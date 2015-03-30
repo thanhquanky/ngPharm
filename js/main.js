@@ -16,7 +16,6 @@ ngPharm.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "partials/invoice.html"
     })
 });
-
 ngPharm.controller('homeController',
     ['$scope', function($scope) {
 
@@ -25,3 +24,4 @@ ngPharm.controller('invoiceController',
     ['$scope', function($scope) {
 
     }]);
+
