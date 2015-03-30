@@ -1,0 +1,11 @@
+Only allowed invoice
+
+I. Mockup:
+	Company 				Invoice No
+
+
+	Name	Unit	Quantity Exp.Date Price 
+
+																Subtotal
+																Tax
+																total
