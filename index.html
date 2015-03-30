@@ -4,21 +4,22 @@
 		<title>ngPharm</title>
 		<link rel="stylesheet" href="components/angular/angular-csp.css"/>
 		<link rel="stylesheet" href="components/angular-ui/build/angular-ui.css"/>
+		<link rel="stylesheet" href="components/angular-ui-grid/ui-grid.css"/>
 		<link rel="stylesheet" href="css/style.css"/>
 
 		<script src="components/angular/angular.min.js"></script>
-		<script src="components/angular-ui/build/angular-ui.min.js"></script>		
+		<script src="components/angular-ui/build/angular-ui.min.js"></script>
+		<script src="components/ui-router/release/angular-ui-router.min.js"></script>
+		<script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<script src="components/angular-ui-grid/ui-grid.min.js"/>
 	</head>
 	<body ng-app="ngPharm">
 	<div class="container">
 		<div class="navbar-header">
 		</div>
-		<header>
-		</header>
-		<div id="data">
-		</div>
-		<footer>
-		</footer>
-	</div>		
+		<div ui-view></div>
+	</div>
+	<script type="text/javascript" src="js/mainController.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

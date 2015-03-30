@@ -1,10 +1,13 @@
 {
-	"name": "ngPharm",
-	"version": "0.1",
-	"dependencies": {
-		"angular": "1.4",
-		"ui-router": "0.2.13",
-		"ui-bootstrap": "0.12.1",
-		"ng-grid": "3.0"
-	}
+  "name": "ngPharm",
+  "version": "0.1",
+  "dependencies": {
+    "angular": "1.4",
+    "ui-router": "0.2.13",
+    "angular-bootstrap": "0.12.1",
+    "angular-ui-grid": "~3.0.0-rc.20"
+  },
+  "devDependencies": {
+    "angular-ui-grid": "~3.0.0-rc.20"
+  }
 }
