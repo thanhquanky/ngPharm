@@ -3,6 +3,8 @@
 	"version": "0.1",
 	"dependencies": {
 		"angular": "1.4",
-		"angular-ui": "latest"
+		"ui-router": "0.2.13",
+		"ui-bootstrap": "0.12.1",
+		"ui-grid": "3.0",
 	}
 }
