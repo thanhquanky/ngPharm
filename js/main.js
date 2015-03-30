@@ -21,3 +21,7 @@ ngPharm.controller('homeController',
     ['$scope', function($scope) {
 
     }]);
+ngPharm.controller('invoiceController',
+    ['$scope', function($scope) {
+
+    }]);
