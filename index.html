@@ -11,15 +11,17 @@
 		<script src="components/angular-ui/build/angular-ui.min.js"></script>
 		<script src="components/ui-router/release/angular-ui-router.min.js"></script>
 		<script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-		<script src="components/angular-ui-grid/ui-grid.min.js"/>
+		<script src="components/angular-ui-grid/ui-grid.min.js"></script>
 	</head>
 	<body ng-app="ngPharm">
-	<div class="container">
-		<div class="navbar-header">
+		<div class="container">
+			<div class="navbar-header">
+			</div>
+			<div ui-view></div>
+			<a ui-sref="home">Home</a>
+	    	<a ui-sref="invoice">Invoice</a>
 		</div>
-		<div ui-view></div>
-	</div>
-	<script type="text/javascript" src="js/mainController.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/homeController.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

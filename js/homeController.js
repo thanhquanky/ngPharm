@@ -1,4 +1,4 @@
-ngPharm.controller('mainController',
+ngPharm.controller('homeController',
     ['$scope', function($scope) {
 
     }]);
