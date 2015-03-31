@@ -1,7 +1,15 @@
 <div class="row">
     <div id="invoice_list" class="col-md-3">
-        <h1>List</h1>
-        <li ng-repeat="invoice in invoices"><a href="#invoice/{{invoice.name}}">{{invoice.name}}</a></li>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Invoices</h3>
+          </div>
+          <div class="panel-body">
+              <div class="list-group">
+                  <a data-ng-repeat="invoice in invoices" href="#invoice/{{invoice.name}}" class="list-group-item">{{invoice.name}}</a>
+              </div>
+          </div>
+        </div>
         <button id="add_invoice"class="btn btn-success">Add Invoice</button>
     </div>
     <div ui-view class="col-md-9">

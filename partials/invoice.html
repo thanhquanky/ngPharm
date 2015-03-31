@@ -1,7 +1,43 @@
-<h1>This is invoice</h1>
-<div>
-    <div id="grid1" ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav class="grid"></div>
-    <button type="button" class="btn btn-default btn-lg">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New item
-    </button>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Invoice: {{invoice.name}}</h3>
+    </div <div class="panel-body">
+    <div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputEmail" class="col-md-2 control-label">Email</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="company" class="col-md-2 control-label">Company</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="invoiceNumber" class="col-md-2 control-label">Invoice Number</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control col-md-10" id="inputInvoiceNumber" placeholder="Invoice number">
+                </div
+            </div>
+            <div class="form-group">
+                <label for="items" class="col-md-2 control-label">Items</label>
+                <div class="col-md-10">
+                    <div id="invoice_items" ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav class="col-md-10 grid"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10 col-md-offset-2">
+                    <button type="reset" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New item
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 </div>
