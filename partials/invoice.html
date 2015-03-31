@@ -1,6 +1,2 @@
-<h1>This is invoice</h1>
-<div>
-    <div id="grid1" ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav class="grid">
-    <button class="btn btn-primary">Add more medicine</button>
-    </div>
-</div>
+<div ui-view></div>
+<li ng-repeat="invoice in invoices"><a href="#invoice/{{invoice.name}}">{{invoice.name}}</a></li>

@@ -1,6 +1,6 @@
 Only allowed invoice
 
-I. Mockup:
+I. Mockup Invoice:
 	Company 				Invoice No
 
 
