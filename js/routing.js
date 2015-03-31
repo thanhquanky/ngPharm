@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
     //
     // For any unmatched url, redirect to /state1
