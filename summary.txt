@@ -9,3 +9,8 @@ I. Mockup Invoice:
 																Subtotal
 																Tax
 																total
+
+
+Add item: open a modal, fill name, type, exp date(with calendar), ... 
+	Try to refactor script tag to JS file
+Add invoice
