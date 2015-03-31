@@ -1,0 +1,80 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Invoice: {{invoice.name}}</h3>
+    </div <div class="panel-body">
+    <div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputEmail" class="col-md-2 control-label">Email</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="company" class="col-md-2 control-label">Company</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="invoiceNumber" class="col-md-2 control-label">Invoice Number</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control col-md-10" id="inputInvoiceNumber" placeholder="Invoice number">
+                </div
+            </div>
+            <div class="form-group">
+                <label for="items" class="col-md-2 control-label">Items</label>
+                <div class="col-md-10">
+                    <div id="invoice_items" ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav class="grid" flex></div>
+                </div>
+            </div>
+            <div>
+                <script type="text/ng-template" id="myModalContent.html">
+                    <form name="newItem" novalidate>
+        
+                    <div class="modal-header">
+                        <h3 class="modal-title">Fill in information for new item</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                          <label for="usr">Name:</label>
+                          <input type="text" class="form-control" id="usr" ng-model="item.name">
+                        </div>
+                        <!---->
+                        <div class="form-group">
+                          <label for="usr">Unit:</label>
+                          <input type="text" class="form-control" ng-model="item.unit">
+                        </div>
+                        <div class="form-group">
+                          <label for="usr">Quantity:</label>
+                          <input type="number" class="form-control" ng-model="item.quantity">
+                        </div>
+                        <div class="form-group">
+                          <label for="usr">Expiration:</label>
+                          <input type="date" class="form-control" ng-model="item.expiration_date">
+                        </div>
+                        <div class="form-group">
+                          <label for="usr">Price:</label>
+                          <input type="number" class="form-control" ng-model="item.price">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" ng-click="ok()">OK</button>
+                        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                    </div>
+                </script>
+                <div class="form-group">
+                    <div class="col-md-10 col-md-offset-2">
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                        <button type="button" class="btn btn-default btn-lg" ng-click="open()">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true" ></span> New item
+                        </button>
+                    </div>                                     
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
