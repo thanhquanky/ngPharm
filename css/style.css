@@ -13,3 +13,8 @@ body {
     width: 400px; 
     height: 300px
 }
+#add_invoice {
+    position: absolute;
+    top: 50vh;
+    right: 10vw;
+}

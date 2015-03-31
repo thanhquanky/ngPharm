@@ -1,2 +1,9 @@
-<div ui-view></div>
-<li ng-repeat="invoice in invoices"><a href="#invoice/{{invoice.name}}">{{invoice.name}}</a></li>
+<div class="row">
+    <div id="invoice_list" class="col-md-3">
+        <h1>List</h1>
+        <li ng-repeat="invoice in invoices"><a href="#invoice/{{invoice.name}}">{{invoice.name}}</a></li>
+        <button id="add_invoice"class="btn btn-success">Add Invoice</button>
+    </div>
+    <div ui-view class="col-md-9">
+    </div>
+</div>
