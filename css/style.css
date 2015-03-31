@@ -18,3 +18,7 @@ body {
     top: 50vh;
     right: 10vw;
 }
+.ui-grid {
+    border: none;
+    margin-right: 18px;
+}

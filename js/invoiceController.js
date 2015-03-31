@@ -16,25 +16,21 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', function($sco
             name: 'Name',
             enableCellEdit: true,
             enableCellEditOnFocus: true,
-            field: 'name',
-            width: '13%'
+            field: 'name'
         }, {
             name: "Unit",
             field: 'unit',
             width: '13%'
         }, {
             name: "Quantity",
-            field: 'quantity',
-            width: '13%'
+            field: 'quantity'
         }, {
             name: "Expiration Date",
             field: 'expiration_date',
-            width: '13%',
             cellFilter: 'date'
         }, {
             name: 'Price',
-            field: 'price',
-            width: '20%'
+            field: 'price'
         }],
         data: 'invoice.items'
     };
