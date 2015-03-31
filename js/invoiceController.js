@@ -38,7 +38,7 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', function($sco
 
 
 ngPharm.controller('ModalDemoCtrl', function ($scope, $modal, $log) {
-
+ // Create item to display
   $scope.items = ['item1', 'item2', 'item3'];
 
   $scope.open = function (size) {

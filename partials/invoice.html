@@ -31,15 +31,30 @@
             <div ng-controller="ModalDemoCtrl">
                 <script type="text/ng-template" id="myModalContent.html">
                     <div class="modal-header">
-                        <h3 class="modal-title">I'm a modal!</h3>
+                        <h3 class="modal-title">Fill in information for new item</h3>
                     </div>
                     <div class="modal-body">
-                        <ul>
-                            <li ng-repeat="item in items">
-                                <a ng-click="selected.item = item">{{ item }}</a>
-                            </li>
-                        </ul>
-                        Selected: <b>{{ selected.item }}</b>
+                        <div class="form-group">
+                          <label for="usr">Name:</label>
+                          <input type="text" class="form-control" id="usr">
+                        </div>
+                        <!---->
+                        <div class="form-group">
+                          <label for="usr">Unit:</label>
+                          <input type="text" class="form-control" id="usr">
+                        </div>
+                        <div class="form-group">
+                          <label for="usr">Quantity:</label>
+                          <input type="number" class="form-control" id="usr">
+                        </div>
+                        <div class="form-group">
+                          <label for="usr">Expiration:</label>
+                          <input type="date" class="form-control" id="usr">
+                        </div>
+                        <div class="form-group">
+                          <label for="usr">Price:</label>
+                          <input type="number" class="form-control" id="usr">
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-primary" ng-click="ok()">OK</button>
