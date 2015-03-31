@@ -24,7 +24,10 @@ ngPharm.controller('SalesController',
         volumes: 100,
         average_price: 1.65,
         average_profit: 0.65,
-    }];        
+    }];
+        var numOfColumns = Object.keys($scope.myData[0]).length;
+        var columnWidthStr = (100 / numOfColumns) + "%";
+        console.log(columnWidthStr);
         $scope.gridOptions = {
         showGridFooter: true,
         showColumnFooter: true,
@@ -34,35 +37,35 @@ ngPharm.controller('SalesController',
             enableCellEdit: true,
             enableCellEditOnFocus: true,
             field: 'quarter',
-            width: '20%',
+            width: columnWidthStr,
             footerCellTemplate:'<div></div>'
         }, {
             name: 'Total Sales',
             enableCellEdit: true,
             enableCellEditOnFocus: true,
             field: 'total',
-            width: '20%',
+            width: columnWidthStr,
             footerCellTemplate:'<div></div>'
         }, {
             name: 'Total Volumes Sold',
             enableCellEdit: true,
             enableCellEditOnFocus: true,
             field: 'Volumes',
-            width: '20%',
+            width: columnWidthStr,
             footerCellTemplate:'<div></div>'
         }, {
             name: 'Average sold price per unit',
             enableCellEdit: true,
             enableCellEditOnFocus: true,
             field: 'average_price',
-            width: '20%',
+            width: columnWidthStr,
             footerCellTemplate:'<div></div>'
         }, {
             name: 'Average Profit per unit',
             enableCellEdit: true,
             enableCellEditOnFocus: true,
             field: 'average_profit',
-            width: '20%',
+            width: columnWidthStr,
             footerCellTemplate:'<div></div>'
         }],
         data: $scope.myData
