@@ -30,36 +30,61 @@
             </div>
             <div ng-controller="ModalDemoCtrl">
                 <script type="text/ng-template" id="myModalContent.html">
-                    <div class="modal-header">
-                        <h3 class="modal-title">Fill in information for new item</h3>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                          <label for="usr">Name:</label>
-                          <input type="text" class="form-control" id="usr">
+                    <form name="newItem" novalidate>
+                        <div class="modal-header">
+                            <h3 class="modal-title">Fill in information for new item</h3>
                         </div>
-                        <!---->
-                        <div class="form-group">
-                          <label for="usr">Unit:</label>
-                          <input type="text" class="form-control" id="usr">
+                        <div class="modal-body">
+                            <!---->
+                            <div class="form-group">
+                            <label for="name">Drug Name</label>
+                                <input type="text" name="name" ng-model="name" required class="form-control">
+                                <span style="color:red" ng-show="newItem.name.$dirty && newItem.name.$invalid">
+                                <span ng-show="newItem.name.$error.required">Name is required.</span>
+                                </span>                            
+                            </div>
+                            <!---->
+                            <div class="form-group">
+                            <label for="unit">Unit</label>
+                                <input type="text" name="unit" ng-model="unit" required class="form-control">
+                                <span style="color:red" ng-show="newItem.unit.$dirty && newItem.unit.$invalid">
+                                <span ng-show="newItem.unit.$error.required">Unit is required.</span>
+                                </span>                            
+                            </div>
+                            <!---->
+                            <div class="form-group">
+                            <label for="expiration">Expiration Date</label>
+                                <input type="date" name="expiration" ng-model="expiration" required class="form-control">
+                                <span style="color:red" ng-show="newItem.expiration.$dirty && newItem.expiration.$invalid">
+                                <span ng-show="newItem.expiration.$error.required">Expiration date is required.</span>
+                                <span ng-show="newItem.expiration.$error.date">Invalid date.</span>
+                                </span>                            
+                            </div>
+                            <!---->
+                            <div class="form-group">
+                            <label for="price">Price</label>
+                                <input type="number" name="price" ng-model="price" required class="form-control">
+                                <span style="color:red" ng-show="newItem.price.$dirty && newItem.price.$invalid">
+                                <span ng-show="newItem.price.$error.required">Price is required.</span>
+                                <span ng-show="newItem.price.$error.number">Invalid number.</span>
+                                </span>                            
+                            </div>
+                            <!---->
+                            <div class="form-group">
+                            <label for="quantity_number">Price</label>
+                                <input type="number" name="quantity_number" ng-model="quantity_number" required class="form-control">
+                                <span style="color:red" ng-show="newItem.quantity_number.$dirty && newItem.quantity_number.$invalid">
+                                <span ng-show="newItem.quantity_number.$error.required">Quantity is required.</span>
+                                <span ng-show="newItem.quantity_number.$error.number">Invalid number.</span>
+                                </span>                            
+                            </div>  
                         </div>
-                        <div class="form-group">
-                          <label for="usr">Quantity:</label>
-                          <input type="number" class="form-control" id="usr">
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-primary" 
+                            ng-disabled="itemName.$dirty" ng-click="ok()">
+                            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
                         </div>
-                        <div class="form-group">
-                          <label for="usr">Expiration:</label>
-                          <input type="date" class="form-control" id="usr">
-                        </div>
-                        <div class="form-group">
-                          <label for="usr">Price:</label>
-                          <input type="number" class="form-control" id="usr">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" ng-click="ok()">OK</button>
-                        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-                    </div>
+                    </form>
                 </script>
                 <div class="form-group">
                     <div class="col-md-10 col-md-offset-2">
@@ -69,7 +94,6 @@
                         <button type="button" class="btn btn-default btn-lg" ng-click="open()">
                             <span class="glyphicon glyphicon-plus" aria-hidden="true" ></span> New item
                         </button>
-                        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
                     </div>                                     
                 </div>
             </div>

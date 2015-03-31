@@ -8,7 +8,6 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', function($sco
         }
     });
     $scope.invoice = invoice;
-
     $scope.gridOptions = {
         showGridFooter: true,
         enableFiltering: true,
@@ -36,13 +35,11 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', function($sco
     };
 }]);
 
-
+// Modal controller
 ngPharm.controller('ModalDemoCtrl', function ($scope, $modal, $log) {
  // Create item to display
-  $scope.items = ['item1', 'item2', 'item3'];
-
+  $scope.items = ['item1', 'item2', 'e'];
   $scope.open = function (size) {
-
     var modalInstance = $modal.open({
       templateUrl: 'myModalContent.html',
       controller: 'ModalInstanceCtrl',
@@ -73,10 +70,14 @@ ngPharm.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items)
   };
 
   $scope.ok = function () {
+    // Do some form validation
+    
     $modalInstance.close($scope.selected.item);
+    console.log($scope.newItem.email.$viewValue);
   };
 
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
 });
+// Ends modal controller
