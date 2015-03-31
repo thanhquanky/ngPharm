@@ -1,82 +1,69 @@
-ngPharm.controller('InvoiceController', ['$scope', '$stateParams', function($scope, $stateParams) {
-    var invoiceName = $stateParams.invoice_id;
-    var invoice = null;
-    angular.forEach($scope.invoices, function(currentInvoice, key) {
-        console.log(currentInvoice);
-        if (currentInvoice.name === invoiceName) {
-            invoice = currentInvoice;
-        }
-    });
-    $scope.invoice = invoice;
+ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$log', function ($scope, $stateParams, $modal, $log) {
+	var invoiceName = $stateParams.invoice_id;
+	var invoice = null;
+	angular.forEach($scope.invoices, function (currentInvoice, key) {
+		console.log(currentInvoice);
+		if (currentInvoice.name === invoiceName) {
+			invoice = currentInvoice;
+		}
+	});
+	$scope.invoice = invoice;
 
-    $scope.gridOptions = {
-        showGridFooter: true,
-        enableFiltering: true,
-        columnDefs: [{
-            name: 'Name',
-            enableCellEdit: true,
-            enableCellEditOnFocus: true,
-            field: 'name'
+	$scope.gridOptions = {
+		showGridFooter: true,
+		enableFiltering: true,
+		columnDefs: [{
+			name: 'Name',
+			enableCellEdit: true,
+			enableCellEditOnFocus: true,
+			field: 'name'
         }, {
-            name: "Unit",
-            field: 'unit',
-            width: '13%'
+			name: "Unit",
+			field: 'unit',
+			width: '13%'
         }, {
-            name: "Quantity",
-            field: 'quantity'
+			name: "Quantity",
+			field: 'quantity'
         }, {
-            name: "Expiration Date",
-            field: 'expiration_date',
-            cellFilter: 'date'
+			name: "Expiration Date",
+			field: 'expiration_date',
+			cellFilter: 'date'
         }, {
-            name: 'Price',
-            field: 'price'
+			name: 'Price',
+			field: 'price'
         }],
-        data: 'invoice.items'
-    };
+		data: 'invoice.items'
+	};
+
+    $scope.open = function (size) {
+		var modalInstance = $modal.open({
+			templateUrl: 'myModalContent.html',
+			controller: 'ModalInstanceCtrl',
+			size: size,
+			resolve: {
+				items: function () {
+					return $scope.item;
+				}
+			}
+		});
+		modalInstance.result.then(function (newItem) {
+            console.log($scope.invoice);
+            $scope.invoice.items.push(newItem);
+		}, function () {
+			$log.info('Modal dismissed at: ' + new Date());
+		});
+	};
 }]);
-
-
-ngPharm.controller('ModalDemoCtrl', function ($scope, $modal, $log) {
- // Create item to display
-  $scope.items = ['item1', 'item2', 'item3'];
-
-  $scope.open = function (size) {
-
-    var modalInstance = $modal.open({
-      templateUrl: 'myModalContent.html',
-      controller: 'ModalInstanceCtrl',
-      size: size,
-      resolve: {
-        items: function () {
-          return $scope.items;
-        }
-      }
-    });
-
-    modalInstance.result.then(function (selectedItem) {
-      $scope.selected = selectedItem;
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
-    });
-  };
-});
-
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
 ngPharm.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
 
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
+	$scope.ok = function () {
+		$modalInstance.close($scope.item);
+	};
 
-  $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
-  };
-
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
+	$scope.cancel = function () {
+		$modalInstance.dismiss('cancel');
+	};
 });

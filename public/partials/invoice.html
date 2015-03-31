@@ -28,7 +28,7 @@
                     <div id="invoice_items" ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav class="grid" flex></div>
                 </div>
             </div>
-            <div ng-controller="ModalDemoCtrl">
+            <div>
                 <script type="text/ng-template" id="myModalContent.html">
                     <div class="modal-header">
                         <h3 class="modal-title">Fill in information for new item</h3>
@@ -36,24 +36,24 @@
                     <div class="modal-body">
                         <div class="form-group">
                           <label for="usr">Name:</label>
-                          <input type="text" class="form-control" id="usr">
+                          <input type="text" class="form-control" id="usr" ng-model="item.name">
                         </div>
                         <!---->
                         <div class="form-group">
                           <label for="usr">Unit:</label>
-                          <input type="text" class="form-control" id="usr">
+                          <input type="text" class="form-control" ng-model="item.unit">
                         </div>
                         <div class="form-group">
                           <label for="usr">Quantity:</label>
-                          <input type="number" class="form-control" id="usr">
+                          <input type="number" class="form-control" ng-model="item.quantity">
                         </div>
                         <div class="form-group">
                           <label for="usr">Expiration:</label>
-                          <input type="date" class="form-control" id="usr">
+                          <input type="date" class="form-control" ng-model="item.expiration_date">
                         </div>
                         <div class="form-group">
                           <label for="usr">Price:</label>
-                          <input type="number" class="form-control" id="usr">
+                          <input type="number" class="form-control" ng-model="item.price">
                         </div>
                     </div>
                     <div class="modal-footer">
