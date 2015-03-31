@@ -1,2 +1,7 @@
-<div ui-view></div>
-<li ng-repeat="invoice in invoices"><a href="#invoice/{{invoice.name}}">{{invoice.name}}</a></li>
+<h1>This is invoice</h1>
+<div>
+    <div id="grid1" ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav class="grid"></div>
+    <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New item
+    </button>
+</div>
