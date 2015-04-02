@@ -1,1 +1,1 @@
-var ngPharm = angular.module('ngPharm', ['ui.bootstrap','ui.router','ui.grid','ui.grid.edit','ngResource', 'firebase']);
+var ngPharm = angular.module('ngPharm', ['ui.bootstrap','ui.router','ui.grid','ui.grid.edit','ngResource', 'firebase','ngPharm.services']);

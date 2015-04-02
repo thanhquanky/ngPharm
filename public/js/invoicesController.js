@@ -1,4 +1,3 @@
-ngPharm.controller('InvoicesController', ['uiGridConstants', '$firebaseArray', '$scope', function(uiGridConstants, $firebaseArray, $scope) {
-    var invoiceRef = new Firebase("https://amber-inferno-7229.firebaseio.com/invoices");
-    $scope.invoices = $firebaseArray(invoiceRef);
+ngPharm.controller('InvoicesController', ['uiGridConstants', 'Invoices', '$scope', function(uiGridConstants, Invoices, $scope) {
+    $scope.invoices = Invoices.all();
 }]);
