@@ -35,10 +35,10 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$l
 		data: 'invoice.items'
 	};
 
-    $scope.open = function (size) {
+    $scope.addNewItem = function (size) {
 		var modalInstance = $modal.open({
-			templateUrl: 'myModalContent.html',
-			controller: 'ModalInstanceCtrl',
+			templateUrl: 'newItem.html',
+			controller: 'NewItemCtrl',
 			size: size,
 			resolve: {
 				items: function () {
@@ -57,7 +57,7 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$l
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-ngPharm.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+ngPharm.controller('NewItemCtrl', function ($scope, $modalInstance, items) {
 
 	$scope.ok = function () {
 		$modalInstance.close($scope.item);
