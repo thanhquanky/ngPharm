@@ -9,3 +9,4 @@ After you clone the project, run
 ### Authors:
 * Thanh Ky Quan < thanhquanky@gatech.edu >
 * Duc Anh Tran < dtran39@gatech.edu >
+* Thang Van Nguyen < thang911pk@gatech.edu >

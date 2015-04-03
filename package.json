@@ -1,14 +1,23 @@
 {
-	"name": "ngPharm",
-	"version": "0.1",
-	"author": {
-		"name": "Thanh Ky Quan",
-		"email": "thanhquanky@gatech.edu"
-	},
-	"contributors": [
-		{
-			"name": "Duc Anh Tran",
-			"email": "dtran39@gatech.edu"
-		}
-	]
+    "name": "ngPharm",
+    "version": "0.0.1",
+    "author": {
+        "name": "Thanh Ky Quan",
+        "email" : "thanhquanky@gatech.edu"
+    },
+    "collaborators": [
+            {
+                "name": "Duc Anh Tran",
+                "email": "dtran39@gatech.edu"
+            },
+            {
+                "name": "Thang Van Nguyen",
+                "email": "thang911pk@gmail.com"
+            }
+    ],
+    "main": "server.js",
+    "dependencies": {
+        "body-parser": "^1.4.3",
+        "express": "^4.4.5"
+    }
 }

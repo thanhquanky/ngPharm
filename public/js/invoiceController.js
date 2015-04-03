@@ -6,7 +6,7 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$l
 			console.log(currentInvoice);
 			if (currentInvoice.name === invoiceName) {
 				invoice = currentInvoice;
-                $scope.items = InvoiceItems.fromInvoice(invoice.$id);
+				$scope.items = InvoiceItems.fromInvoice(invoice.$id);
 			}
 		});
 		$scope.invoice = invoice;
@@ -48,6 +48,18 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$l
 					}
 				}
 			});
+		};
+		$scope.addNewItem = function (size) {
+			var modalInstance = $modal.open({
+				templateUrl: 'newItem.html',
+				controller: 'NewItemCtrl',
+				size: size,
+				resolve: {
+					items: function () {
+						return $scope.item;
+					}
+				}
+			});
 			modalInstance.result.then(function (newItem) {
 				console.log($scope.invoice);
 				Invoices.addItem($scope.invoice.$id, newItem);
@@ -55,14 +67,14 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$l
 				$log.info('Modal dismissed at: ' + new Date());
 			});
 		};
-        $scope.hasSelectedInvoice = function() {
-            return !angular.isUndefined($scope.invoice.name) && !angular.isNull($scope.invoice.name);
-        };
+		$scope.hasSelectedInvoice = function () {
+			return !angular.isUndefined($scope.invoice.name) && !angular.isNull($scope.invoice.name);
+		};
 }]);
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-ngPharm.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+ngPharm.controller('NewItemCtrl', function ($scope, $modalInstance, items) {
 
 	$scope.ok = function () {
 		$modalInstance.close($scope.item);

@@ -1,27 +1,27 @@
 ngPharm.controller('SalesController',
-    ['uiGridConstants', '$scope', function(uiGridConstants, $scope) {
+    ['uiGridConstants', '$scope', '$modal', '$log', function(uiGridConstants, $scope, $modal, $log) {
         $scope.myData = [{
         name: "Hydrocodone",
-        total: 1000,
-        volumes: 100,
+        total_sales: 1000,
+        total_volume: 100,
         average_price: 1.65,
         average_profit: 0.65
     }, {
         name: "Generic Zocor ",
-        total: 1000,
-        volumes: 100,
+        total_sales: 1000,
+        total_volume: 100,
         average_price: 1.65,
         average_profit: 0.65
     }, {
         name: "Lisinopril",
-        total: 1000,
-        volumes: 100,
+        total_sales: 1000,
+        total_volume: 100,
         average_price: 1.65,
         average_profit: 0.65
     }, {
         name: "Generic Synthroid",
-        total: 1000,
-        volumes: 100,
+        total_sales: 1000,
+        total_volume: 100,
         average_price: 1.65,
         average_profit: 0.65
     }];
@@ -43,14 +43,14 @@ ngPharm.controller('SalesController',
             name: 'Total Sales',
             enableCellEdit: true,
             enableCellEditOnFocus: true,
-            field: 'total',
+            field: 'total_sales',
             width: columnWidthStr,
             aggregationType: uiGridConstants.aggregationTypes.sum
         }, {
             name: 'Total Volumes Sold',
             enableCellEdit: true,
             enableCellEditOnFocus: true,
-            field: 'volumes',
+            field: 'total_volume',
             width: columnWidthStr,
             aggregationType: uiGridConstants.aggregationTypes.sum
         }, {
@@ -70,14 +70,28 @@ ngPharm.controller('SalesController',
         }],
         data: $scope.myData
     };
-    
-        $scope.addSales = function(){
-            $scope.myData.push({
-                name: "Some random drugs",
-                total: 1000,
-                volumes: 100,
-                average_price: 1.65,
-                average_profit: 0.65
-            });
-        };
+    $scope.addNewSales = function(){
+        var modalInstance = $modal.open({
+            templateUrl: 'newSalesItem.html',
+            controller: 'NewSalesCtrl',
+            resolve: {
+                items: function(){
+                    return $scope.item;
+                }
+            }
+        });
+        modalInstance.result.then(function(newItem){
+            $scope.myData.push(newItem);
+        }, function(){
+            $log.info('Modal dismissed at ' + new Date());
+        });
+    };
 }]);
+ngPharm.controller('NewSalesCtrl', function($scope, $modalInstance, items){
+    $scope.ok = function(){
+        $modalInstance.close($scope.item);
+    };
+    $scope.cancel = function(){
+        $modalInstance.dismiss('cancel');
+    };
+});
