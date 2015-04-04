@@ -58,7 +58,7 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                         <label for="expiration_date">Expiration:</label>
-                                                                        <input type="text" name="expiration_date" required class="form-control" ng-model="item.expiration_date">
+                                                                        <input type="date" name="expiration_date" required class="form-control" ng-model="item.expiration_date">
                                                                         <span style="color:red" ng-show="newItem.expiration_date.$dirty && newItem.expiration_date.$invalid">
                                                                                 <span ng-show="newItem.expiration_date.$error.required">Date is required.</span>
                                                                                 <span ng-show="newItem.expiration_date.$error.date">Invalid Date.</span>
