@@ -1,30 +1,30 @@
 var Sequelize = require('sequelize');
 
-module.exports = {
-    Drug: function(sequelizeInstance) {
-        return sequelizeInstance.define('drug', {
-            id: {
-                type: Sequelize.INTEGER,
-                autoIncrement: true,
-                primaryKey: true
-            },
-            name: {
-                type: Sequelize.STRING,
-            },
-            use: {
-                type: Sequelize.STRING,
-                allowNull: true
-            },
-            side_effect: {
-                type: Sequelize.STRING,
-                allowNull: true
-            },
-            warning: {
-                type: Sequelize.STRING,
-                allowNull: true
-            }
-        }, {
-            freezeTableName: true // Model tableName will be the same as the model name
-        });
-    }
-};
+module.exports = function(sequelizeInstance, DataTypes) {
+    var Drug = sequelizeInstance.define('Drug', {
+        "id": {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        "name": {
+            type: DataTypes.STRING,
+        },
+        "use": {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        "sideEffect": {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        "warning": {
+            type: DataTypes.STRING,
+            allowNull: true
+        }
+    }, {
+        freezeTableName: true // Model tableName will be the same as the model name
+    });
+
+    return Drug;
+}

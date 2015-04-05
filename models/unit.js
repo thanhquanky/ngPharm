@@ -1,18 +1,22 @@
 var Sequelize = require('sequelize');
 
-module.exports = {
-    Unit: function(sequelizeInstance) {
-        return sequelizeInstance.define('unit', {
-            id: {
-                type: Sequelize.INTEGER,
-                primaryKey: true,
-                autoIncrement: true
-            },
-            name: {
-                type: Sequelize.STRING,
+module.exports = function(sequelizeInstance, DataTypes) {
+    var Unit = sequelizeInstance.define('Unit', {
+        "id": {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        "name": {
+            type: DataTypes.STRING,
+        }
+    }, {
+        classMethods: {
+            associate: function(models) {
+                Unit.hasMany(models.InvoiceItem);
             }
-        }, {
-            freezeTableName: true // Model tableName will be the same as the model name
-        });
-    }
-};
+        },
+        freezeTableName: true // Model tableName will be the same as the model name
+    });
+    return Unit;
+}
