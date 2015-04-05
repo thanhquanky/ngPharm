@@ -8,6 +8,9 @@ angular.module('ngPharm.services', ['firebase'])
             all: function() {
                 return invoices;
             },
+            get: function(invoiceName) {
+                invoices.
+            }
             updateItem: function(itemId, invoiceId, updatedItem) {
                 var itemsRef = new Firebase(firebaseUrl + "/" + invoiceId + "/items");
                 var items = $firebaseArray(itemsRef);
