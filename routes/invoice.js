@@ -4,10 +4,24 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
     models.Invoice.findAll({
-            include: {
+            include: [{
                 model: models.InvoiceItem,
-                include: [models.Drug, models.Unit]
-            }
+                attributes: ["id", "quantity", "manufactureDate", "expirationDate", "price"],
+                include: [
+                    {
+                        model: models.Drug,
+                        attributes: ["name"]
+                    },
+                    {
+                        model: models.Unit,
+                        attributes: ["name"]
+                    }
+                ]
+            },
+            {
+                model: models.Vendor,
+                attributes: ["name"]
+            }]
         })
         .then(function(models) {
             res.json(models);
