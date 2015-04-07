@@ -1,12 +1,17 @@
 <div class="row">
     <div id="invoice_list" class="col-md-3">
         <div class="panel panel-primary">
-          <div class="panel-heading">
+          <div class="panel-heading clear-fix">
             <h3 class="panel-title">Invoices</h3>
+            <div class="pull-right">
+                <a href="#" class="btn btn-info btn-sm">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </div>
           </div>
-          <div class="panel-body">
+          <div class="panel-body" style="margin-top: 10px">
               <div class="list-group">
-                  <a data-ng-repeat="invoice in invoices" ui-sref="invoice.item({invoice_id: invoice.id})" class="list-group-item">
+                  <a data-ng-repeat="invoice in invoices" ui-sref="invoice.item({invoiceId: invoice.id})" class="list-group-item">
                       {{invoice.number}}
                   </a>
               </div>

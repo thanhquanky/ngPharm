@@ -3,32 +3,42 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-    models.Invoice.findAll({
-            include: [{
-                model: models.InvoiceItem,
-                attributes: ["id", "quantity", "manufactureDate", "expirationDate", "price"],
-                include: [
-                    {
+        models.Invoice.findAll({
+                attributes: ['id','number']
+            })
+            .then(function(models) {
+                res.json(models);
+            })
+            .catch(function(error) {
+                res.send(error);
+            });
+    })
+    .get('/:invoiceId', function(req, res) {
+        models.Invoice.findOne({
+                where: {
+                    id: req.params.invoiceId
+                },
+                include: [{
+                    model: models.InvoiceItem,
+                    attributes: ["id", "quantity", "manufactureDate", "expirationDate", "price"],
+                    include: [{
                         model: models.Drug,
                         attributes: ["name"]
-                    },
-                    {
+                    }, {
                         model: models.Unit,
                         attributes: ["name"]
-                    }
-                ]
-            },
-            {
-                model: models.Vendor,
-                attributes: ["name"]
-            }]
-        })
-        .then(function(models) {
-            res.json(models);
-        })
-        .catch(function(error) {
-            res.send(error);
-        });
-})
+                    }]
+                }, {
+                    model: models.Vendor,
+                    attributes: ["name"]
+                }]
+            }).then(function(model) {
+                console.log(model);
+                res.json(model);
+            })
+            .catch(function(error) {
+                res.send(error);
+            });
+    })
 
 module.exports = router;

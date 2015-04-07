@@ -41,6 +41,12 @@ var dodacin = {
     "use": "Antibiotic"
 }
 
+var claritin = {
+    "id": 2,
+    "name": "Claritin",
+    "use": "Anti-histamine"
+}
+
 var dodacin_item = {
     "InvoiceId": 1,
     "DrugId": 1,
@@ -50,6 +56,17 @@ var dodacin_item = {
     "expirationDate": new Date("2017/01/01"),
     "price": 3.5
 }
+
+var claritin_item = {
+    "InvoiceId": 1,
+    "DrugId": 2,
+    "quantity": 5,
+    "UnitId": 1,
+    "manufactureDate": new Date("2015/01/01"),
+    "expirationDate": new Date("2017/02/01"),
+    "price": 7.5
+}
+
 
 var box = {
     "id": 1,
@@ -78,25 +95,25 @@ function createVendor(vendor) {
 function createInvoice(invoice) {
     console.log("Create invoice\n");
 
-    return db.Invoice.create(invoice_one);
+    return db.Invoice.create(invoice);
 }
 
 function createUnit(unit) {
     console.log("Create unit\n");
 
-    return db.Unit.create(box);
+    return db.Unit.create(unit);
 }
 
 function createDrug(drug) {
     console.log("Create drug\n");
 
-    return db.Drug.create(dodacin);
+    return db.Drug.create(drug);
 }
 
 function createInvoiceItem(invoice_item) {
     console.log("Create invoice item\n");
 
-    return db.InvoiceItem.create(dodacin_item);
+    return db.InvoiceItem.create(invoice_item);
 }
 
 function populateData() {
@@ -111,7 +128,13 @@ function populateData() {
             return createDrug(dodacin);
         })
         .then(function() {
+            return createDrug(claritin);
+        })
+        .then(function() {
             return createInvoiceItem(dodacin_item);
+        })
+        .then(function() {
+            return createInvoiceItem(claritin_item);
         });
 }
 

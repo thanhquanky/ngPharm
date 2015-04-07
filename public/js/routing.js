@@ -15,7 +15,7 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
             controller: "InvoicesController"
         })
         .state('invoice.item', {
-            url: "/:invoice_id",
+            url: "/:invoiceId",
             templateUrl: "partials/invoice.html",
             controller: "InvoiceController"
         })

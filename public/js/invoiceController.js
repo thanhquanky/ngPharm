@@ -1,34 +1,37 @@
-ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$log', 'Invoices', 'InvoiceItems',
-    function ($scope, $stateParams, $modal, $log, Invoices, InvoiceItems) {
-		var invoiceName = $stateParams.invoice_id;
-		var invoice = null;
+ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', 'Invoices',
+    function ($scope, $stateParams, $modal, Invoices) {
+        $scope.vm = this;
 
-		$scope.invoice = Invoices.get(invoiceName);
-		$scope.items = InvoiceItems.fromInvoice(invoice.$id);
-		$scope.gridOptions = {
+		vm.invoice = Invoices.get({invoiceId: $stateParams.invoiceId});
+
+		vm.gridOptions = {
 			showGridFooter: true,
 			enableFiltering: true,
 			columnDefs: [{
 				name: 'Name',
 				enableCellEdit: true,
 				enableCellEditOnFocus: true,
-				field: 'name'
+				field: 'Drug.name'
         }, {
 				name: "Unit",
-				field: 'unit',
+				field: 'Unit.name',
 				width: '13%'
         }, {
 				name: "Quantity",
 				field: 'quantity'
         }, {
-				name: "Expiration Date",
-				field: 'expiration_date',
+				name: "Manufacture Date",
+				field: 'manufactureDate',
 				cellFilter: 'date'
         }, {
+				name: "Expiration Date",
+				field: 'expirationDate',
+				cellFilter: 'date'
+        },{
 				name: 'Price',
 				field: 'price'
         }],
-			data: 'items'
+			data: 'invoice.InvoiceItems'
 		};
 
 		$scope.newItemForm = {
@@ -45,7 +48,7 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$l
 				});
 			}
 		};
-		$scope.addNewItem = function (size) {
+		vm.addNewItem = function (size) {
 			var modalInstance = $modal.open({
 				templateUrl: 'newItem.html',
 				controller: 'NewItemCtrl',
@@ -63,8 +66,8 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$l
 				$log.info('Modal dismissed at: ' + new Date());
 			});
 		};
-		$scope.hasSelectedInvoice = function () {
-			return !angular.isUndefined($scope.invoice.name) && !angular.isNull($scope.invoice.name);
+		vm.hasSelectedInvoice = function () {
+			return !angular.isUndefined(vm.invoice.number) && !angular.isNull(vm.invoice.number);
 		};
 }]);
 // Please note that $modalInstance represents a modal window (instance) dependency.
