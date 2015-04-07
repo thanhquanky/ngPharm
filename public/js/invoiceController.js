@@ -2,15 +2,9 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$l
     function ($scope, $stateParams, $modal, $log, Invoices, InvoiceItems) {
 		var invoiceName = $stateParams.invoice_id;
 		var invoice = null;
-		angular.forEach($scope.invoices, function (currentInvoice, key) {
-			console.log(currentInvoice);
-			if (currentInvoice.name === invoiceName) {
-				invoice = currentInvoice;
-				$scope.items = InvoiceItems.fromInvoice(invoice.$id);
-			}
-		});
-		$scope.invoice = invoice;
 
+		$scope.invoice = Invoices.get(invoiceName);
+		$scope.items = InvoiceItems.fromInvoice(invoice.$id);
 		$scope.gridOptions = {
 			showGridFooter: true,
 			enableFiltering: true,
@@ -37,17 +31,19 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$l
 			data: 'items'
 		};
 
-		$scope.open = function (size) {
-			var modalInstance = $modal.open({
-				templateUrl: 'myModalContent.html',
-				controller: 'ModalInstanceCtrl',
-				size: size,
-				resolve: {
-					items: function () {
-						return $scope.item;
+		$scope.newItemForm = {
+			open: function (size) {
+				var modalInstance = $modal.open({
+					templateUrl: 'newItem.html',
+					controller: 'NewItemCtrl',
+					size: size,
+					resolve: {
+						items: function () {
+							return $scope.item;
+						}
 					}
-				}
-			});
+				});
+			}
 		};
 		$scope.addNewItem = function (size) {
 			var modalInstance = $modal.open({
