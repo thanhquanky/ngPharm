@@ -1,35 +1,38 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>ngPharm</title>
-		<link rel="stylesheet" href="components/angular/angular-csp.css"/>
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="components/angular-ui-grid/ui-grid.css"/>
-		<link rel="stylesheet" href="css/style.css"/>
 
-		<script src="components/angular/angular.min.js"></script>
-		<script src="components/ui-router/release/angular-ui-router.min.js"></script>
-		<script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-		<script src="components/angular-ui-grid/ui-grid.min.js"></script>
-		<script src="components/angular-resource/angular-resource.min.js"></script>
-		<script src="components/firebase/firebase.js"></script>
-		<script src="components/angularfire/dist/angularfire.min.js"></script>
-	</head>
-	<body ng-app="ngPharm">
-		<div class="container-fluid">
-			<div class="navbar-header">
-			</div>
-			<a class="btn btn-success" ui-sref="home">Home</a>
-	    	<a class="btn btn-success" ui-sref="invoice">Invoice</a>
-	    	<a class="btn btn-success" ui-sref="sales"> Sales</a>
-            <div ui-view></div>
-		</div>
-		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="js/services.js"></script>
-        <script type="text/javascript" src="js/homeController.js"></script>
-        <script type="text/javascript" src="js/invoicesController.js"></script>
-		<script type="text/javascript" src="js/invoiceController.js"></script>
-        <script type="text/javascript" src="js/salesController.js"></script>
-		<script type="text/javascript" src="js/routing.js"></script>
-	</body>
+<head>
+    <title>ngPharm</title>
+    <link rel="stylesheet" href="components/angular/angular-csp.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="components/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="components/angular/angular.min.js"></script>
+    <script src="components/ui-router/release/angular-ui-router.min.js"></script>
+    <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="components/angular-ui-grid/ui-grid.min.js"></script>
+    <script src="components/angular-resource/angular-resource.min.js"></script>
+    <script src="components/firebase/firebase.js"></script>
+    <script src="components/angularfire/dist/angularfire.min.js"></script>
+</head>
+
+<body ng-app="ngPharm">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        </div>
+        <a class="btn btn-success" ui-sref="home">Home</a>
+        <a class="btn btn-success" ui-sref="invoice">Invoice</a>
+        <a class="btn btn-success" ui-sref="sales"> Sales</a>
+        <div ui-view></div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+    <script type="text/javascript" src="js/homeController.js"></script>
+    <script type="text/javascript" src="js/invoicesController.js"></script>
+    <script type="text/javascript" src="js/invoiceController.js"></script>
+    <script type="text/javascript" src="js/salesController.js"></script>
+    <script type="text/javascript" src="js/routing.js"></script>
+</body>
+
 </html>

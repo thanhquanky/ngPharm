@@ -3,21 +3,31 @@
     "version": "0.0.1",
     "author": {
         "name": "Thanh Ky Quan",
-        "email" : "thanhquanky@gatech.edu"
+        "email": "thanhquanky@gatech.edu"
     },
     "collaborators": [
-            {
-                "name": "Duc Anh Tran",
-                "email": "dtran39@gatech.edu"
-            },
-            {
-                "name": "Thang Van Nguyen",
-                "email": "thang911pk@gmail.com"
-            }
-    ],
+        {
+            "name": "Duc Anh Tran",
+            "email": "dtran39@gatech.edu"
+    },
+        {
+            "name": "Thang Van Nguyen",
+            "email": "thang911pk@gmail.com"
+    }
+  ],
     "main": "server.js",
     "dependencies": {
         "body-parser": "^1.4.3",
-        "express": "^4.4.5"
+        "express": "^4.4.5",
+        "mariasql": "^0.1.22",
+        "mysql": "^2.6.1",
+        "node-mysql": "^0.1.12",
+        "sequelize": "^2.0.5"
+    },
+    "devDependencies": {
+        "gulp": "^3.8.11",
+        "gulp-concat": "^2.5.2",
+        "gulp-plumber": "^1.0.0",
+        "gulp-uglify": "^1.1.0"
     }
 }
