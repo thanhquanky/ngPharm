@@ -34,7 +34,7 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', '$l
 		$scope.newItemForm = {
 			open: function (size) {
 				var modalInstance = $modal.open({
-					templateUrl: 'myModalContent.html',
+					templateUrl: 'newItem.html',
 					controller: 'NewItemCtrl',
 					size: size,
 					resolve: {
