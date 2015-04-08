@@ -21,14 +21,7 @@
         "express": "^4.4.5",
         "mariasql": "^0.1.22",
         "mysql": "^2.6.1",
-        "node-mysql": "^0.1.12",
         "sequelize": "^2.0.5",
-        "gulp": "^3.8.11",
-        "gulp-concat": "^2.5.2",
-        "gulp-plumber": "^1.0.0",
-        "gulp-uglify": "^1.1.0"
-    },
-    "devDependencies": {
         "gulp": "^3.8.11",
         "gulp-concat": "^2.5.2",
         "gulp-plumber": "^1.0.0",

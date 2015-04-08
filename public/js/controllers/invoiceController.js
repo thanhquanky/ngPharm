@@ -1,10 +1,9 @@
 ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', 'Invoices',
     function ($scope, $stateParams, $modal, Invoices) {
-        $scope.vm = this;
 
-		vm.invoice = Invoices.get({invoiceId: $stateParams.invoiceId});
+		$scope.invoice = Invoices.get({invoiceId: $stateParams.invoiceId});
 
-		vm.gridOptions = {
+		$scope.gridOptions = {
 			showGridFooter: true,
 			enableFiltering: true,
 			columnDefs: [{
@@ -48,7 +47,7 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', 'In
 				});
 			}
 		};
-		vm.addNewItem = function (size) {
+		$scope.addNewItem = function (size) {
 			var modalInstance = $modal.open({
 				templateUrl: 'newItem.html',
 				controller: 'NewItemCtrl',
@@ -65,9 +64,6 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', 'In
 			}, function () {
 				$log.info('Modal dismissed at: ' + new Date());
 			});
-		};
-		vm.hasSelectedInvoice = function () {
-			return !angular.isUndefined(vm.invoice.number) && !angular.isNull(vm.invoice.number);
 		};
 }]);
 // Please note that $modalInstance represents a modal window (instance) dependency.

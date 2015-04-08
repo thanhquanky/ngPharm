@@ -1,6 +1,6 @@
-<div class="panel panel-primary" ng-show="vm.hasSelectedInvoice()">
+<div class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">Invoice: {{vm.invoice.name}}</h3>
+        <h3 class="panel-title">Invoice: {{invoice.name}}</h3>
     </div>
     <div class="panel-body">
         <div>
@@ -8,13 +8,13 @@
                 <div class="form-group">
                     <label for="company" class="col-md-2 control-label">Company</label>
                     <div class="col-md-10">
-                        <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company" ng-model="vm.invoice.Vendor.name">
+                        <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company" ng-model="invoice.Vendor.name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="invoiceNumber" class="col-md-2 control-label">Invoice Number</label>
                     <div class="col-md-10">
-                        <input type="text" class="form-control col-md-10" id="inputInvoiceNumber" placeholder="Invoice number" ng-model="vm.invoice.number" />
+                        <input type="text" class="form-control col-md-10" id="inputInvoiceNumber" placeholder="Invoice number" ng-model="invoice.number" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -29,21 +29,13 @@
                         <div class="col-md-10 col-md-offset-2">
                             <button type="reset" class="btn btn-default">Cancel</button>
                             <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="button" class="btn btn-default btn-lg" ng-click="vm.newItemForm.open()">
+                            <button type="button" class="btn btn-default btn-lg" ng-click="newItemForm.open()">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New item </button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-    </div>
-</div>
-<div class="panel panel-primary" ng-hide="!vm.hasSelectedInvoice()">
-    <div class="panel-heading">
-        <h3 class="panel-title">Invoice</h3>
-    </div>
-    <div class="panel-body">
-        <h3>Select invoice from the left panel</h3>
     </div>
 </div>
 <script type="text/ng-template" id="newItem.html">
