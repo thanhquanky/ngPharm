@@ -28,12 +28,24 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 
-var domesco = {
+var vendors = 
+[{
+        name: "CVS",
+        email: "info@cvs.com",
+        phone_number: "123-456-7890",
+        address: "adfadf"
+    }, {
+        name: "Walgreen",
+        email: "info@walgreen.com",
+        phone_number: "123-456-7890",
+        address: "abcdef"
+    },
+    {
     "name": "CÔNG TY CỔ PHẦN XNK Y TẾ DOMESCO",
     "address": "66 Quốc lộ 30 - P.Mỹ Phú - TP. Cao Lãnh - Tỉnh Đồng Tháp - Việt Nam",
     "telephone": "84673852278",
     "email": "domesco@domesco.com"
-};
+}];
 
 var dodacin = {
     "id": 1,
@@ -87,9 +99,9 @@ function syncTables() {
     });
 }
 
-function createVendor(vendor) {
+function createVendor(vendors) {
     console.log("Create vendor\n");
-    return db.Vendor.create(vendor);
+    return db.Vendor.bulkCreate(vendors);
 };
 
 function createInvoice(invoice) {
@@ -117,7 +129,7 @@ function createInvoiceItem(invoice_item) {
 }
 
 function populateData() {
-    return createVendor(domesco)
+    return createVendor(vendors)
         .then(function() {
             return createInvoice(invoice_one);
         })

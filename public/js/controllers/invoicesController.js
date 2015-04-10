@@ -1,4 +1,4 @@
-ngPharm.controller('InvoicesController', ['uiGridConstants', 'Invoices', '$scope', function(uiGridConstants, Invoices, $scope) {
+ngPharm.controller('InvoicesController', ['Invoices', '$scope', function(Invoices, $scope) {
     $scope.invoices = Invoices.query();
     console.log($scope.invoices);
 }]);

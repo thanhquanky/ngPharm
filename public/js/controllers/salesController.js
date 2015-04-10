@@ -27,7 +27,7 @@ ngPharm.controller('SalesController',
     }];
         var numOfColumns = Object.keys($scope.myData[0]).length;
         var columnWidthStr = (100 / numOfColumns) + "%";
-        console.log(columnWidthStr);
+        //console.log(columnWidthStr);
         $scope.gridOptions = {
         showGridFooter: true,
         showColumnFooter: true,
