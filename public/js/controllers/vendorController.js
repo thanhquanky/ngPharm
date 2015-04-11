@@ -1,4 +1,4 @@
-ngPharm.controller('VendorController', ['$scope', 'Vendors',function($scope, Vendors){
+ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($scope, $modal, Vendors){
 	//console.log("Print out vendor");
 	
 	$scope.myData = Vendors.query();
@@ -23,7 +23,7 @@ ngPharm.controller('VendorController', ['$scope', 'Vendors',function($scope, Ven
         	name: 'Telephone',
         	enableCellEdit: true,
         	enableCellEditOnFocus: true,
-        	field: 'phone_number',
+        	field: 'telephone',
         	footerCellTemplate: '<div></div>'
         }, {
         	name: 'Address',
@@ -33,4 +33,28 @@ ngPharm.controller('VendorController', ['$scope', 'Vendors',function($scope, Ven
         }],
 		data: $scope.myData
 	};
+    $scope.newVendorForm = {
+        open: function(size) {
+            var modalInstance = $modal.open({
+                templateUrl: 'newVendor.html',
+                controller: 'NewVendorCtrl',
+                size: size,
+                resolve: {
+                    items: function() {
+                        return $scope.vendor;
+                    }
+                }
+            });
+        }
+    };
 }]);
+ngPharm.controller('NewVendorCtrl', function ($scope, $modalInstance, items) {
+
+    $scope.ok = function () {
+        $modalInstance.close($scope.item);
+    };
+
+    $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+    };
+});

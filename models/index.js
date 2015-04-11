@@ -30,21 +30,20 @@ db.Sequelize = Sequelize;
 
 var vendors = 
 [{
-        name: "CVS",
-        email: "info@cvs.com",
-        phone_number: "123-456-7890",
-        address: "adfadf"
+        "name": "CVS",
+        "email": "info@cvs.com",
+        "telephone": "123-456-7890",
+        "address": "adfadf"
     }, {
-        name: "Walgreen",
-        email: "info@walgreen.com",
-        phone_number: "123-456-7890",
-        address: "abcdef"
-    },
-    {
-    "name": "CÔNG TY CỔ PHẦN XNK Y TẾ DOMESCO",
-    "address": "66 Quốc lộ 30 - P.Mỹ Phú - TP. Cao Lãnh - Tỉnh Đồng Tháp - Việt Nam",
-    "telephone": "84673852278",
-    "email": "domesco@domesco.com"
+        "name": "Walgreen",
+        "email": "info@walgreen.com",
+        "telephone": "123-456-7890",
+        "address": "abcdef"
+    }, {
+        "name": "CÔNG TY CỔ PHẦN XNK Y TẾ DOMESCO",
+        "address": "66 Quốc lộ 30 - P.Mỹ Phú - TP. Cao Lãnh - Tỉnh Đồng Tháp - Việt Nam",
+        "telephone": "84673852278",
+        "email": "domesco@domesco.com"
 }];
 
 var dodacin = {
