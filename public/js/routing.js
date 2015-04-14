@@ -28,7 +28,12 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
           url: "/sales",
           templateUrl: "partials/sales.html",
           controller: "SalesController"
-      });
+        })
+        .state('vendor', {
+           url: "/vendor",
+           templateUrl: "partials/vendor.html",
+           controller: "VendorController"
+        });
         // Don't strip trailing slashes from calculated URLs
     $resourceProvider.defaults.stripTrailingSlashes = false;
 });
