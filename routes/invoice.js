@@ -33,12 +33,14 @@ router.get('/', function(req, res) {
                     attributes: ["name"]
                 }]
             }).then(function(model) {
-                console.log(model);
                 res.json(model);
             })
             .catch(function(error) {
                 res.send(error);
             });
+    })
+    .post('/', function(req, res) {
+      //models.Invoice
     })
 
 module.exports = router;
