@@ -15,14 +15,14 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
             controller: "InvoicesController"
         })
         .state('invoice.item', {
-            url: "/:invoiceId",
+            url: "/{invoiceId:[0-9]+}",
             templateUrl: "partials/invoice.html",
             controller: "InvoiceController"
         })
         .state('invoice.create', {
             url: "/create",
-            templateUrl: "partials/invoice.html",
-            controller:  "InvoiceCreateController"
+            templateUrl: "partials/new_invoice.html",
+            controller:  "InvoiceCreateController as InvoiceCreateCtrl"
         })
         .state('sales', {
           url: "/sales",

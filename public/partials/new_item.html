@@ -1,0 +1,121 @@
+<form name="newItem" novalidate class="form-horizontal">
+    <div class="modal-header">
+        <h3 class="modal-title">Fill in information for new item</h3>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="drugName" class="col-lg-3">Drug Name:</label>
+
+            <div class="col-lg-9">
+                <input type="text" name="drugName" required class="form-control" ng-model="item.name">
+
+                <div ng-show="newItem.drugName.$dirty">
+                    <span style="color:red" ng-show="newItem.drugName.$error.required">Name is required.</span>
+                    <span style="color:red" ng-show="newItem.drugName.$invalid"> Name is invalid
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="unit" class="col-lg-3">Unit:</label>
+
+            <div class="col-lg-9">
+                <input type="text" name="unit" required class="form-control" ng-model="item.unit">
+
+                <div ng-show="newItem.unit.$dirty">
+                    <span style="color:red" ng-show="newItem.unit.$error.required">Unit is required.</span>
+            <span style="color:red" ng-show="&& newItem.unit.$invalid"> Unit is invalid
+            </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="quantity_number" class="col-lg-3">Quantity:</label>
+
+            <div class="col-lg-9">
+                <input type="number" name="quantity_number" required class="form-control" ng-model="item.quantity">
+
+                <div ng-show="newItem.quantity_number.$dirty">
+                    <span style="color:red"
+                          ng-show="newItem.quantity_number.$error.required">Quantity is required.</span>
+            <span style="color:red" ng-show="newItem.quantity_number.$invalid">
+                <span ng-show="newItem.quantity_number.$error.number">Invalid number.</span>
+            </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="manufacture_date" class="col-lg-3">Manufacture Date:</label>
+
+            <div class="col-lg-9">
+                <p class="input-group">
+                    <input type="text" class="form-control"
+                           datepicker-popup="{{NewItemCtrl.manufactureDatePicker.format}}"
+                           ng-model="NewItemCtrl.manufacture_date" is-open="NewItemCtrl.manufactureDatePicker.opened"
+                           datepicker-options="NewItemCtrl.manufactureDatePicker.dateOptions" name="manufacture_date"
+                           date-disabled="NewItemCtrl.manufactureDatePicker.disabled(date, mode)" ng-required="true"
+                           close-text="Close"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default"
+                                ng-click="NewItemCtrl.manufactureDatePicker.open($event)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </button>
+                    </span>
+                </p>
+                <div ng-show="newItem.manufacture_date.$dirty">
+                    <span style="color:red" ng-show="newItem.manufacture_date.$error.required">Date is required.</span>
+                    <span style="color:red" ng-show="newItem.manufacture_date.$invalid">
+                        <span ng-show="newItem.manufacture_date.$error.date">Invalid Date.</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="expiration_date" class="col-lg-3">Expiration Date:</label>
+
+            <div class="col-lg-9">
+                <p class="input-group">
+                    <input type="text" class="form-control"
+                           datepicker-popup="{{NewItemCtrl.expirationDatePicker.format}}"
+                           ng-model="NewItemCtrl.expiration_date"
+                           is-open="NewItemCtrl.expirationDatePicker.opened"
+                           datepicker-options="NewItemCtrl.expirationDatePicker.dateOptions" name="expiration_date"
+                           date-disabled="NewItemCtrl.expirationDatePicker.disabled(date, mode)" ng-required="true"
+                           close-text="Close"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default"
+                                ng-click="NewItemCtrl.expirationDatePicker.open($event)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </button>
+                    </span>
+                </p>
+                <div ng-show="newItem.expiration_date.$dirty">
+                    <span style="color:red" ng-show="newItem.expiration_date.$error.required">Date is required.</span>
+                    <span style="color:red" ng-show="NewItemCtrl.expiration_date.$invalid">
+                        <span ng-show="newItem.expiration_date.$error.date">Invalid Date.</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="price" class="col-lg-3">Price:</label>
+
+            <div class="col-lg-9">
+                <input type="number" name="price" required class="form-control" ng-model="item.price">
+
+                <div ng-show="newItem.price.$dirty">
+                    <span style="color:red" ng-show="newItem.price.$error.required">Price is required.</span>
+                    <span style="color:red" ng-show="newItem.price.$invalid">
+                        <span ng-show="newItem.price.$error.number">Invalid number.</span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button ng-disabled="newItem.$invalid" class="btn btn-primary" ng-click="NewItemCtrl.ok()">OK</button>
+        <button class="btn btn-warning" ng-click="NewItemCtrl.cancel()">Cancel</button>
+    </div>
+</form>
+
