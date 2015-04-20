@@ -49,13 +49,16 @@ var vendors =
 var dodacin = {
     "id": 1,
     "name": "Dodacin",
-    "use": "Antibiotic"
+    "use": "Antibiotic",
+    "manufacturer": "adfadf"
 }
 
 var claritin = {
     "id": 2,
     "name": "Claritin",
-    "use": "Anti-histamine"
+    "use": "Anti-histamine",
+    "manufacturer": "adfadf"
+
 }
 
 var dodacin_item = {

@@ -1,7 +1,7 @@
 ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($scope, $modal, Vendors){
 	//console.log("Print out vendor");
 	
-	$scope.myData = Vendors.query();
+	$scope.myData = Vendors.query(); // query is from ngResource.
 	$scope.gridOptions = {
 		showGridFooter: true,
         showColumnFooter: true,
@@ -48,10 +48,13 @@ ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($
         }
     };
 }]);
-ngPharm.controller('NewVendorCtrl', function ($scope, $modalInstance, items) {
-
+ngPharm.controller('NewVendorCtrl',  function ($scope, $modalInstance, items, Vendors) {
+    
     $scope.ok = function () {
-        $modalInstance.close($scope.item);
+        //console.log(Vendors.query());
+        //console.log($scope.vendor.email);
+        Vendors.save($scope.vendor);
+        $modalInstance.close($scope.items);        
     };
 
     $scope.cancel = function () {

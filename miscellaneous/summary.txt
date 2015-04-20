@@ -1,0 +1,70 @@
+Only allowed invoice
+
+I. Mockup Invoice:
+	Company 				Invoice No
+
+
+	Name	Unit	Quantity Exp.Date Price 
+
+																Subtotal
+																Tax
+																total
+
+
+Add item: open a modal, fill name, type, exp date(with calendar), ... 
+	Try to refactor script tag to JS file
+Add invoice
+
+new Invoices
+new vendors
+
+
+
+I. Overview
+	- Is a pharmacy management system for managing sales of drug and medications in a small/medium pharmacy.
+	- The staff of the pharmacy either handles import and sales procedure using ngPharm and is responsible for maintaining the correct status of the drugs online 
+
+II. User:
+	- 2 kinds of user: Staff or customer.
+	1. Log in
+	- Provide error message if for invalid lo tg in credential
+	2. New User Registration
+		- Name (first and last), DOB, Email, Address, Gender, staff or not, 
+III. Drug:
+	- Name, purpose, uses, side effect/warning
+IV. Drug unit:
+	- Has drug name, quantity left and expiration date 
+V. Invoice:
+	- When imported from a vendor, a drug will have an invoice with vendor's info and list of products' info (including name, expiration date, quantity). Same Drug in the invoice with different expiration date will be counted as different units
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
