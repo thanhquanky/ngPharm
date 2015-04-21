@@ -11,7 +11,7 @@
           </div>
           <div class="panel-body" style="margin-top: 10px">
               <div class="list-group">
-                  <a data-ng-repeat="invoice in invoices" ui-sref="invoice.item({invoiceId: invoice.id})" class="list-group-item">
+                  <a data-ng-repeat="invoice in InvoicesCtrl.invoices" ui-sref="invoice.item({invoiceId: invoice.id})" class="list-group-item">
                       {{invoice.number}}
                   </a>
               </div>

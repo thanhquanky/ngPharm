@@ -1,0 +1,11 @@
+--2015-04-21 14:08:21--  https://fonts.gstatic.com/s/roboto/v15/NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2
+Resolving fonts.gstatic.com (fonts.gstatic.com)... 173.194.219.94, 2607:f8b0:4002:c03::5e
+Connecting to fonts.gstatic.com (fonts.gstatic.com)|173.194.219.94|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4896 (4.8K) [font/woff2]
+Saving to: ‘NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2’
+
+     0K ....                                                  100%  829K=0.006s
+
+2015-04-21 14:08:21 (829 KB/s) - ‘NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2’ saved [4896/4896]
+

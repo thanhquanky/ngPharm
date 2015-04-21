@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title">Invoice: {{invoice.name}}</h3>
+        <h3 class="panel-title">Invoice: {{InvoiceCtrl.invoice.number}}</h3>
     </div>
     <div class="panel-body">
         <div>
@@ -8,19 +8,19 @@
                 <div class="form-group">
                     <label for="company" class="col-md-2 control-label">Company</label>
                     <div class="col-md-10">
-                        <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company" ng-model="invoice.Vendor.name">
+                        <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company" ng-model="InvoiceCtrl.invoice.Vendor.name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="invoiceNumber" class="col-md-2 control-label">Invoice Number</label>
                     <div class="col-md-10">
-                        <input type="text" class="form-control col-md-10" id="inputInvoiceNumber" placeholder="Invoice number" ng-model="invoice.number" />
+                        <input type="text" class="form-control col-md-10" id="inputInvoiceNumber" placeholder="Invoice number" ng-model="InvoiceCtrl.invoice.number" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="items" class="col-md-2 control-label">Items</label>
                     <div class="col-md-10">
-                        <div id="invoice_items" ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav class="grid" flex></div>
+                        <div id="invoice_items" ui-grid="InvoiceCtrl.gridOptions" ui-grid-edit ui-grid-cellnav class="grid" flex></div>
                     </div>
                 </div>
 
@@ -29,7 +29,7 @@
                         <div class="col-md-10 col-md-offset-2">
                             <button type="reset" class="btn btn-default">Cancel</button>
                             <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="button" class="btn btn-default btn-lg" ng-click="newItemForm.open()">
+                            <button type="button" class="btn btn-default btn-lg" ng-click="InvoiceCtrl.newItemForm.open()">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New item </button>
                         </div>
                     </div>

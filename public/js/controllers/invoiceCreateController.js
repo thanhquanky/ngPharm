@@ -4,14 +4,24 @@
 
 (function() {
     angular.module('ngPharm')
-        .controller('InvoiceCreateController', ['$modal', 'Vendors', '$log', function($modal, Vendors, $log) {
+        .controller('InvoiceCreateController', ['$modal', 'Vendors', 'Drugs', 'Units', '$log', function($modal, Vendors, Drugs, Units, $log) {
             var that = this;
+
+            // Query the vendor list
             this.vendors = Vendors.query();
 
+            // Query the drugs list
+            this.drugs = Drugs.query();
+
+            // Query the units list
+            this.units = Units.query();
+
+            // Initialize invoice
             this.invoice = {
                 items: []
             };
 
+            //ng-grid configuration for invoice items table
             this.gridOptions = {
                 showGridFooter: true,
                 enableFiltering: true,
@@ -49,8 +59,12 @@
                         controller: 'NewInvoiceItemController as NewInvoiceItemCtrl',
                         size: size,
                         resolve: {
-                            items: function () {
-                                return this.items;
+                            // drugs list for typeahead
+                            drugs: function () {
+                                return that.drugs;
+                            },
+                            units: function() {
+                                return that.units;
                             }
                         }
                     });

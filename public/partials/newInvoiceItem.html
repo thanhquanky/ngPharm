@@ -7,7 +7,9 @@
             <label for="drugName" class="col-lg-3">Drug Name:</label>
 
             <div class="col-lg-9">
-                <input type="text" name="drugName" required class="form-control" ng-model="NewInvoiceItemCtrl.invoiceItem.Drug.name">
+                <input type="text" name="drugName" required class="form-control"
+                       ng-model="NewInvoiceItemCtrl.invoiceItem.Drug"
+                        typeahead="drug as drug.name for drug in NewInvoiceItemCtrl.drugs | limitTo: 8 | filter:{'name':$viewValue}">
 
                 <div ng-show="newItem.drugName.$dirty">
                     <span style="color:red" ng-show="newItem.drugName.$error.required">Name is required.</span>
@@ -20,7 +22,9 @@
             <label for="unit" class="col-lg-3">Unit:</label>
 
             <div class="col-lg-9">
-                <input type="text" name="unit" required class="form-control" ng-model="NewInvoiceItemCtrl.invoiceItem.Unit.name">
+                <input type="text" name="unit" required class="form-control"
+                       ng-model="NewInvoiceItemCtrl.invoiceItem.Unit.name"
+                        typeahead="unit as unit.name for unit in NewInvoiceItemCtrl.units | limitTo: 8 | filter: {'name' : $viewValue}">
 
                 <div ng-show="newItem.unit.$dirty">
                     <span style="color:red" ng-show="newItem.unit.$error.required">Unit is required.</span>

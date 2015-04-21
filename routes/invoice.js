@@ -15,6 +15,7 @@ router.get('/', function(req, res) {
     })
     .get('/:invoiceId', function(req, res) {
         models.Invoice.findOne({
+                attributes: ["id", "number", "createdAt", "orderDate", "updatedAt"],
                 where: {
                     id: req.params.invoiceId
                 },
@@ -30,7 +31,7 @@ router.get('/', function(req, res) {
                     }]
                 }, {
                     model: models.Vendor,
-                    attributes: ["name"]
+                    attributes: ["id", "name"]
                 }]
             }).then(function(model) {
                 res.json(model);

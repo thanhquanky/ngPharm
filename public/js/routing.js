@@ -12,12 +12,12 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
         .state('invoice', {
             url: "/invoice",
             templateUrl: "partials/invoices.html",
-            controller: "InvoicesController"
+            controller: "InvoicesController as InvoicesCtrl"
         })
         .state('invoice.item', {
             url: "/{invoiceId:[0-9]+}",
             templateUrl: "partials/invoice.html",
-            controller: "InvoiceController"
+            controller: "InvoiceController as InvoiceCtrl"
         })
         .state('invoice.create', {
             url: "/create",
@@ -32,7 +32,7 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
         .state('vendor', {
            url: "/vendor",
            templateUrl: "partials/vendor.html",
-           controller: "VendorController"
+           controller: "VendorController as VendorCtrl"
         }).state('drug', {
             url: "/drug",
             templateUrl: "partials/drug.html",

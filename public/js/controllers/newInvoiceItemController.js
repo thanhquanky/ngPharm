@@ -2,7 +2,11 @@
  * Created by thanhquanky on 4/21/15.
  */
 angular.module('ngPharm')
-    .controller('NewInvoiceItemController', function ($modalInstance, $scope) {
+    .controller('NewInvoiceItemController', function ($modalInstance, drugs, units) {
+
+        this.drugs = drugs;
+
+        this.units = units;
 
         this.ok = function () {
             $modalInstance.close(this.invoiceItem);

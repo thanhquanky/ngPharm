@@ -1,4 +1,3 @@
-ngPharm.controller('InvoicesController', ['Invoices', '$scope', function(Invoices, $scope) {
-    $scope.invoices = Invoices.query();
-    console.log($scope.invoices);
+ngPharm.controller('InvoicesController', ['Invoices', function(Invoices) {
+    this.invoices = Invoices.query();
 }]);
