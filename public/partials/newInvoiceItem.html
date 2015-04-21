@@ -7,7 +7,7 @@
             <label for="drugName" class="col-lg-3">Drug Name:</label>
 
             <div class="col-lg-9">
-                <input type="text" name="drugName" required class="form-control" ng-model="item.name">
+                <input type="text" name="drugName" required class="form-control" ng-model="NewInvoiceItemCtrl.invoiceItem.Drug.name">
 
                 <div ng-show="newItem.drugName.$dirty">
                     <span style="color:red" ng-show="newItem.drugName.$error.required">Name is required.</span>
@@ -20,11 +20,11 @@
             <label for="unit" class="col-lg-3">Unit:</label>
 
             <div class="col-lg-9">
-                <input type="text" name="unit" required class="form-control" ng-model="item.unit">
+                <input type="text" name="unit" required class="form-control" ng-model="NewInvoiceItemCtrl.invoiceItem.Unit.name">
 
                 <div ng-show="newItem.unit.$dirty">
                     <span style="color:red" ng-show="newItem.unit.$error.required">Unit is required.</span>
-            <span style="color:red" ng-show="&& newItem.unit.$invalid"> Unit is invalid
+            <span style="color:red" ng-show="newItem.unit.$invalid"> Unit is invalid
             </span>
                 </div>
             </div>
@@ -33,7 +33,7 @@
             <label for="quantity_number" class="col-lg-3">Quantity:</label>
 
             <div class="col-lg-9">
-                <input type="number" name="quantity_number" required class="form-control" ng-model="item.quantity">
+                <input type="number" name="quantity_number" min="1" required class="form-control" ng-model="NewInvoiceItemCtrl.invoiceItem.quantity">
 
                 <div ng-show="newItem.quantity_number.$dirty">
                     <span style="color:red"
@@ -50,14 +50,14 @@
             <div class="col-lg-9">
                 <p class="input-group">
                     <input type="text" class="form-control"
-                           datepicker-popup="{{NewItemCtrl.manufactureDatePicker.format}}"
-                           ng-model="NewItemCtrl.manufacture_date" is-open="NewItemCtrl.manufactureDatePicker.opened"
-                           datepicker-options="NewItemCtrl.manufactureDatePicker.dateOptions" name="manufacture_date"
-                           date-disabled="NewItemCtrl.manufactureDatePicker.disabled(date, mode)" ng-required="true"
+                           datepicker-popup="{{NewInvoiceItemCtrl.manufactureDatePicker.format}}"
+                           ng-model="NewInvoiceItemCtrl.invoiceItem.manufactureDate" is-open="NewInvoiceItemCtrl.manufactureDatePicker.opened"
+                           datepicker-options="NewInvoiceItemCtrl.manufactureDatePicker.dateOptions" name="manufacture_date"
+                           date-disabled="NewInvoiceItemCtrl.manufactureDatePicker.disabled(date, mode)" ng-required="true"
                            close-text="Close"/>
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-default"
-                                ng-click="NewItemCtrl.manufactureDatePicker.open($event)">
+                                ng-click="NewInvoiceItemCtrl.manufactureDatePicker.open($event)">
                             <i class="glyphicon glyphicon-calendar"></i>
                         </button>
                     </span>
@@ -76,22 +76,22 @@
             <div class="col-lg-9">
                 <p class="input-group">
                     <input type="text" class="form-control"
-                           datepicker-popup="{{NewItemCtrl.expirationDatePicker.format}}"
-                           ng-model="NewItemCtrl.expiration_date"
-                           is-open="NewItemCtrl.expirationDatePicker.opened"
-                           datepicker-options="NewItemCtrl.expirationDatePicker.dateOptions" name="expiration_date"
-                           date-disabled="NewItemCtrl.expirationDatePicker.disabled(date, mode)" ng-required="true"
+                           datepicker-popup="{{NewInvoiceItemCtrl.expirationDatePicker.format}}"
+                           ng-model="NewInvoiceItemCtrl.invoiceItem.expirationDate"
+                           is-open="NewInvoiceItemCtrl.expirationDatePicker.opened"
+                           datepicker-options="NewInvoiceItemCtrl.expirationDatePicker.dateOptions" name="expiration_date"
+                           date-disabled="NewInvoiceItemCtrl.expirationDatePicker.disabled(date, mode)" ng-required="true"
                            close-text="Close"/>
                     <span class="input-group-btn">
                         <button type="button" class="btn btn-default"
-                                ng-click="NewItemCtrl.expirationDatePicker.open($event)">
+                                ng-click="NewInvoiceItemCtrl.expirationDatePicker.open($event)">
                             <i class="glyphicon glyphicon-calendar"></i>
                         </button>
                     </span>
                 </p>
                 <div ng-show="newItem.expiration_date.$dirty">
                     <span style="color:red" ng-show="newItem.expiration_date.$error.required">Date is required.</span>
-                    <span style="color:red" ng-show="NewItemCtrl.expiration_date.$invalid">
+                    <span style="color:red" ng-show="NewInvoiceItemCtrl.expirationDate.$invalid">
                         <span ng-show="newItem.expiration_date.$error.date">Invalid Date.</span>
                     </span>
                 </div>
@@ -101,7 +101,7 @@
             <label for="price" class="col-lg-3">Price:</label>
 
             <div class="col-lg-9">
-                <input type="number" name="price" required class="form-control" ng-model="item.price">
+                <input type="number" name="price" required class="form-control" ng-model="NewInvoiceItemCtrl.invoiceItem.price">
 
                 <div ng-show="newItem.price.$dirty">
                     <span style="color:red" ng-show="newItem.price.$error.required">Price is required.</span>
@@ -114,8 +114,8 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button ng-disabled="newItem.$invalid" class="btn btn-primary" ng-click="NewItemCtrl.ok()">OK</button>
-        <button class="btn btn-warning" ng-click="NewItemCtrl.cancel()">Cancel</button>
+        <button ng-disabled="newItem.$invalid" class="btn btn-primary" ng-click="NewInvoiceItemCtrl.ok()">OK</button>
+        <button class="btn btn-warning" ng-click="NewInvoiceItemCtrl.cancel()">Cancel</button>
     </div>
 </form>
 

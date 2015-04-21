@@ -44,7 +44,7 @@ ngPharm.controller('DrugController', ['$scope', 'Drugs','$modal', function($scop
         }
     };
 }]);
-ngPharm.controller('NewDrugCtrl', ['$scope','$modalInstance','items', 'Drugs', function($scope, $modalInstance, items, Drugs){
+ngPharm.controller('NewDrugCtrl', ['$scope','$modalInstance', function($scope, $modalInstance){
     $scope.ok = function(){
         //console.log($scope.drug);
         $modalInstance.close($scope.drug);
