@@ -9,11 +9,17 @@ router
                 res.json(models);
             })
             .catch(function(error) {
-                res.send(error);
+                res.send(500, error);
             });
     })
     .post('/', function(req, res){
-        models.Drug.create(req.body);
+        models.Drug.create(req.body)
+            .then(function(drug) {
+                res.json(drug);
+            })
+            .catch(function(err) {
+                res.send(500, err);
+            })
     })
 
 module.exports = router;
