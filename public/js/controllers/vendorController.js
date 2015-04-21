@@ -45,6 +45,9 @@ ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($
                     }
                 }
             });
+            modalInstance.result.then(function(vendor, header) {
+                $scope.myData.push(vendor);
+            });
         }
     };
 }]);
