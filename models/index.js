@@ -45,7 +45,13 @@ var vendors =
         "telephone": "84673852278",
         "email": "domesco@domesco.com"
 }];
-
+var manufacturers = [{
+    "id": 1,
+    "name": "Traphaco"
+}, {
+    "id": 2,
+    "name": "Domesco"
+}];
 var dodacin = {
     "id": 1,
     "name": "Dodacin",
@@ -129,7 +135,10 @@ function createInvoiceItem(invoice_item) {
 
     return db.InvoiceItem.create(invoice_item);
 }
-
+function createManufacturer(manufacturers) {
+    console.log("Manufacturers created. \n");
+    return db.Manufacturer.bulkCreate(manufacturers);
+}
 function populateData() {
     return createVendor(vendors)
         .then(function() {
@@ -149,6 +158,9 @@ function populateData() {
         })
         .then(function() {
             return createInvoiceItem(claritin_item);
+        })
+        .then(function(){
+            return createManufacturer(manufacturers);
         });
 }
 
