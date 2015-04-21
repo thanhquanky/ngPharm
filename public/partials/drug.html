@@ -1,28 +1,3 @@
 <h1>Drug</h1>
-<div id="drug" ui-grid="gridOptions" ui-grid-edit ui-grid-cellnav class="grid" flex></div>
-<button class="btn btn-success" ng-click="newDrugForm.open()">Add more drug</button>
-<div><script type="text/ng-template" id="newDrug.html">
-    <div class="modal-header">Add new Drug</div>
-    <div class="modal-body"><form name="newDrug" novalidate>
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" name="name" required class="form-control" ng-model="drug.name">
-            <span style="color:red" ng-show="newDrug.name.$error.required">Name is required</span>
-        </div>
-        <div class="form-group">
-            <label for="use">Use</label>
-            <input type="text" name="use" required class="form-control" ng-model="drug.use">
-            <span style="color:red" ng-show="newDrug.use.$error.required">Use is required</span>
-        </div>
-        <div class="form-group">
-            <!-- TODO Typeahead for manufacturer -->
-            <label for="manufacturer">Manufacturer</label>
-            <input type="text" name="manufacturer" required class="form-control" ng-model="drug.manufacturer">
-            <span style="color:red" ng-show="newDrug.manufacturer.$error.required">is required</span>
-        </div>
-    </form></div>
-    <div class="modal-footer">
-        <button ng-disabled="newDrug.$invalid" class="btn btn-success" ng-click=ok()>OK</button>
-        <button class="btn btn-warning" ng-click=cancel()>Cancel</button>
-    </div>
-    </script></div>
+<div id="drug" ui-grid="DrugCtrl.gridOptions" ui-grid-edit ui-grid-cellnav class="grid" flex></div>
+<button class="btn btn-success" ng-click="DrugCtrl.newDrugForm.open()">Add more drug</button>
