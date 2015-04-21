@@ -45,8 +45,11 @@ ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($
                     }
                 }
             });
-            modalInstance.result.then(function(vendor, header) {
-                $scope.myData.push(vendor);
+            modalInstance.result.then(function(vendor) {
+                var newVendor = new Vendors(vendor);
+                newVendor.$save(function(addedVendor, headers) {
+                    $scope.myData.push(addedVendor);
+                });
             });
         }
     };
@@ -54,10 +57,7 @@ ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($
 ngPharm.controller('NewVendorCtrl',  function ($scope, $modalInstance, items, Vendors) {
     
     $scope.ok = function () {
-        //console.log(Vendors.query());
-        //console.log($scope.vendor.email);
-        Vendors.save($scope.vendor);
-        $modalInstance.close($scope.items);        
+        $modalInstance.close($scope.vendor);
     };
 
     $scope.cancel = function () {
