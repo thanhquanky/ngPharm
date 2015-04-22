@@ -11,7 +11,7 @@
                     <div class="col-md-10">
                         <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company"
                                ng-model="InvoiceCreateCtrl.invoice.vendor"
-                               typeahead="vendor.name for vendor in InvoiceCreateCtrl.vendors | limitTo:8"
+                               typeahead="vendor as vendor.name for vendor in InvoiceCreateCtrl.vendors | limitTo:8 | filter:{'name':$viewValue}"
                                class="form-control"/>
                     </div>
                 </div>

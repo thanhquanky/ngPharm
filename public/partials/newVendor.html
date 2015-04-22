@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <h3 class="modal-title">Adding a new vendor to the list</h3>
+</div>
+<div class="modal-body"><form name="newVendor" novalidate>
+    <div class="form-group">
+        <label for="name">Vendor Name:</label>
+        <input type="text" name="name" required class="form-control" ng-model="NewVendorCtrl.vendor.name">
+	        <span style="color:red" ng-show="newVendor.name.$dirty && newVendor.name.$invalid"> 
+                <span ng-show="newVendor.name.$error.required">Name is required.</span>
+            </span>
+    </div>
+    <div class="form-group">
+        <label for="email">Vendor Email</label>
+        <input type="email" name="email" required class="form-control" ng-model="NewVendorCtrl.vendor.email">
+			<span style="color:red" ng-show="newVendor.email.$dirty && newVendor.email.$invalid">	
+                <span style="color:red" ng-show="newVendor.email.$error.required"> Email address is required</span>
+				<span ng-show="newVendor.email.$error.email"> Invalid Email address</span>
+			</span>
+    </div>
+    <div class="form-group">
+        <label for="telephone">Vendor Phone Number</label>
+        <input type="text" name="telephone" required class="form-control" ng-model="NewVendorCtrl.vendor.telephone">
+	        <span style="color:red" ng-show="newVendor.telephone.$dirty && newVendor.telephone.$invalid">
+                <span ng-show="newVendor.telephone.$error.required" style="color:red"> Phone number is required</span>
+	        </span>
+    </div>
+    <div class="form-group">
+        <label for="address">Vendor Address</label>
+        <input type="text" name="address" required class="form-control" ng-model="NewVendorCtrl.vendor.address">
+	        <span style="color:red" ng-show="newVendor.address.$dirty && newVendor.address.$invalid">
+                <span ng-show="newVendor.address.$error.required" style="color:red"> Address is required</span>			
+            </span>
+    </div>
+</form></div>
+<div class="modal-footer">
+    <button ng-disabled="newVendor.$invalid" class="btn btn-primary" ng-click="NewVendorCtrl.ok()">OK</button>
+    <button class="btn btn-warning" ng-click="NewVendorCtrl.cancel()">Cancel</button>
+</div>

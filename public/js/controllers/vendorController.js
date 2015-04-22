@@ -1,8 +1,11 @@
 ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($scope, $modal, Vendors){
 	//console.log("Print out vendor");
-	
-	$scope.myData = Vendors.query(); // query is from ngResource.
-	$scope.gridOptions = {
+	var that = this;
+	this.vendors = Vendors.query({}, function(vendors) {
+        that.gridOptions.data = vendors;
+    }); // query is from ngResource.
+
+	this.gridOptions = {
 		showGridFooter: true,
         showColumnFooter: true,
         enableFiltering: true,
@@ -31,13 +34,13 @@ ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($
         	enableCellEditOnFocus: true,
         	field: 'address'
         }],
-		data: $scope.myData
+		data: []
 	};
-    $scope.newVendorForm = {
+    this.newVendorForm = {
         open: function(size) {
             var modalInstance = $modal.open({
-                templateUrl: 'newVendor.html',
-                controller: 'NewVendorCtrl',
+                templateUrl: 'partials/newVendor.html',
+                controller: 'NewVendorController as NewVendorCtrl',
                 size: size,
                 resolve: {
                     items: function() {
@@ -48,19 +51,9 @@ ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($
             modalInstance.result.then(function(vendor) {
                 var newVendor = new Vendors(vendor);
                 newVendor.$save(function(addedVendor, headers) {
-                    $scope.myData.push(addedVendor);
+                    that.vendors.push(addedVendor);
                 });
             });
         }
     };
 }]);
-ngPharm.controller('NewVendorCtrl',  function ($scope, $modalInstance, items, Vendors) {
-    
-    $scope.ok = function () {
-        $modalInstance.close($scope.vendor);
-    };
-
-    $scope.cancel = function () {
-        $modalInstance.dismiss('cancel');
-    };
-});
