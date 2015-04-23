@@ -27,6 +27,14 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+var currencies = 
+[{
+    "name": "USD"
+}, {
+    "name": "VND"
+}, {
+    "name": "GBP"
+}]
 
 var vendors = 
 [{
@@ -56,38 +64,43 @@ var dodacin = {
     "id": 1,
     "name": "Dodacin",
     "use": "Antibiotic",
-    "manufacturer": "adfadf"
+    "manufacturer": 1
 }
 
 var claritin = {
     "id": 2,
     "name": "Claritin",
     "use": "Anti-histamine",
-    "manufacturer": "adfadf"
-
+    "manufacturer": 1,
+    "salesPrice": 12,
 }
 
 var dodacin_item = {
-    "InvoiceId": 1,
-    "DrugId": 1,
+    "invoiceNo": 1,
+    "drug": 1,
     "quantity": 1,
-    "UnitId": 1,
+    "unit": 1,
     "manufactureDate": new Date("2015/01/01"),
     "expirationDate": new Date("2017/01/01"),
     "price": 3.5
 }
 
 var claritin_item = {
-    "InvoiceId": 1,
-    "DrugId": 2,
+    "invoiceNo": 1,
+    "drug": 2,
     "quantity": 5,
-    "UnitId": 1,
+    "unit": 1,
     "manufactureDate": new Date("2015/01/01"),
     "expirationDate": new Date("2017/02/01"),
     "price": 7.5
 }
 
-
+var itemPrice1 = {
+    "drug": 1,
+    "unit": 1,
+    "currency": 1,
+    price: 10.5
+}
 var box = {
     "id": 1,
     "name": "Box"
@@ -96,7 +109,7 @@ var box = {
 var invoice_one = {
     "id": 1,
     "orderDate": new Date(),
-    "VendorId": 1,
+    "vendor": 1,
     "number": "HD001"
 }
 
@@ -129,15 +142,23 @@ function createDrug(drug) {
 
     return db.Drug.create(drug);
 }
-
 function createInvoiceItem(invoice_item) {
     console.log("Create invoice item\n");
 
     return db.InvoiceItem.create(invoice_item);
 }
+function createCurrency(currencies) {
+    console.log("Currency created \n");
+    return db.Currency.bulkCreate(currencies);
+}
+
 function createManufacturer(manufacturers) {
     console.log("Manufacturers created. \n");
     return db.Manufacturer.bulkCreate(manufacturers);
+}
+function createItemPrice(itemPrice){
+    console.log('Item price created');
+    return db.ItemPrice.create(itemPrice);
 }
 function populateData() {
     return createVendor(vendors)
@@ -146,6 +167,9 @@ function populateData() {
         })
         .then(function() {
             return createUnit(box);
+        })
+        .then(function(){
+            return createManufacturer(manufacturers);
         })
         .then(function() {
             return createDrug(dodacin);
@@ -160,7 +184,10 @@ function populateData() {
             return createInvoiceItem(claritin_item);
         })
         .then(function(){
-            return createManufacturer(manufacturers);
+            return createCurrency(currencies);
+        })
+        .then(function(){
+            return createItemPrice(itemPrice1);
         });
 }
 

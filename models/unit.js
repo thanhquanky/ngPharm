@@ -9,11 +9,11 @@ module.exports = function(sequelizeInstance, DataTypes) {
         },
         "name": {
             type: DataTypes.STRING,
+            unique: true
         }
     }, {
         classMethods: {
             associate: function(models) {
-                Unit.hasMany(models.InvoiceItem);
             }
         },
         freezeTableName: true // Model tableName will be the same as the model name

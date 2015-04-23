@@ -13,13 +13,15 @@ module.exports = function(sequelizeInstance, DataTypes) {
         "use": {
             type: DataTypes.STRING,
             allowNull: true
-        }, 
-        "manufacturer": {
-            type: DataTypes.STRING,
         }
-    }, {
+    },  {
+        classMethods: {
+            associate: function(models) {            
+                Drug.belongsTo(models.Manufacturer, {foreignKey: 'manufacturer'});
+    
+            }
+        },
         freezeTableName: true // Model tableName will be the same as the model name
     });
-
     return Drug;
 }

@@ -17,9 +17,11 @@ module.exports = function(sequelizeInstance, DataTypes) {
     }, {
         classMethods: {
             associate: function(models) {
-                InvoiceItem.belongsTo(models.Invoice);
-                InvoiceItem.belongsTo(models.Drug);
-                InvoiceItem.belongsTo(models.Unit);
+                InvoiceItem.belongsTo(models.Invoice, {foreignKey: 'invoiceNo'});
+                InvoiceItem.belongsTo(models.Drug, {foreignKey: 'drug'});
+                InvoiceItem.belongsTo(models.Unit, {foreignKey: 'unit'});
+                /*
+                */
             }
         },
         freezeTableName: true // Model tableName will be the same as the model name

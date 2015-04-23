@@ -20,11 +20,6 @@ module.exports = function(sequelizeInstance, DataTypes) {
             type: DataTypes.STRING
         }
     }, {
-        classMethods: {
-            associate: function(models) {
-                Vendor.hasMany(models.Invoice);
-            }
-        },
         freezeTableName: true // Model tableName will be the same as the model name
     });
     return Vendor;

@@ -1,5 +1,4 @@
 var Sequelize = require('sequelize');
-
 module.exports = function(sequelizeInstance) {
     var Invoice = sequelizeInstance.define('Invoice', {
         "id": {
@@ -16,8 +15,7 @@ module.exports = function(sequelizeInstance) {
     }, {
         classMethods: {
             associate: function(models) {
-                Invoice.hasMany(models.InvoiceItem);
-                Invoice.belongsTo(models.Vendor);
+                Invoice.belongsTo(models.Vendor, {foreignKey: 'vendor'});
             }
         },
         freezeTableName: true // Model tableName will be the same as the model name
