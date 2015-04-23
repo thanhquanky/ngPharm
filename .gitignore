@@ -1,3 +1,7 @@
 public/components/*
 node_modules/*
 .idea/*
+ngPharm.pem
+
+git filter-branch --force --index-filter
+git rm --cached --ignore-unmatch ngPharm.pem
