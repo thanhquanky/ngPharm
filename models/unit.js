@@ -14,6 +14,7 @@ module.exports = function(sequelizeInstance, DataTypes) {
     }, {
         classMethods: {
             associate: function(models) {
+                Unit.hasMany(models.InvoiceItem, {foreignKey: 'unit'});
             }
         },
         freezeTableName: true // Model tableName will be the same as the model name

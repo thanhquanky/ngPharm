@@ -9,7 +9,8 @@
             <div class="col-lg-9">
                 <input type="text" name="drugName" required class="form-control"
                        ng-model="NewInvoiceItemCtrl.invoiceItem.Drug"
-                        typeahead="drug as drug.name for drug in NewInvoiceItemCtrl.drugs | limitTo: 8 | filter:{'name':$viewValue}">
+                        typeahead="drug as drug.name for drug in NewInvoiceItemCtrl.drugs | limitTo: 8 | filter:{'name':$viewValue}"
+                        typeahead-on-select="NewInvoiceItemCtrl.selectDrug($item, $model, $label)">
 
                 <div ng-show="newItem.drugName.$dirty">
                     <span style="color:red" ng-show="newItem.drugName.$error.required">Name is required.</span>
@@ -23,7 +24,7 @@
 
             <div class="col-lg-9">
                 <input type="text" name="unit" required class="form-control"
-                       ng-model="NewInvoiceItemCtrl.invoiceItem.Unit.name"
+                       ng-model="NewInvoiceItemCtrl.invoiceItem.Unit"
                         typeahead="unit as unit.name for unit in NewInvoiceItemCtrl.units | limitTo: 8 | filter: {'name' : $viewValue}">
 
                 <div ng-show="newItem.unit.$dirty">

@@ -17,9 +17,9 @@ module.exports = function(sequelizeInstance, DataTypes) {
     }, {
         classMethods: {
             associate: function(models) {
-                InvoiceItem.belongsTo(models.Invoice, {foreignKey: 'invoiceNo'});
                 InvoiceItem.belongsTo(models.Drug, {foreignKey: 'drug'});
                 InvoiceItem.belongsTo(models.Unit, {foreignKey: 'unit'});
+                InvoiceItem.belongsTo(models.Invoice, {foreignKey: 'invoice'});
                 /*
                 */
             }

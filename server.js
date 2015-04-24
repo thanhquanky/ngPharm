@@ -6,7 +6,7 @@ var app = express();
 var router = express.Router();
 
 app.use('/', express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
+app.use(bodyParser());
 app.use(bodyParser.urlencoded({
     extended: true
 }));

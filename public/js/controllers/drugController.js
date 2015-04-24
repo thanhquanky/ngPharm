@@ -3,7 +3,7 @@ ngPharm.controller('DrugController', ['$scope', 'Drugs','Manufacturers','$modal'
     var that = this;
     this.manufacturers = Manufacturers.query();
     console.log(this.manufacturers);
-    this.myData = Drugs.query();
+    this.drugs = Drugs.query();
     this.gridOptions = {
         columnDefs: [{
             name: 'Name',
@@ -19,9 +19,9 @@ ngPharm.controller('DrugController', ['$scope', 'Drugs','Manufacturers','$modal'
             name: 'Manufacturer',
             enableCellEdit: true,
             enableCellEditOnFocus: true,
-            field: 'manufacturer',
+            field: 'manufacturer'
         }],
-        data: this.myData
+        data: this.drugs
     };
     this.newDrugForm = {
         open: function(size){
@@ -31,9 +31,8 @@ ngPharm.controller('DrugController', ['$scope', 'Drugs','Manufacturers','$modal'
                 controller: 'NewDrugController as NewDrugCtrl',
                 size: size,
                 resolve: {
-                    items: function(){
-                        console.log($scope.drug);
-                        return $scope.drug;
+                    drug: function() {
+                        return "";
                     },
                     manufacturers: function() {
                         return that.manufacturers;
@@ -42,21 +41,9 @@ ngPharm.controller('DrugController', ['$scope', 'Drugs','Manufacturers','$modal'
             });
 
             modalInstance.result.then(function(drug) {
-                var newDrug = new Drugs(drug);
-                newDrug.$save(function(u, headers) {
-                    that.myData.push(u);
-                })
+                that.drugs.push(drug);
             });
         }
     };
 }]);
 
-ngPharm.controller('NewDrugController', ['$scope','$modalInstance','items', 'manufacturers', 'Drugs', function($scope, $modalInstance, items, manufacturers, Drugs){
-    this.manufacturers = manufacturers;
-    this.ok = function(){
-        $modalInstance.close(this.drug);
-    };
-    this.cancel = function(){
-        $modalInstance.dismiss('cancel');
-    };
-}]);

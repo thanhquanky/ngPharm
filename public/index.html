@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="components/angular/angular-csp.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="components/angular-ui-grid/ui-grid.min.css" />
+    <link rel="stylesheet" href="components/angularjs-toaster/toaster.min.css"/>
     <link rel="stylesheet" href="css/style.css" />
 
     <script src="components/angular/angular.min.js"></script>
@@ -13,6 +14,8 @@
     <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="components/angular-ui-grid/ui-grid.min.js"></script>
     <script src="components/angular-resource/angular-resource.min.js"></script>
+    <script src="components/angular-animate/angular-animate.min.js"></script>
+    <script src="components/angularjs-toaster/toaster.min.js"></script>
 </head>
 
 <body ng-app="ngPharm">
@@ -21,10 +24,11 @@
         </div>
         <a class="btn btn-success" ui-sref="home">Home</a>
         <a class="btn btn-success" ui-sref="invoice">Invoice</a>
-        <a class="btn btn-success" ui-sref="sales"> Sales</a>
-        <a class="btn btn-success" ui-sref="vendor"> Vendor </a>
+        <a class="btn btn-success" ui-sref="sales">Sales</a>
+        <a class="btn btn-success" ui-sref="vendor">Vendor</a>
         <a class="btn btn-success" ui-sref="drug">Drug</a>
         <div ui-view></div>
+        <toaster-container></toaster-container>
     </div>
     <script type="text/javascript" src="js/services/services.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
@@ -36,8 +40,9 @@
     <script type="text/javascript" src="js/controllers/homeController.js"></script>
     <script type="text/javascript" src="js/controllers/invoicesController.js"></script>
     <script type="text/javascript" src="js/controllers/invoiceController.js"></script>
-    <script type="text/javascript" src="js/controllers/invoiceCreateController.js"></script>
+    <script type="text/javascript" src="js/controllers/newInvoiceController.js"></script>
     <script type="text/javascript" src="js/controllers/newInvoiceItemController.js"></script>
+    <script type="text/javascript" src="js/controllers/newDrugController.js"></script>
     <script type="text/javascript" src="js/controllers/newVendorController.js"></script>
     <script type="text/javascript" src="js/controllers/salesController.js"></script>
     <script type="text/javascript" src="js/controllers/vendorController.js"></script>

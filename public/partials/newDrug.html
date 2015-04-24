@@ -18,8 +18,8 @@
         <!-- TODO Typeahead for manufacturer -->
         <label for="manufacturer">Manufacturer</label>
         <input type="text" name="manufacturer" required class="form-control" ng-model="NewDrugCtrl.drug.manufacturer"
-           typeahead="manufacturer.name for manufacturer in NewDrugCtrl.manufacturers"/>
-        <span style="color:red" ng-show="newDrug.manufacturer.$dirty && newDrug.name.$invalid"> 
+           typeahead="manufacturer as manufacturer.name for manufacturer in NewDrugCtrl.manufacturers | filter:{'name':$viewValue}"/>
+        <span style="color:red" ng-show="newDrug.manufacturer.$dirty && newDrug.name.$invalid">
             <span style="color:red" ng-show="newDrug.manufacturer.$error.required">is required</span>
         </span>
     </div>

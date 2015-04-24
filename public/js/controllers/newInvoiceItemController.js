@@ -2,14 +2,18 @@
  * Created by thanhquanky on 4/21/15.
  */
 angular.module('ngPharm')
-    .controller('NewInvoiceItemController', function ($modalInstance, drugs, units) {
-
-        this.drugs = drugs;
-
-        this.units = units;
+    .controller('NewInvoiceItemController', function ($scope, $modalInstance, Drugs, Units, $modal, $state) {
+        var that = this;
+        this.drugs = Drugs.query();
+        this.units = Units.query();
 
         this.ok = function () {
-            $modalInstance.close(this.invoiceItem);
+            if (typeof(that.invoiceItem.Drug) === "string") {
+                var modalInstance = that.newDrugForm.open();
+            }
+            else {
+                $modalInstance.close(this.invoiceItem);
+            }
         };
 
         this.cancel = function () {
@@ -53,6 +57,26 @@ angular.module('ngPharm')
 
             disabled: function(date, mode) {
                 return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+            }
+        };
+
+        this.newDrugForm = {
+            open: function(size){
+                console.log("Drug form opened");
+                var modalInstance = $modal.open({
+                    templateUrl: 'partials/newDrug.html',
+                    controller: 'NewDrugController as NewDrugCtrl',
+                    size: size,
+                    resolve: {
+                        drug: function() {
+                            return that.invoiceItem.Drug;
+                        }
+                    }
+                });
+
+                modalInstance.result.then(function(drug) {
+                    that.invoiceItem.Drug = drug;
+                });
             }
         };
 

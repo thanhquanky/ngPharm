@@ -27,7 +27,7 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-var currencies = 
+var currencies =
 [{
     "name": "USD"
 }, {
@@ -36,7 +36,7 @@ var currencies =
     "name": "GBP"
 }]
 
-var vendors = 
+var vendors =
 [{
         "name": "CVS",
         "email": "info@cvs.com",
@@ -76,7 +76,7 @@ var claritin = {
 }
 
 var dodacin_item = {
-    "invoiceNo": 1,
+    "invoice": 1,
     "drug": 1,
     "quantity": 1,
     "unit": 1,
@@ -86,7 +86,7 @@ var dodacin_item = {
 }
 
 var claritin_item = {
-    "invoiceNo": 1,
+    "invoice": 1,
     "drug": 2,
     "quantity": 5,
     "unit": 1,
@@ -108,7 +108,6 @@ var box = {
 
 var invoice_one = {
     "id": 1,
-    "orderDate": new Date(),
     "vendor": 1,
     "number": "HD001"
 }

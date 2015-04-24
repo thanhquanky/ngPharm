@@ -13,7 +13,9 @@ router
             });
     })
     .post('/', function(req, res){
-        models.Drug.create(req.body)
+        var newDrug = req.body;
+        newDrug.manufacturer = req.body.manufacturer.id;
+        models.Drug.create(newDrug)
             .then(function(drug) {
                 res.json(drug);
             })

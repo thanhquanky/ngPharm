@@ -7,15 +7,15 @@ module.exports = function(sequelizeInstance) {
             autoIncrement: true
         },
         "number": {
-            type: Sequelize.STRING,
-        },
-        "orderDate": {
-            type: Sequelize.DATE
+            type: Sequelize.STRING
         }
     }, {
         classMethods: {
             associate: function(models) {
-                Invoice.belongsTo(models.Vendor, {foreignKey: 'vendor'});
+                    Invoice.belongsTo(models.Vendor, {
+                        foreignKey: 'vendor'
+                    });
+                    Invoice.hasMany(models.InvoiceItem, {foreignKey: 'invoice'});
             }
         },
         freezeTableName: true // Model tableName will be the same as the model name

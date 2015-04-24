@@ -10,8 +10,8 @@
 
                     <div class="col-md-10">
                         <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company"
-                               ng-model="InvoiceCreateCtrl.invoice.vendor"
-                               typeahead="vendor as vendor.name for vendor in InvoiceCreateCtrl.vendors | limitTo:8 | filter:{'name':$viewValue}"
+                               ng-model="NewInvoiceCtrl.invoice.vendor"
+                               typeahead="vendor as vendor.name for vendor in NewInvoiceCtrl.vendors | limitTo:8 | filter:{'name':$viewValue}"
                                class="form-control"/>
                     </div>
                 </div>
@@ -20,14 +20,14 @@
 
                     <div class="col-md-10">
                         <input type="text" class="form-control col-md-10" id="inputInvoiceNumber"
-                               placeholder="Invoice number" ng-model="InvoiceCreateCtrl.invoice.number"/>
+                               placeholder="Invoice number" ng-model="NewInvoiceCtrl.invoice.number"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="items" class="col-md-2 control-label">Items</label>
 
                     <div class="col-md-10">
-                        <div id="invoice_items" ui-grid="InvoiceCreateCtrl.gridOptions" ui-grid-edit ui-grid-cellnav
+                        <div id="invoice_items" ui-grid="NewInvoiceCtrl.gridOptions" ui-grid-edit ui-grid-cellnav
                              class="grid" flex></div>
                     </div>
                 </div>
@@ -36,9 +36,9 @@
                     <div class="form-group">
                         <div class="col-md-10 col-md-offset-2">
                             <button type="reset" class="btn btn-default">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" ng-click="NewInvoiceCtrl.submit()">Submit</button>
                             <button type="button" class="btn btn-default btn-lg"
-                                    ng-click="InvoiceCreateCtrl.newItemForm.open()">
+                                    ng-click="NewInvoiceCtrl.newItemForm.open()">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New item
                             </button>
                         </div>

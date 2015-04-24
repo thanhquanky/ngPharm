@@ -19,10 +19,38 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
             templateUrl: "partials/invoice.html",
             controller: "InvoiceController as InvoiceCtrl"
         })
-        .state('invoice.create', {
-            url: "/create",
+        .state('invoice.newinvoice', {
+            parent: "invoice",
             templateUrl: "partials/newInvoice.html",
-            controller:  "InvoiceCreateController as InvoiceCreateCtrl"
+            controller:  "NewInvoiceController as NewInvoiceCtrl"
+        })
+        .state('invoice.newinvoice.newinvoiceitem', {
+            url: '/newInvoiceItem/:drug',
+            parent: 'invoice.newinvoice',
+            onEnter: ['$modal', '$state', function($modal, $state) {
+                console.log('Open new invoice item modal');
+                $modal.open({
+                    controller: 'NewInvoiceItemController as NewInvoiceItemCtrl',
+                    templateUrl: 'partials/newInvoiceItem.html'
+                })
+                .result.finally(function() {
+                    $state.go('^');
+                });
+            }]
+        })
+        .state('invoice.newinvoice.newinvoiceitem.newdrug', {
+            url: '/newDrug/:drug',
+            parent: 'invoice.newinvoice.newinvoiceitem',
+            onEnter: ['$modal', '$state', function($modal, $state) {
+                console.log('Open new drug modal');
+                var modalInstance = $modal.open({
+                    controller: 'NewDrugController as NewDrugCtrl',
+                    templateUrl: 'partials/newDrug.html'
+                })
+                modalInstance.result.then(function(drug) {
+                    modalInstance.close(drug);
+                });
+            }]
         })
         .state('sales', {
           url: "/sales",
