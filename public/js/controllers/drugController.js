@@ -5,6 +5,7 @@ ngPharm.controller('DrugController', ['$scope', 'Drugs','Manufacturers','$modal'
     console.log(this.manufacturers);
     this.drugs = Drugs.query();
     this.gridOptions = {
+        enableFiltering: true,
         columnDefs: [{
             name: 'Name',
             enableCellEdit: true,

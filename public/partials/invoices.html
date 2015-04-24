@@ -11,7 +11,13 @@
           </div>
           <div class="panel-body" style="margin-top: 10px">
               <div class="list-group">
-                  <a data-ng-repeat="invoice in InvoicesCtrl.invoices" ui-sref="invoice.item({invoiceId: invoice.id})" class="list-group-item">
+                  <div class="form-group">
+                      <label for="search">
+                      </label>
+                      <input name="search" type="text" class="input-md" ng-model="InvoicesCtrl.invoiceFilter" placeholder="Search"/>
+
+                  </div>
+                  <a data-ng-repeat="invoice in InvoicesCtrl.invoices | filter:InvoicesCtrl.invoiceFilter" ui-sref="invoice.item({invoiceId: invoice.id})" class="list-group-item">
                       {{invoice.Vendor.name}} - {{invoice.number}}
                   </a>
               </div>

@@ -6,20 +6,20 @@
         <div>
             <form class="form-horizontal">
                 <div class="form-group">
-                    <label for="company" class="col-md-1 control-label">Company</label>
-                    <div class="col-md-11">
+                    <label for="company" class="col-md-2 control-label">Company</label>
+                    <div class="col-md-10">
                         <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company" ng-model="InvoiceCtrl.invoice.Vendor.name">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="invoiceNumber" class="col-md-1 control-label">Invoice Number</label>
-                    <div class="col-md-11">
+                    <label for="invoiceNumber" class="col-md-2 control-label">Invoice Number</label>
+                    <div class="col-md-10">
                         <input type="text" class="form-control col-md-10" id="inputInvoiceNumber" placeholder="Invoice number" ng-model="InvoiceCtrl.invoice.number" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="items" class="col-md-1 control-label">Items</label>
-                    <div class="col-md-11">
+                    <label for="items" class="col-md-2 control-label">Items</label>
+                    <div class="col-md-10">
                         <div id="invoice_items" ui-grid="InvoiceCtrl.gridOptions" ui-grid-edit ui-grid-cellnav class="grid" flex></div>
                     </div>
                 </div>

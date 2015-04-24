@@ -23,6 +23,7 @@
                 };
 
                 this.submit = function() {
+                    that.newInvoiceForm.disabled = true;
                     var newInvoice = new Invoices(that.invoice);
                     newInvoice.$save(
                         function(addedInvoice) {
@@ -30,7 +31,8 @@
                             $state.go('invoice', {}, {reload: true});
                         },
                         function(err) {
-                            toaster.pop('error', 'Invoice', 'Cannot add invoice');
+                            toaster.pop('error', 'Invoice', 'Cannot add invoice. Please try again');
+                            that.newInvoiceForm.disabled = false;
                         });
                 }
 
@@ -65,7 +67,7 @@
                     data: this.invoice.items
                 };
 
-                this.newItemForm = {
+                this.newInvoiceForm = {
                     open: function (size) {
                         var modalInstance = $modal.open({
                             templateUrl: 'partials/newInvoiceItem.html',
@@ -78,7 +80,8 @@
                             $log.info('Modal dismissed at: ' + new Date ());
                         });
 
-                    }
+                    },
+                    disabled: false
                 };
             }
         ]);
