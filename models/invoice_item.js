@@ -19,7 +19,7 @@ module.exports = function(sequelizeInstance, DataTypes) {
             associate: function(models) {
                 InvoiceItem.belongsTo(models.Drug, {foreignKey: 'drug'});
                 InvoiceItem.belongsTo(models.Unit, {foreignKey: 'unit'});
-                InvoiceItem.belongsTo(models.Invoice, {foreignKey: 'invoice'});
+                InvoiceItem.belongsTo(models.Invoice, {foreignKey: 'invoice'})
                 /*
                 */
             }

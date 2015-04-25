@@ -26,7 +26,7 @@
                     that.newInvoiceForm.disabled = true;
                     var newInvoice = new Invoices(that.invoice);
                     newInvoice.$save(
-                        function(addedInvoice) {
+                        function() {
                             toaster.pop('success', 'Invoice', 'Invoice has been added');
                             $state.go('invoice', {}, {reload: true});
                         },

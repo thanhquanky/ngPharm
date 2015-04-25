@@ -73,7 +73,7 @@ router
                 console.log(items);
                 models.InvoiceItem.bulkCreate(items)
                     .then(function() {
-                        findAll()
+                        findOne(invoice.id)
                             .then(function(model) {
                                 res.json(model);
                             })

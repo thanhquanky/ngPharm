@@ -37,7 +37,7 @@ angular.module('ngPharm')
             format: this.dateFormats[0],
 
             disabled: function(date, mode) {
-                return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+                return false;
             }
         };
 
@@ -56,7 +56,7 @@ angular.module('ngPharm')
             format: this.dateFormats[0],
 
             disabled: function(date, mode) {
-                return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+                return false;
             }
         };
 
