@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h3 class="modal-title">Adding a new vendor to the list</h3>
+    <h3 class="modal-title">Add new vendor</h3>
 </div>
 <div class="modal-body"><form name="newVendor" novalidate>
     <div class="form-group">
@@ -33,6 +33,6 @@
     </div>
 </form></div>
 <div class="modal-footer">
-    <button ng-disabled="newVendor.$invalid" class="btn btn-primary" ng-click="NewVendorCtrl.ok()">OK</button>
-    <button class="btn btn-warning" ng-click="NewVendorCtrl.cancel()">Cancel</button>
+    <button ng-disabled="newVendor.$invalid" class="btn btn-primary" ng-click="NewVendorCtrl.newVendorForm.ok()" ng-disabled="NewVendorCtrl.newVendorForm.disabled">OK</button>
+    <button class="btn btn-warning" ng-click="NewVendorCtrl.newVendorForm.cancel()">Cancel</button>
 </div>

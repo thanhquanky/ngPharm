@@ -20,7 +20,7 @@ ngPharm.controller('DrugController', ['$scope', 'Drugs','Manufacturers','$modal'
             name: 'Manufacturer',
             enableCellEdit: true,
             enableCellEditOnFocus: true,
-            field: 'manufacturer'
+            field: 'Manufacturer.name'
         }],
         data: this.drugs
     };

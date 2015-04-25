@@ -4,7 +4,12 @@ var router = express.Router();
 
 router
     .get('/', function(req, res) {
-        models.Drug.findAll()
+        models.Drug.findAll({
+                include: {
+                    model: models.Manufacturer,
+                    attributes: ["name"]
+                }
+            })
             .then(function(models) {
                 res.json(models);
             })
