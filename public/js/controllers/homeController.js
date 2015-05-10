@@ -1,22 +1,20 @@
 ngPharm.controller('HomeController',
-    ['$scope', function($scope) {
-
+    [function() {
+        var that = this;
+        this.carousel = {
+            interval: 1000,
+            slides: [{
+              image: '../../images/claritin.jpg',
+              text: 'This is claritin, an Anti-histanmine'
+            }, {
+              image: '../../images/amoxicillin.jpg',
+              text: 'This is amoxicillin, an Anti-biotic'
+            }, {
+              image: '../../images/doracin.jpg',
+              text: 'This is claritin, an Anti-biotic'
+            }]
+        }
     }]);
-
-
-ngPharm.controller('CarouselCtrl', function($scope){
-  $scope.myInterval = 1000;
-  $scope.slides = [{
-    image: '../../images/claritin.jpg',
-    text: 'This is claritin, an Anti-histanmine'
-  }, {
-    image: '../../images/amoxicillin.jpg',
-    text: 'This is amoxicillin, an Anti-biotic'
-  }, {
-    image: '../../images/doracin.jpg',
-    text: 'This is claritin, an Anti-biotic'
-  }];
-});
 
 /*
 ngPharm.controller('CarouselCtrl', function ($scope) {

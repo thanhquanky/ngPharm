@@ -3,19 +3,18 @@
 
 
 
-<div ng-controller="CarouselCtrl">
-	<div>
-		<carousel interval="myInterval">
-			<slide ng-repeat = "slide in slides" active="slide.active">
-				<img ng-src="{{slide.image}}">
-				<div class="carousel-caption">
-					<h4>Number {{$index + 1}}</h4>
-					<p>{{slide.text}}</p>
-				</div>
-			</slide>
-		</carousel>
-	</div>
+<div>
+	<carousel interval="HomeCtrl.carousel.interval" disable-animation="true">
+		<slide ng-repeat = "slide in HomeCtrl.carousel.slides" active="slide.active">
+			<img ng-src="{{slide.image}}">
+			<div class="carousel-caption">
+				<h4>Number {{$index + 1}}</h4>
+				<p>{{slide.text}}</p>
+			</div>
+		</slide>
+	</carousel>
 </div>
+
 
 <!---
 	<div ng-controller="CarouselDemoCtrl">
