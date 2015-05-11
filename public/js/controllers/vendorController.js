@@ -1,11 +1,11 @@
 ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($scope, $modal, Vendors){
 	//console.log("Print out vendor");
-	var that = this;
-	this.vendors = Vendors.query({}, function(vendors) {
-        that.gridOptions.data = vendors;
+	var vm = this;
+	vm.vendors = Vendors.query({}, function(vendors) {
+		vm.gridOptions.data = vendors;
     }); // query is from ngResource.
 
-	this.gridOptions = {
+	vm.gridOptions = {
 		showGridFooter: true,
         showColumnFooter: true,
         enableFiltering: true,
@@ -36,23 +36,15 @@ ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($
         }],
 		data: []
 	};
-    this.newVendorForm = {
+	vm.newVendorForm = {
         open: function(size) {
             var modalInstance = $modal.open({
                 templateUrl: 'partials/newVendor.html',
                 controller: 'NewVendorController as NewVendorCtrl',
-                size: size,
-                resolve: {
-                    items: function() {
-                        return $scope.vendor;
-                    }
-                }
+                size: size
             });
             modalInstance.result.then(function(vendor) {
-                var newVendor = new Vendors(vendor);
-                newVendor.$save(function(addedVendor, headers) {
-                    that.vendors.push(addedVendor);
-                });
+                vm.vendors.push(vendor);
             });
         }
     };
