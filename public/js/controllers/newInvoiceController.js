@@ -19,8 +19,35 @@
 
                 // Initialize invoice
                 this.invoice = {
-                    items: []
+                    items: [],
+                    subtotal: 0,
+                    tax: 0,
+                    total: 0
                 };
+                this.taxPercentage = 0.05;
+
+                this.calculateSubtotal = function() {
+                    var s = 0;
+                    if (that.invoice.items.length > 0) {
+                        angular.forEach(that.invoice.items, function(invoiceItem) {
+                            s += invoiceItem.price * invoiceItem.quantity;
+                        });
+                    }
+                    that.invoice.subtotal = s;
+                    return s;
+                }
+
+                this.calculateTax = function() {
+                    var tax = this.invoice.subtotal * this.taxPercentage;
+                    this.invoice.tax = tax;
+                    return tax;
+                }
+
+                this.calculateTotal = function() {
+                    var total = this.invoice.subtotal + this.invoice.tax;
+                    this.invoice.total = total;
+                    return total;
+                }
 
                 //ng-grid configuration for invoice items table
                 this.gridOptions = {
@@ -60,6 +87,8 @@
                             controller: 'NewVendorController as NewVendorCtrl',
                             size: size
                         });
+
+                        // After returning from the modal
                         modalInstance.result.then(function (newVendor) {
                             that.invoice.Vendor = newVendor;
                         }, function () {
@@ -84,7 +113,7 @@
                     }
                 };
 
-                this.newInvoiceForm = {
+                this.newInvoiceItemForm = {
                     open: function (size) {
                         var modalInstance = $modal.open({
                             templateUrl: 'partials/newInvoiceItem.html',
@@ -93,13 +122,15 @@
                         });
                         modalInstance.result.then(function (newInvoiceItem) {
                             that.invoice.items.push(newInvoiceItem);
+                            that.calculateSubtotal();
                         }, function () {
                             $log.info('Modal dismissed at: ' + new Date());
                         });
 
-                    },
-                    disabled: false,
+                    }
+                };
 
+                this.newInvoiceForm = {
                     submit: function () {
                         that.newInvoiceForm.disabled = true;
                         var newInvoice = new Invoices(that.invoice);
@@ -113,8 +144,10 @@
                                 that.newInvoiceForm.disabled = false;
                             });
 
-                    }
-                };
+                    },
+
+                    disabled: false
+                }
             }
         ])
     })();

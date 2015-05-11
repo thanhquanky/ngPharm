@@ -3,8 +3,9 @@
       "username": "root",
       "password": "hackathon",
       "database": "ngPharm",
-      "host": "52.5.44.90",
-      "dialect": "mariadb"
+      "host": "localhost",
+      "dialect": "sqlite",
+      "storage": "database.sqlite"
   },
   "test": {
     "username": "root",

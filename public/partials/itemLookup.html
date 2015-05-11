@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Price lookup</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+            <form class="form-horizontal" name="newInvoice">
+                <div class="form-group">
+                    <label for="invoiceVendor" class="col-md-2 control-label">Drug</label>
+
+                    <div class="col-md-10">
+                            <input type="text" class="form-control" id="drugName" name="drugName" placeholder="Drug name"
+                               ng-model="ItemLookupCtrl.keyword"
+                               typeahead="item.name as item.name for item in ItemLookupCtrl.drugs | filter:{'name':$viewValue}"
+                               class="form-control"
+                               required ng-enter="ItemLookupCtrl.findPrice(ItemLookupCtrl.keyword)"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="items" class="col-md-2 control-label">Items</label>
+
+                    <div class="col-md-10">
+                        <div id="invoice_items" ui-grid="ItemLookupCtrl.gridOptions" ui-grid-edit ui-grid-cellnav
+                             class="grid" flex></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -23,11 +23,13 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', 'In
             {
                 name: "Manufacture Date",
                 field: 'manufactureDate',
-                cellFilter: 'date'
+                cellFilter: 'date:"yyyy-MM-dd"',
+                type: 'date'
             }, {
                 name: "Expiration Date",
                 field: 'expirationDate',
-                cellFilter: 'date'
+                type: 'date',
+                cellFilter: 'date:"yyyy-MM-dd"'
             },{
                 name: "Unit",
                 field: 'Unit.name',

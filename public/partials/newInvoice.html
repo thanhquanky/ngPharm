@@ -4,15 +4,21 @@
     </div>
     <div class="panel-body">
         <div>
-            <form class="form-horizontal">
+            <form class="form-horizontal" name="newInvoice">
                 <div class="form-group">
-                    <label for="company" class="col-md-2 control-label">Company</label>
+                    <label for="invoiceVendor" class="col-md-2 control-label">Vendor</label>
 
                     <div class="col-md-10">
-                        <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company"
+                            <input type="text" class="form-control" id="invoiceVendor" name="invoiceVendor" placeholder="Vendor"
                                ng-model="NewInvoiceCtrl.invoice.vendor"
                                typeahead="vendor as vendor.name for vendor in NewInvoiceCtrl.vendors | limitTo:8 | filter:{'name':$viewValue}"
-                               class="form-control"/>
+                               class="form-control"
+                               required/>
+                           <div ng-show="newInvoice.invoiceVendor.$dirty">
+                               <span style="color:red" ng-show="newInvoice.invoiceVendor.$error.required">Vendor is required.</span>
+                               <span style="color:red" ng-show="newInvoice.invoiceVendor.$invalid">Vendor is invalid
+                               </span>
+                           </div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -20,7 +26,13 @@
 
                     <div class="col-md-10">
                         <input type="text" class="form-control col-md-10" id="inputInvoiceNumber"
-                               placeholder="Invoice number" ng-model="NewInvoiceCtrl.invoice.number"/>
+                               placeholder="Invoice number" ng-model="NewInvoiceCtrl.invoice.number" name="invoiceNumber"
+                               required/>
+                       <div ng-show="newInvoice.invoiceNumber.$dirty">
+                           <span style="color:red" ng-show="newInvoice.invoiceNumber.$error.required">Invoice number is required.</span>
+                           <span style="color:red" ng-show="newInvoice.invoiceNumber.$invalid">Invoice number is invalid
+                           </span>
+                       </div>
                     </div>
                 </div>
                 <div class="form-group">
@@ -33,12 +45,40 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="subtotal" class="col-md-2 control-label">Subtotal</label>
+
+                    <div class="col-md-10">
+                        <span>{{NewInvoiceCtrl.calculateSubtotal()}}</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subtotal" class="col-md-2 control-label">Tax</label>
+
+                    <div class="col-md-10">
+                        <span>{{NewInvoiceCtrl.calculateTax()}}</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subtotal" class="col-md-2 control-label">Total</label>
+
+                    <div class="col-md-10">
+                        <span>{{NewInvoiceCtrl.calculateTotal()}}</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <div class="form-group">
                         <div class="col-md-10 col-md-offset-2">
                             <button type="reset" class="btn btn-default">Cancel</button>
-                            <button type="submit" class="btn btn-primary" ng-click="NewInvoiceCtrl.newInvoiceForm.submit()" ng-disabled="{{this.newInvoiceForm.disabled}}">Submit</button>
+                            <button type="submit" class="btn btn-primary"
+                                ng-click="NewInvoiceCtrl.newInvoiceForm.submit()"
+                                ng-disabled="newInvoice.$pristine || newInvoice.$invalid || NewInvoiceCtrl.newInvoiceForm.disabled">
+                                Submit
+                            </button>
                             <button type="button" class="btn btn-default btn-lg"
-                                    ng-click="NewInvoiceCtrl.newInvoiceForm.open()">
+                                    ng-click="NewInvoiceCtrl.newInvoiceItemForm.open()">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New item
                             </button>
                         </div>

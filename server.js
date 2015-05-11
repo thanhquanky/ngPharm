@@ -19,13 +19,13 @@ var drugRouter = require('./routes/drug');
 var vendorRouter = require('./routes/vendor');
 var unitRouter = require('./routes/unit');
 var invoiceRouter = require('./routes/invoice');
-var invoiceItemRouter = require('./routes/invoice_item');
+var invoiceItemRouter = require('./routes/invoiceitem');
 var manufacturerRouter = require('./routes/manufacturer');
 app.use('/drug', drugRouter);
 app.use('/vendor', vendorRouter);
 app.use('/unit', unitRouter);
 app.use('/invoice', invoiceRouter);
-app.use('/invoice_item', invoiceItemRouter);
+app.use('/invoiceitem', invoiceItemRouter);
 app.use('/manufacturer', manufacturerRouter);
 
 module.exports = app;
