@@ -50,22 +50,24 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="manufacture_date" class="col-lg-3">Manufacture Date:</label>
+            <label for="manufacture_date" class="col-lg-3">Manufacture Date: (ex: 05/2015)</label>
 
             <div class="col-lg-9">
                 <p class="input-group">
-                    <input type="text" class="form-control"
-                           datepicker-popup="{{NewInvoiceItemCtrl.manufactureDatePicker.format}}"
-                           ng-model="NewInvoiceItemCtrl.invoiceItem.manufactureDate" is-open="NewInvoiceItemCtrl.manufactureDatePicker.opened"
-                           datepicker-options="NewInvoiceItemCtrl.manufactureDatePicker.dateOptions" name="manufacture_date"
-                           date-disabled="NewInvoiceItemCtrl.manufactureDatePicker.disabled(date, mode)" ng-required="true"
-                           close-text="Close"/>
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default"
-                                ng-click="NewInvoiceItemCtrl.manufactureDatePicker.open($event)">
-                            <i class="glyphicon glyphicon-calendar"></i>
-                        </button>
-                    </span>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" id="manufactureDateDropDown" role="button" data-toggle="dropdown" data-target="#" href="">
+                            <div class="input-group">
+                              <input type="text" class="form-control" name="manufacture_date"
+                              data-ng-model="NewInvoiceItemCtrl.invoiceItem.manufactureDate">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <datetimepicker data-ng-model="NewInvoiceItemCtrl.invoiceItem.manufactureDate"
+                                            data-datetimepicker-config="NewInvoiceItemCtrl.manufactureDatePicker.configs">
+                            </datetimepicker>
+                        </ul>
+                    </div>
                 </p>
                 <div ng-show="newItem.manufacture_date.$dirty">
                     <span style="color:red" ng-show="newItem.manufacture_date.$error.required">Date is required.</span>
@@ -76,23 +78,25 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="expiration_date" class="col-lg-3">Expiration Date:</label>
+            <label for="expiration_date" class="col-lg-3">Expiration Date: (ex: 05/2018)</label>
 
             <div class="col-lg-9">
                 <p class="input-group">
-                    <input type="text" class="form-control"
-                           datepicker-popup="{{NewInvoiceItemCtrl.expirationDatePicker.format}}"
-                           ng-model="NewInvoiceItemCtrl.invoiceItem.expirationDate"
-                           is-open="NewInvoiceItemCtrl.expirationDatePicker.opened"
-                           datepicker-options="NewInvoiceItemCtrl.expirationDatePicker.dateOptions" name="expiration_date"
-                           date-disabled="NewInvoiceItemCtrl.expirationDatePicker.disabled(date, mode)" ng-required="true"
-                           close-text="Close"/>
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default"
-                                ng-click="NewInvoiceItemCtrl.expirationDatePicker.open($event)">
-                            <i class="glyphicon glyphicon-calendar"></i>
-                        </button>
-                    </span>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" id="expirationDateDropDown" role="button" data-toggle="dropdown" data-target="#" href="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="expiration_date"
+                                data-ng-model="NewInvoiceItemCtrl.invoiceItem.expirationDate">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <datetimepicker data-ng-model="NewInvoiceItemCtrl.invoiceItem.expirationDate"
+                                            data-datetimepicker-config="NewInvoiceItemCtrl.expirationDatePicker.configs"
+                                            data-on-set-time="NewInvoiceItemCtrl.expirationDatePicker.onTimeSet(newDate, oldDate)">
+                            </datetimepicker>
+                        </ul>
+                    </div>
                 </p>
                 <div ng-show="newItem.expiration_date.$dirty">
                     <span style="color:red" ng-show="newItem.expiration_date.$error.required">Date is required.</span>
@@ -102,6 +106,7 @@
                 </div>
             </div>
         </div>
+
         <div class="form-group">
             <label for="price" class="col-lg-3">Price:</label>
 
@@ -123,4 +128,3 @@
         <button class="btn btn-warning" ng-click="NewInvoiceItemCtrl.cancel()">Cancel</button>
     </div>
 </form>
-

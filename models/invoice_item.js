@@ -13,6 +13,9 @@ module.exports = function(sequelizeInstance, DataTypes) {
         },
         "price": {
             type: DataTypes.FLOAT
+        },
+        "sku": {
+            type: DataTypes.STRING
         }
     }, {
         classMethods: {

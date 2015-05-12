@@ -4,18 +4,6 @@
 <head>
     <title>ngPharm</title>
     <link rel="stylesheet" href="components/angular/angular-csp.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="components/angular-ui-grid/ui-grid.min.css" />
-    <link rel="stylesheet" href="components/angularjs-toaster/toaster.min.css"/>
-    <link rel="stylesheet" href="css/style.css" />
-
-    <script src="components/angular/angular.min.js"></script>
-    <script src="components/ui-router/release/angular-ui-router.min.js"></script>
-    <script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-    <script src="components/angular-ui-grid/ui-grid.min.js"></script>
-    <script src="components/angular-resource/angular-resource.min.js"></script>
-    <script src="components/angular-animate/angular-animate.min.js"></script>
-    <script src="components/angularjs-toaster/toaster.min.js"></script>
 </head>
 
 <body ng-app="ngPharm">
@@ -31,6 +19,36 @@
         <div ui-view></div>
         <toaster-container></toaster-container>
     </div>
+</body>
+    <script type="text/javascript" src="components/moment/moment.js"></script>
+    <script type="text/javascript" src="components/moment/locale/vi.js"></script>
+    <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="components/angular/angular.min.js"></script>
+    <!-- Additional libraries -->
+    <script type="text/javascript" src="components/ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="components/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="components/angular-animate/angular-animate.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- UI-grid -->
+    <script type="text/javascript" src="components/angular-ui-grid/ui-grid.min.js"></script>
+    <link rel="stylesheet" href="components/angular-ui-grid/ui-grid.min.css" />
+
+    <!-- Toaster -->
+    <script type="text/javascript" src="components/angularjs-toaster/toaster.min.js"></script>
+    <link rel="stylesheet" href="components/angularjs-toaster/toaster.min.css"/>
+
+    <!-- Date time picker -->
+    <script type="text/javascript" src="components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+    <link rel="stylesheet" href="components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
+
+    <!-- Customized style -->
+    <link rel="stylesheet" href="css/style.css" />
+
     <!-- All Services -->
     <script type="text/javascript" src="js/services/services.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
@@ -58,7 +76,6 @@
     <script type="text/javascript" src="js/directives/disableAnimation.js"></script>
     <script type="text/javascript" src="js/directives/ngEnter.js"></script>
 
+    <!-- Routing -->
     <script type="text/javascript" src="js/routing.js"></script>
-</body>
-
 </html>

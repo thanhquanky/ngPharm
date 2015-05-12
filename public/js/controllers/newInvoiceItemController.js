@@ -2,65 +2,50 @@
  * Created by thanhquanky on 4/21/15.
  */
 angular.module('ngPharm')
-    .controller('NewInvoiceItemController', function ($scope, $modalInstance, Drugs, Units, $modal, $state) {
-        var that = this;
-        this.drugs = Drugs.query();
-        this.units = Units.query();
-
-        this.ok = function () {
-            if (typeof(that.invoiceItem.Drug) === "string") {
-                var modalInstance = that.newDrugForm.open();
+    .controller('NewInvoiceItemController', function ($scope, $modalInstance, Drugs, Units, $modal, $state, $filter) {
+        var vm = this;
+        vm.drugs = Drugs.query();
+        vm.units = Units.query();
+        vm.invoiceItem = {};
+        vm.ok = function () {
+            if (typeof(vm.invoiceItem.Drug) === "string") {
+                var modalInstance = vm.newDrugForm.open();
             }
             else {
-                $modalInstance.close(this.invoiceItem);
+                $modalInstance.close(vm.invoiceItem);
             }
         };
 
-        this.cancel = function () {
+        vm.cancel = function () {
             $modalInstance.dismiss('cancel');
         };
 
-        this.dateFormats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-
-        this.manufactureDatePicker = {
-            open:function($event) {
-                $event.preventDefault();
-                $event.stopPropagation();
-                this.opened = true;
-            },
-
-            dateOptions: {
-                formatYear: 'yy',
-                startingDay: 1
-            },
-
-            format: this.dateFormats[0],
-
-            disabled: function(date, mode) {
-                return false;
+        vm.manufactureDatePicker = {
+            configs: {
+                dropdownSelector: '#manufactureDateDropDown',
+                minView: 'month',
+                startView: 'month'
             }
         };
 
-        this.expirationDatePicker = {
-            open:function($event) {
-                $event.preventDefault();
-                $event.stopPropagation();
-                this.opened = true;
-            },
-
-            dateOptions: {
-                formatYear: 'yy',
-                startingDay: 1
-            },
-
-            format: this.dateFormats[0],
-
-            disabled: function(date, mode) {
-                return false;
+        vm.expirationDatePicker = {
+            configs: {
+                dropdownSelector: '#expirationDateDropDown',
+                minView: 'month',
+                startView: 'month'
             }
         };
 
-        this.newDrugForm = {
+        $scope.$watch('NewInvoiceItemCtrl.invoiceItem.expirationDate', function(newValue) {
+            vm.invoiceItem.expirationDate = $filter('date')(newValue, 'MM/yyyy'); // Or whatever format your input should use
+        })
+        $scope.$watch('NewInvoiceItemCtrl.invoiceItem.manufactureDate', function(newValue) {
+            vm.invoiceItem.manufactureDate = $filter('date')(newValue, 'MM/yyyy'); // Or whatever format your input should use
+        })
+        
+        moment.locale('vi');
+
+        vm.newDrugForm = {
             open: function(size){
                 console.log("Drug form opened");
                 var modalInstance = $modal.open({
@@ -69,15 +54,14 @@ angular.module('ngPharm')
                     size: size,
                     resolve: {
                         drug: function() {
-                            return that.invoiceItem.Drug;
+                            return vm.invoiceItem.Drug;
                         }
                     }
                 });
 
                 modalInstance.result.then(function(drug) {
-                    that.invoiceItem.Drug = drug;
+                    vm.invoiceItem.Drug = drug;
                 });
             }
         };
-
     });

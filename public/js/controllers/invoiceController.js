@@ -7,6 +7,13 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', 'In
                     return invoiceItem.price * invoiceItem.quantity;
                 }
             });
+
+            var n = data.InvoiceItems.length;
+            for (var i=0; i<n; i++) {
+                data.InvoiceItems[i].manufactureDate = new Date(data.InvoiceItems[i].manufactureDate);
+                data.InvoiceItems[i].expirationDate = new Date(data.InvoiceItems[i].expirationDate);
+            }
+
             that.gridOptions.data = data.InvoiceItems;
         });
 
@@ -21,15 +28,15 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', 'In
                 field: 'Drug.name'
             },
             {
-                name: "Manufacture Date",
+                name: "MFD",
                 field: 'manufactureDate',
-                cellFilter: 'date:"yyyy-MM-dd"',
-                type: 'date'
+                type: 'date',
+                cellFilter: 'date:"MM/yyyy"'
             }, {
-                name: "Expiration Date",
+                name: "EXP",
                 field: 'expirationDate',
                 type: 'date',
-                cellFilter: 'date:"yyyy-MM-dd"'
+                cellFilter: 'date:"MM/yyyy"'
             },{
                 name: "Unit",
                 field: 'Unit.name',

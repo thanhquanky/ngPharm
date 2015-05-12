@@ -6,51 +6,51 @@
     angular.module('ngPharm')
         .controller('NewInvoiceController', ['$modal', '$state', 'Vendors', 'Drugs', 'Units', 'Invoices', 'toaster','$log',
             function($modal, $state, Vendors, Drugs, Units, Invoices, toaster, $log) {
-                var that = this;
+                var vm = this;
 
                 // Query the vendor list
-                this.vendors = Vendors.query();
+                vm.vendors = Vendors.query();
 
                 // Query the drugs list
-                this.drugs = Drugs.query();
+                vm.drugs = Drugs.query();
 
                 // Query the units list
-                this.units = Units.query();
+                vm.units = Units.query();
 
                 // Initialize invoice
-                this.invoice = {
+                vm.invoice = {
                     items: [],
                     subtotal: 0,
                     tax: 0,
                     total: 0
                 };
-                this.taxPercentage = 0.05;
+                vm.taxPercentage = 0.05;
 
-                this.calculateSubtotal = function() {
+                vm.calculateSubtotal = function() {
                     var s = 0;
-                    if (that.invoice.items.length > 0) {
-                        angular.forEach(that.invoice.items, function(invoiceItem) {
+                    if (vm.invoice.items.length > 0) {
+                        angular.forEach(vm.invoice.items, function(invoiceItem) {
                             s += invoiceItem.price * invoiceItem.quantity;
                         });
                     }
-                    that.invoice.subtotal = s;
+                    vm.invoice.subtotal = s;
                     return s;
                 }
 
-                this.calculateTax = function() {
-                    var tax = this.invoice.subtotal * this.taxPercentage;
-                    this.invoice.tax = tax;
+                vm.calculateTax = function() {
+                    var tax = vm.invoice.subtotal * vm.taxPercentage;
+                    vm.invoice.tax = tax;
                     return tax;
                 }
 
-                this.calculateTotal = function() {
-                    var total = this.invoice.subtotal + this.invoice.tax;
-                    this.invoice.total = total;
+                vm.calculateTotal = function() {
+                    var total = vm.invoice.subtotal + vm.invoice.tax;
+                    vm.invoice.total = total;
                     return total;
                 }
 
                 //ng-grid configuration for invoice items table
-                this.gridOptions = {
+                vm.gridOptions = {
                     showGridFooter: true,
                     enableFiltering: true,
                     columnDefs: [{
@@ -68,19 +68,19 @@
                     }, {
                         name: "Manufacture Date",
                         field: 'manufactureDate',
-                        cellFilter: 'date'
+                        cellFilter: 'date:"MM/yyyy"'
                     }, {
                         name: "Expiration Date",
                         field: 'expirationDate',
-                        cellFilter: 'date'
+                        cellFilter: 'date:"MM/yyyy"'
                     }, {
                         name: 'Price',
                         field: 'price'
                     }],
-                    data: this.invoice.items
+                    data: vm.invoice.items
                 };
 
-                this.newVendorForm = {
+                vm.newVendorForm = {
                     open: function (size) {
                         var modalInstance = $modal.open({
                             templateUrl: 'partials/newVendor.html',
@@ -90,7 +90,7 @@
 
                         // After returning from the modal
                         modalInstance.result.then(function (newVendor) {
-                            that.invoice.Vendor = newVendor;
+                            vm.invoice.Vendor = newVendor;
                         }, function () {
                             $log.info('Modal dismissed at: ' + new Date());
                         });
@@ -99,21 +99,21 @@
                     disabled: false,
 
                     submit: function () {
-                        that.newVendorForm.disabled = true;
-                        var newVendor = new Vendors(that.vendor);
+                        vm.newVendorForm.disabled = true;
+                        var newVendor = new Vendors(vm.vendor);
                         newVendor.$save(
                             function () {
                                 toaster.pop('success', 'Vendor', 'Vendor has been added');
                             },
                             function (err) {
                                 toaster.pop('error', 'Vendor', 'Cannot add vendor. Please try again');
-                                that.newVendorForm.disabled = false;
+                                vm.newVendorForm.disabled = false;
                             });
 
                     }
                 };
 
-                this.newInvoiceItemForm = {
+                vm.newInvoiceItemForm = {
                     open: function (size) {
                         var modalInstance = $modal.open({
                             templateUrl: 'partials/newInvoiceItem.html',
@@ -121,8 +121,8 @@
                             size: size
                         });
                         modalInstance.result.then(function (newInvoiceItem) {
-                            that.invoice.items.push(newInvoiceItem);
-                            that.calculateSubtotal();
+                            vm.invoice.items.push(newInvoiceItem);
+                            vm.calculateSubtotal();
                         }, function () {
                             $log.info('Modal dismissed at: ' + new Date());
                         });
@@ -130,10 +130,15 @@
                     }
                 };
 
-                this.newInvoiceForm = {
+                vm.newInvoiceForm = {
                     submit: function () {
-                        that.newInvoiceForm.disabled = true;
-                        var newInvoice = new Invoices(that.invoice);
+                        vm.newInvoiceForm.disabled = true;
+                        var n = vm.invoice.items.length;
+                        for (var i=0; i<n; i++) {
+                            vm.invoice.items[i].expirationDate = moment(vm.invoice.items[i].expirationDate, 'DD/YYYY');
+                            vm.invoice.items[i].manufactureDate = moment(vm.invoice.items[i].manufactureDate, 'DD/YYYY');
+                        }
+                        var newInvoice = new Invoices(vm.invoice);
                         newInvoice.$save(
                             function () {
                                 toaster.pop('success', 'Invoice', 'Invoice has been added');
@@ -141,7 +146,7 @@
                             },
                             function (err) {
                                 toaster.pop('error', 'Invoice', 'Cannot add invoice. Please try again');
-                                that.newInvoiceForm.disabled = false;
+                                vm.newInvoiceForm.disabled = false;
                             });
 
                     },
@@ -153,5 +158,5 @@
     })();
 
 
-// Please note that $modalInstance represents a modal window (instance) dependency.
+// Please note vm $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
