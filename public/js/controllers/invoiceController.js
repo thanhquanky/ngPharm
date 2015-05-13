@@ -8,11 +8,13 @@ ngPharm.controller('InvoiceController', ['$scope', '$stateParams', '$modal', 'In
                 }
             });
 
+            /*
             var n = data.InvoiceItems.length;
             for (var i=0; i<n; i++) {
                 data.InvoiceItems[i].manufactureDate = new Date(data.InvoiceItems[i].manufactureDate);
                 data.InvoiceItems[i].expirationDate = new Date(data.InvoiceItems[i].expirationDate);
             }
+            */
 
             that.gridOptions.data = data.InvoiceItems;
         });

@@ -1,3 +1,7 @@
 <h1>Drugs</h1>
-<div id="drug" ui-grid="DrugCtrl.gridOptions" ui-grid-edit ui-grid-cellnav class="grid" flex></div>
+<div class="container-fluid">
+    <div class="table-responsive">
+        <div id="drug" ui-grid="DrugCtrl.gridOptions" ui-grid-edit ui-grid-cellnav class="grid" flex></div>
+    </div>
+</div>
 <button class="btn btn-success" ng-click="DrugCtrl.newDrugForm.open()">Add more drug</button>

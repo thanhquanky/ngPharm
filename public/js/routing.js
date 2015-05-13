@@ -21,7 +21,8 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
             controller: "InvoiceController as InvoiceCtrl"
         })
         .state('invoice.newinvoice', {
-            parent: "invoice",
+            url: '/new',
+            parent: 'invoice',
             templateUrl: "partials/newInvoice.html",
             controller:  "NewInvoiceController as NewInvoiceCtrl"
         })

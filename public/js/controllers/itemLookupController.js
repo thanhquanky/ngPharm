@@ -20,13 +20,13 @@
                     {
                         name: "Manufacture Date",
                         field: 'manufactureDate',
-                        cellFilter: 'date:"yyyy-MM-dd"',
+                        cellFilter: 'date:"MM/yyyy"',
                         type: 'date'
                     }, {
                         name: "Expiration Date",
                         field: 'expirationDate',
                         type: 'date',
-                        cellFilter: 'date:"yyyy-MM-dd"'
+                        cellFilter: 'date:"MM/yyyy"'
                     },{
                         name: "Unit",
                         field: 'Unit.name',
@@ -46,7 +46,7 @@
                     }]
                 };
 
-                vm.findPrice = function(drugName) {
+                vm.lookup = function(drugName) {
                     vm.gridOptions.data = InvoiceItems.get({name: drugName});
                 }
         }]);
