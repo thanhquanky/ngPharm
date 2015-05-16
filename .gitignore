@@ -2,6 +2,6 @@ public/components/*
 node_modules/*
 .idea/*
 ngPharm.pem
-
+database.sqlite
 git filter-branch --force --index-filter
 git rm --cached --ignore-unmatch ngPharm.pem
