@@ -1,0 +1,41 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Invoice: {{InvoiceDetailCtrl.invoice.number}}</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="company" class="col-md-2 control-label">Company</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" id="inputCompany" name="company" placeholder="Company" ng-model="InvoiceDetailCtrl.invoice.Vendor.name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="invoiceNumber" class="col-md-2 control-label">Invoice Number</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control col-md-10" id="inputInvoiceNumber" placeholder="Invoice number" ng-model="InvoiceDetailCtrl.invoice.number" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="items" class="col-md-2 control-label">Items</label>
+                    <div class="col-md-10 table-responsive">
+                        <div id="invoice_items" ui-grid="InvoiceDetailCtrl.gridOptions" ui-grid-edit ui-grid-cellnav class="grid" flex></div>
+                    </div>
+                </div>
+                <!--
+                <div class="form-group">
+                    <div class="form-group">
+                        <div class="col-md-10 col-md-offset-2">
+                            <button type="reset" class="btn btn-default">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-default btn-lg" ng-click="InvoiceDetailCtrl.newItemForm.open()">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New item </button>
+                        </div>
+                    </div>
+                </div>
+                -->
+            </form>
+        </div>
+    </div>
+</div>

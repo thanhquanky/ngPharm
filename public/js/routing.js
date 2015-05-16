@@ -12,19 +12,24 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
         })
         .state('invoice', {
             url: "/invoice",
-            templateUrl: "partials/invoices.html",
-            controller: "InvoicesController as InvoicesCtrl"
+            templateUrl: "partials/invoice.html",
+            controller: "InvoiceController as InvoiceCtrl"
         })
         .state('invoice.item', {
             url: "/{invoiceId:[0-9]+}",
-            templateUrl: "partials/invoice.html",
-            controller: "InvoiceController as InvoiceCtrl"
+            templateUrl: "partials/invoice-detail.html",
+            controller: "InvoiceDetailController as InvoiceDetailCtrl"
         })
         .state('invoice.newinvoice', {
             url: '/new',
             parent: 'invoice',
             templateUrl: "partials/newInvoice.html",
             controller:  "NewInvoiceController as NewInvoiceCtrl"
+        })
+        .state('manufacturer', {
+            url: '/manufacturer',
+            templateUrl: "partials/manufacturer.html",
+            controller: "ManufacturerController as ManufacturerCtrl"
         })
         /*
         .state('invoice.newinvoice.newinvoiceitem', {
