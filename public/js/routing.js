@@ -26,6 +26,7 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
             templateUrl: "partials/newInvoice.html",
             controller:  "NewInvoiceController as NewInvoiceCtrl"
         })
+        /*
         .state('invoice.newinvoice.newinvoiceitem', {
             url: '/newInvoiceItem/:drug',
             parent: 'invoice.newinvoice',
@@ -53,6 +54,12 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
                     modalInstance.close(drug);
                 });
             }]
+        })
+        */
+        .state('about', {
+            url: '/about',
+            templateUrl: 'partials/about.html',
+            controller: 'AboutController as AboutCtrl'
         })
         .state('sales', {
           url: "/sales",
