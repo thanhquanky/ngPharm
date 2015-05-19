@@ -1,10 +1,10 @@
 // TODO Typeahead for manufacturer
 ngPharm.controller('DrugController', ['$scope', 'Drugs','Manufacturers','$modal', function($scope, Drugs, Manufacturers, $modal){
-    var that = this;
-    this.manufacturers = Manufacturers.query();
-    console.log(this.manufacturers);
-    this.drugs = Drugs.query();
-    this.gridOptions = {
+    var vm = this;
+    vm.manufacturers = Manufacturers.query();
+    
+    vm.drugs = Drugs.query();
+    vm.gridOptions = {
         enableFiltering: true,
         columnDefs: [{
             name: 'Name',
@@ -22,27 +22,24 @@ ngPharm.controller('DrugController', ['$scope', 'Drugs','Manufacturers','$modal'
             enableCellEditOnFocus: true,
             field: 'Manufacturer.name'
         }],
-        data: this.drugs
+        data: vm.drugs
     };
-    this.newDrugForm = {
+    vm.newDrugForm = {
         open: function(size){
-            console.log("Drug form opened"); 
+            console.log("Drug form opened");
             var modalInstance = $modal.open({
                 templateUrl: 'partials/newDrug.html',
                 controller: 'NewDrugController as NewDrugCtrl',
                 size: size,
                 resolve: {
                     drug: function() {
-                        return "";
-                    },
-                    manufacturers: function() {
-                        return that.manufacturers;
+                        return null;
                     }
                 }
             });
 
             modalInstance.result.then(function(drug) {
-                that.drugs.push(drug);
+                vm.drugs.push(drug);
             });
         }
     };

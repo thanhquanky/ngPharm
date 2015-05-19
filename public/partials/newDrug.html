@@ -2,23 +2,27 @@
 <div class="modal-body"><form name="newDrug" novalidate>
     <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" name="name" required class="form-control" ng-model="NewDrugCtrl.drug.name">
-        <span style="color:red" ng-show="newDrug.name.$dirty && newDrug.name.$invalid"> 
+        <input type="text" name="name" required class="form-control" ng-model="NewDrugCtrl.drug.name"
+        typeahead="drug as drug.name for drug in NewDrugCtrl.drugs | filter:{'name':$viewValue}"
+        placeholder="Drug name"/>
+        <span style="color:red" ng-show="newDrug.name.$dirty && newDrug.name.$invalid">
             <span style="color:red" ng-show="newDrug.name.$error.required">Name is required</span>
         </span>
     </div>
     <div class="form-group">
         <label for="use">Use</label>
-        <input type="text" name="use" required class="form-control" ng-model="NewDrugCtrl.drug.use">
-        <span style="color:red" ng-show="newDrug.use.$dirty && newDrug.name.$invalid"> 
+        <input type="text" name="use" required class="form-control" ng-model="NewDrugCtrl.drug.use"
+        placeholder="Drug usages">
+        <span style="color:red" ng-show="newDrug.use.$dirty && newDrug.name.$invalid">
             <span style="color:red" ng-show="newDrug.use.$error.required">Use is required</span>
         </span>
     </div>
     <div class="form-group">
         <!-- TODO Typeahead for manufacturer -->
         <label for="manufacturer">Manufacturer</label>
-        <input type="text" name="manufacturer" required class="form-control" ng-model="NewDrugCtrl.drug.manufacturer"
-           typeahead="manufacturer as manufacturer.name for manufacturer in NewDrugCtrl.manufacturers | filter:{'name':$viewValue}"/>
+        <input type="text" name="manufacturer" required class="form-control" ng-model="NewDrugCtrl.drug.Manufacturer"
+           typeahead="manufacturer as manufacturer.name for manufacturer in NewDrugCtrl.manufacturers | filter:{'name':$viewValue}"
+           placeholder="Manufacturer"/>
         <span style="color:red" ng-show="newDrug.manufacturer.$dirty && newDrug.name.$invalid">
             <span style="color:red" ng-show="newDrug.manufacturer.$error.required">is required</span>
         </span>
