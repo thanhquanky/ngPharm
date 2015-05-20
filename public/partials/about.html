@@ -5,7 +5,16 @@
         </h1>
     <div>
         <h3>Developers</h3>
-        <ul>
-            <li ng-repeat="developer in AboutCtrl.developers"><h4>{{developer.name}}</h4></li>
+        <ul class="row">
+            <li class="col-md-6" ng-repeat="developer in AboutCtrl.developers">
+            <div class="row">
+            	<div class="col-md-offset-3 col-md-6">
+            	<h4>{{developer.name}}</h4>
+            	<img ng-src="images/developers/{{developer.image}}" class="img-responsive img-circle">
+            	<h4>{{developer.intro}} </br> <a ng-href="{{developer.linkedin}}" target="_blank">Linked In</a></h4>
+            	</div>
+            </div>
+            </li>
+        </ul>
     </div>
 </div>
