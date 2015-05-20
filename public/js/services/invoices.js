@@ -8,8 +8,8 @@
 		.service('Invoices', ['$resource', 'InvoiceItems', function($resource, InvoiceItems){
 			var that = this;
 			that.transformDate = function(item) {
-				item.manufactureDate = new Date(item.manufactureDate);
-				item.expirationDate = new Date(item.expirationDate);
+				item.manufactureDate = moment(item.manufactureDate, "YYYY-MM-DDThh:mm:ss.sTZD").toDate();
+				item.expirationDate = moment(item.expirationDate, "YYYY-MM-DDThh:mm:ss.sTZD").toDate();
 				return item;
 			}
 			return $resource('/invoice/:invoiceId', {}, {
