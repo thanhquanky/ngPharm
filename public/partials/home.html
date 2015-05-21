@@ -1,9 +1,9 @@
-<h1>Welcome to NgPharm</h1>
-<div class="container">
+<section class="" style="width: 100%; height: 24vh; background-color: pink">
+<h1>Welcome to back to your online pharmacy</h1>
 <div>
 	<carousel interval="HomeCtrl.carousel.interval" disable-animation="true">
 		<slide ng-repeat = "slide in HomeCtrl.carousel.slides" active="slide.active">
-			<img ng-src="{{slide.image}}" width="300" height="200">
+			<img ng-src="{{slide.image}}" width="225" height="150">
 			<div class="carousel-caption">
 				<h4>Number {{$index + 1	}}</h4>
 				<p>{{slide.text}}</p>
@@ -11,6 +11,12 @@
 		</slide>
 	</carousel>
 </div>
-</div>
-<h1>A modern pharmacy management system</h1>
-<button class="btn btn-primary">A button</button>
+<h1>Where you can go from here</h1>
+</section>
+<section style="height: 48vh; width: 100; background-color: blue">
+<div class="main_div"><h1>Storing data with ease</h1></div>
+<div class="main_div"><h1>Searching</h1></div>
+<div class="main_div"><h1>Generating reports/visualization</h1></div>
+<div class="main_div"><h1>Request assistance</h1></div>
+</section>
+
