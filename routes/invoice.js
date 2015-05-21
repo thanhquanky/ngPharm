@@ -55,10 +55,10 @@ router
     .post('/', function(req, res) {
         var items = [];
         var tInvoice = req.body;
-        tInvoice.vendor = req.body.vendor.id;
+        tInvoice.vendor = req.body.Vendor.id;
         models.Invoice.create(tInvoice)
             .then(function(invoice) {
-                tInvoice.items.forEach(function(item) {
+                tInvoice.InvoiceItems.forEach(function(item) {
                     var t = {
                         quantity: item.quantity,
                         price: item.price,
