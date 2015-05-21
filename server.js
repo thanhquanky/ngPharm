@@ -11,8 +11,6 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.listen(3000);
-
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -34,5 +32,5 @@ app.use('/invoiceitem', invoiceItemRouter);
 app.use('/manufacturer', manufacturerRouter);
 
 module.exports = app;
-
 console.log('Server started: http://localhost:3000/');
+app.listen(3000);
