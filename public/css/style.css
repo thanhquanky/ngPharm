@@ -68,11 +68,13 @@ section > h1 {
     margin: 0
 }
 .main_div {
-    background-color: green;
+    /*background-color: green;*/
     width: 50%;
     height: 50%;
     float: left;
     border: 1px solid black;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 footer > div {
     float: left;
