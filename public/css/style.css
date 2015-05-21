@@ -52,6 +52,18 @@ table {
 .datetimepicker {
     width: 400px;
 }
+.clear {
+    clear: both;
+}
+.navbar-button {
+    height: 100%;
+    float: right;
+    background-color: #93c54b;
+    width: 6vh;
+}
+.navbar-button a{
+    color: black;
+}
 /*
 #medicineCarousel {
 }

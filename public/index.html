@@ -7,20 +7,27 @@
 </head>
 
 <body ng-app="ngPharm">
-    <div class="container-fluid">
-        <div class="navbar-header">
+    <div class="container">
+    <header style="background-color: black">
+        <div class="navbar-header" style="height: 6vh">
+            <p class="navbar-brand"style="padding: auto">ngPharm</p>
         </div>
-        <a class="btn btn-success" ui-sref="home">Home</a>
-        <a class="btn btn-success" ui-sref="invoice">Invoice</a>
-        <a class="btn btn-success" ui-sref="sales">Sales</a>
-        <a class="btn btn-success" ui-sref="vendor">Vendor</a>
-        <a class="btn btn-success" ui-sref="manufacturer">Manufacturer</a>
-        <a class="btn btn-success" ui-sref="drug">Drug</a>
-        <a class="btn btn-success" ui-sref="item-lookup">Item Lookup</a>
-        <a class="btn btn-success" ui-sref="about">About</a>
-        <div ui-view></div>
-        <toaster-container></toaster-container>
+        <div style="float: right; height: 6vh">
+            <div class="navbar-button"><a class="" ui-sref="home"><p>Home</p></a></div>
+            <div class="navbar-button"><a class="" ui-sref="invoice">Invoice</a></div>
+            <div class="navbar-button"><a class="" ui-sref="sales">Sales</a></div>
+            <div class="navbar-button"><a class="" ui-sref="vendor">Vendor</a></div>
+            <div class="navbar-button"><a class="" ui-sref="manufacturer">Maker</a></div>
+            <div class="navbar-button"><a class="" ui-sref="drug">Drug</a></div>
+            <div class="navbar-button"><a class="" ui-sref="item-lookup">Item Lookup</a></div>
+            <div class="navbar-button"><a class="" ui-sref="about">About</a></div>
+        </div>
+        <div class="clear"style=""></div>
+    </header>
+    <div ui-view></div>
+    <toaster-container></toaster-container>
     </div>
+
 </body>
     <script type="text/javascript" src="components/moment/moment.js"></script>
     <script type="text/javascript" src="components/moment/locale/vi.js"></script>
