@@ -6,11 +6,11 @@ ngPharm's database has 92971 records of drugs that are registered to Vietnamese 
 ### Installation
 Skip this if you don't have grunt-cli, run
 
-** npm install
+**npm install**
 
 After you clone the project, run
 
-** grunt
+**grunt**
 
 ### Authors:
 * Thanh Ky Quan < thanhquanky@gatech.edu >
