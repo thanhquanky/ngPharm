@@ -101,7 +101,7 @@
             <label for="expiration_date" class="col-lg-3">Expiration Date: (ex: 05/2018)</label>
 
             <div class="col-lg-9">
-                <div class="input-group">
+                <p class="input-group">
                     <div class="dropdown">
                         <a class="dropdown-toggle" id="expirationDateDropDown" role="button" data-toggle="dropdown" data-target="#" href="">
                             <div class="input-group">
@@ -118,7 +118,7 @@
                             </datetimepicker>
                         </ul>
                     </div>
-                </div>
+                </p>
                 <div ng-show="newItem.expiration_date.$dirty">
                     <span style="color:red" ng-show="newItem.expiration_date.$error.required">Date is required.</span>
                     <span style="color:red" ng-show="NewInvoiceItemCtrl.expirationDate.$invalid">
@@ -147,7 +147,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button disabled="newItem.$invalid" class="btn btn-primary" ng-click="NewInvoiceItemCtrl.ok()">OK</button>
+        <button ng-disabled="newItem.$invalid" class="btn btn-primary" ng-click="NewInvoiceItemCtrl.ok()">OK</button>
         <button class="btn btn-warning" ng-click="NewInvoiceItemCtrl.cancel()">Cancel</button>
     </div>
 </form>

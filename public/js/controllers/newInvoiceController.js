@@ -62,17 +62,19 @@
                         field: 'Drug.name'
                     }, {
                         name: "Unit",
-                        field: 'Unit.name',
-                        width: '13%'
+                        field: 'Unit.name'
+                    }, {
+                        name: "SKU",
+                        field: 'sku'
                     }, {
                         name: "Quantity",
                         field: 'quantity'
                     }, {
-                        name: "Manufacture Date",
+                        name: "MFD",
                         field: 'manufactureDate',
                         cellFilter: 'date:"MM/yyyy"'
                     }, {
-                        name: "Expiration Date",
+                        name: "EXP",
                         field: 'expirationDate',
                         cellFilter: 'date:"MM/yyyy"'
                     }, {
