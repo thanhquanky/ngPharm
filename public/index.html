@@ -23,13 +23,30 @@
                 <div class="navbar-button" style="background-color: lightred"><a class="" ui-sref="about">About</a></div>
             </div>
             <div class="clear"style=""></div>
-        </header style="72vh">
-        <main><div ui-view></div>
+        </header>
+        <main style="height:72vh"><div ui-view></div>
         <toaster-container></toaster-container></main>
         <footer style="width: 100%; height: 22vh; background-color: yellow">
-            <div>Product</div>
-            <div>Solution</div>
-            <div><a ui-sref="about">About us</a></div>
+            <div class="row" style="margin: 0; width: 100%">
+                <div class="col-md-4" style="background-color: blue; height: 10vh">
+                    <h3>Sign up for our newsletter</h3>
+                </div>
+                <div class="col-md-4" style="background-color: green; height: 10vh">
+                    <h2>About us</h2>
+                </div>
+                <div class="col-md-4" style="background-color: red; height: 10vh">
+                    <h3>Follow us</h3>
+                    <div class="row" style="margin: 0">                        
+                    </div>
+                </div>
+            </div class="row" style="margin: 0; width: 100%">
+                <div class="col-md-8">
+                    <h3>NgPharm: some slogan with logo</h3>
+                </div>
+                <div>
+                    &copy Copyright 2015
+                </div>
+            </div>
         </footer>
     </div>
 </body>
