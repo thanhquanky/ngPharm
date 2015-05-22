@@ -19,7 +19,7 @@
 
                 // Initialize invoice
                 vm.invoice = {
-                    items: [],
+                    InvoiceItems: [],
                     subtotal: 0,
                     tax: 0,
                     total: 0
@@ -28,8 +28,8 @@
 
                 vm.calculateSubtotal = function() {
                     var s = 0;
-                    if (vm.invoice.items.length > 0) {
-                        angular.forEach(vm.invoice.items, function(invoiceItem) {
+                    if (vm.invoice.InvoiceItems.length > 0) {
+                        angular.forEach(vm.invoice.InvoiceItems, function(invoiceItem) {
                             s += invoiceItem.price * invoiceItem.quantity;
                         });
                     }
@@ -53,6 +53,8 @@
                 vm.gridOptions = {
                     showGridFooter: true,
                     enableFiltering: true,
+                    enableRowSelection: true,
+                    enableRowHeaderSelection: true,
                     columnDefs: [{
                         name: 'Name',
                         enableCellEdit: true,
@@ -77,7 +79,7 @@
                         name: 'Price',
                         field: 'price'
                     }],
-                    data: vm.invoice.items
+                    data: vm.invoice.InvoiceItems
                 };
 
                 vm.newVendorForm = {
@@ -121,7 +123,7 @@
                             size: size
                         });
                         modalInstance.result.then(function (newInvoiceItem) {
-                            vm.invoice.items.push(newInvoiceItem);
+                            vm.invoice.InvoiceItems.push(newInvoiceItem);
                             vm.calculateSubtotal();
                         }, function () {
                             $log.info('Modal dismissed at: ' + new Date());
@@ -129,26 +131,57 @@
 
                     }
                 };
+                
+                vm.newVendorForm = {
+                    open: function(size) {
+                        var modalInstance = $modal.open({
+                            templateUrl: 'partials/newVendor.html',
+                            controller: 'NewVendorController as NewVendorCtrl',
+                            size: size,
+                            resolve: { 
+                                vendor: function() {
+                                    return vm.invoice.Vendor;
+                                }
+                            }
+                        });
+                        modalInstance.result.then(function(vendor) {
+                            vm.invoice.Vendor = vendor;
+                            vm.newInvoiceForm.submit();
+                        });
+                    }
+                };
 
                 vm.newInvoiceForm = {
                     submit: function () {
-                        vm.newInvoiceForm.disabled = true;
-                        var n = vm.invoice.items.length;
-                        for (var i=0; i<n; i++) {
-                            vm.invoice.items[i].expirationDate = moment(vm.invoice.items[i].expirationDate, 'DD/YYYY');
-                            vm.invoice.items[i].manufactureDate = moment(vm.invoice.items[i].manufactureDate, 'DD/YYYY');
+                        // If vendor is not registered, ask user to register vendor
+                        if (typeof(vm.invoice.Vendor) == 'string') {
+                            vm.newVendorForm.open();
                         }
-                        var newInvoice = new Invoices(vm.invoice);
-                        newInvoice.$save(
-                            function () {
-                                toaster.pop('success', 'Invoice', 'Invoice has been added');
-                                $state.go('invoice', {}, {reload: true});
-                            },
-                            function (err) {
-                                toaster.pop('error', 'Invoice', 'Cannot add invoice. Please try again');
-                                vm.newInvoiceForm.disabled = false;
-                            });
-
+                        else {
+                            // then proceed invoice submission
+    
+                            vm.newInvoiceForm.disabled = true;
+                            /*
+                            var invoice = angular.copy(vm.invoice);
+                            var n = invoice.items.length;
+                            for (var i=0; i<n; i++) {
+                                invoice.items[i].expirationDate = moment(invoice.items[i].expirationDate, 'MM/YYYY');
+                                invoice.items[i].manufactureDate = moment(invoice.items[i].manufactureDate, 'MM/YYYY');
+                            }
+                            */
+                         
+                            Invoices.save(vm.invoice).$promise
+                                .then(
+                                    function () {
+                                        toaster.pop('success', 'Invoice', 'Invoice ' + vm.invoice.number + ' from ' + vm.invoice.Vendor.name + ' has been added');
+                                        $state.go('invoice', {}, {reload: true});
+                                    }, 
+                                    function (err) {
+                                        toaster.pop('error', 'Invoice', 'Cannot add invoice. Please try again');
+                                        vm.newInvoiceForm.disabled = false;
+                                    }
+                                );
+                        }
                     },
 
                     disabled: false
