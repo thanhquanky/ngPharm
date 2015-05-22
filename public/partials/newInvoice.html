@@ -44,6 +44,10 @@
                                 ng-click="NewInvoiceCtrl.newInvoiceItemForm.open()">
                             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>       
                         </button>
+                        <button type="button" class="btn btn-default"
+                                ng-click="NewInvoiceCtrl.removeSelectedItems()">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </button>
                         <div id="invoice_items" ui-grid="NewInvoiceCtrl.gridOptions" ui-grid-edit ui-grid-cellnav ui-grid-selection
                              class="grid" flex></div>
                     </div>

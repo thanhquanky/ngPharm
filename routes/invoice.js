@@ -46,10 +46,14 @@ router
     .get('/:invoiceId', function(req, res) {
         findOne(req.params.invoiceId)
             .then(function(model) {
-                res.json(model);
+                if (model !== null)
+                    res.json(model);
+                else {
+                    res.sendStatus(404);
+                }
             })
             .catch(function(error) {
-                res.send(error);
+                res.send(404, error);
             });
     })
     .post('/', function(req, res) {
@@ -88,6 +92,6 @@ router
             .catch(function(error) {
                 res.send(error);
             });
-    })
+    });
 
 module.exports = router;

@@ -23,6 +23,10 @@ ngPharm.controller('InvoiceDetailController', ['$scope', '$stateParams', '$modal
             showGridFooter: true,
             showColumnFooter: true,
             enableFiltering: true,
+            enableRowSelection: true,
+            enableSelectAll: true,
+            enableRowHeaderSelection: true, 
+            selectionRowHeaderWidth: 35,
             columnDefs: [{
                 name: 'Name',
                 enableCellEdit: true,
