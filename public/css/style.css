@@ -61,8 +61,9 @@ table {
     background-color: #93c54b;
     width: 7vh;
 }
-.navbar-button a{
+.navbar-button {
     color: black;
+    text-align: center;
 }
 section > h1 {
     margin: 0

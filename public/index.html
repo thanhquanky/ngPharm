@@ -10,46 +10,48 @@
     <div class="container">
         <header style="background-color: black">
             <div class="navbar-header" style="height: 6vh">
-                <p class="navbar-brand"style="padding: auto">ngPharm</p>
+                <p class="navbar-brand"style="padding: auto; color:white">ngPharm</p>
             </div>
             <div style="float: right; height: 6vh">
-                <div class="navbar-button" style="background-color: lightgreen"><a class="" ui-sref="home"><p>Home</p></a></div>
-                <div class="navbar-button" style="background-color: lightblue"><a class="" ui-sref="invoice">Invoice</a></div>
-                <div class="navbar-button" style="background-color: lightyellow"><a class="" ui-sref="sales">Sales</a></div>
-                <div class="navbar-button" style="background-color: lightred"><a class="" ui-sref="vendor">Vendor</a></div>
-                <div class="navbar-button" style="background-color: lightgreen"><a class="" ui-sref="manufacturer">Maker</a></div>
-                <div class="navbar-button" style="background-color: lightblue"><a class="" ui-sref="drug">Drug</a></div>
-                <div class="navbar-button" style="background-color: lightyellow"><a class="" ui-sref="item-lookup">Item Lookup</a></div>
-                <div class="navbar-button" style="background-color: lightred"><a class="" ui-sref="about">About</a></div>
+                <a class="" ui-sref="home"><div class="navbar-button" style="background-color: lightgreen">
+                    <div style="vertical-align: middle">Home</div>
+                </div></a>
+                <a class="" ui-sref="invoice"><div class="navbar-button" style="background-color: lightblue">Invoice</div></a>
+                <a class="" ui-sref="sales"><div class="navbar-button" style="background-color: lightyellow">Sales</div></a>
+                <a class="" ui-sref="vendor"><div class="navbar-button" style="background-color: lightred">Vendor</div></a>
+                <a class="" ui-sref="manufacturer"><div class="navbar-button" style="background-color: lightgreen">Maker</div></a>
+                <a class="" ui-sref="drug"><div class="navbar-button" style="background-color: lightblue">Drug</div></a>
+                <a class="" ui-sref="item-lookup"><div class="navbar-button" style="background-color: lightyellow">Item Lookup</div></a>
+                <a class="" ui-sref="about"><div class="navbar-button" style="background-color: lightred">About</div></a>
             </div>
             <div class="clear"style=""></div>
         </header>
         <main style="height:72vh"><div ui-view></div>
         <toaster-container></toaster-container></main>
-        <footer style="width: 100%; height: 22vh;">
+        <footer style="width: 100%; height: 22vh; background-color:#3e3f3a; color:white; text-align:center"> 
             <div class="row" style="margin: 0; width: 100%">
                 <div class="col-md-4" style="height: 10vh">
                     <h3>Sign up for our newsletter</h3>
                     <form>
-                        <input type="email" name="email" value="Your email">
+                        <input type="email" name="email">
                         <button class="btn btn-success btn-xs">Sign up</button>
                     </form>
                 </div>
-                <div class="col-md-4" style="background-color: green; height: 10vh">
+                <div class="col-md-4" style="height: 10vh">
                     <h4>About us</h4>
                     <div class="row" style="margin: 0">
-                        <div class="col-md-8"><p>Where we came from</p></div>
+                        <div class="col-md-8"><p>Get to know the team</p></div>
                         <div class="col-md-4"><a class="btn btn-primary btn-sm" ui-sref="about">Learn more</a></div>
                     </div>
                 </div>
-                <div class="col-md-4" style="background-color: red; height: 10vh">
+                <div class="col-md-4" style="height: 10vh">
                     <h3>Follow us</h3>
                     <div class="row" style="margin: 0">
-                    <a href="#"><i class="fa fa-3x fa-google-plus-square"></i></a>
-                    <a href="#"><i class="fa fa-3x fa-github-square"></i></a>
-                    <a href="#"><i class="fa fa-3x fa-linkedin-square"></i></a>
-                    <a href="#"><i class="fa fa-3x fa-facebook-square"></i></a>                                        
-                    <a href="#"><i class="fa fa-3x fa-twitter-square"></i></a>
+                    <a href="#" class="fa fa-3x fa-google-plus-square"></a>
+                    <a href="#" class="fa fa-3x fa-github-square"></a>
+                    <a href="#" class="fa fa-3x fa-linkedin-square"></a>
+                    <a href="#" class="fa fa-3x fa-facebook-square"></a>                                        
+                    <a href="#" class="fa fa-3x fa-twitter-square"></a>
                     </div>
                 </div>
             </div class="row" style="margin: 0; width: 100%">
