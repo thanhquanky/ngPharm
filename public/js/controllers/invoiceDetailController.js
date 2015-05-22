@@ -34,6 +34,17 @@ ngPharm.controller('InvoiceDetailController', ['$scope', '$stateParams', '$modal
                 field: 'Drug.name'
             },
             {
+                name: "Unit",
+                field: 'Unit.name'
+            }, {
+                name: "Sku",
+                field: 'sku'
+            },
+            {
+                name: "Quantity",
+                field: 'quantity'
+            },
+            {
                 name: "MFD",
                 field: 'manufactureDate',
                 type: 'date',
@@ -43,13 +54,6 @@ ngPharm.controller('InvoiceDetailController', ['$scope', '$stateParams', '$modal
                 field: 'expirationDate',
                 type: 'date',
                 cellFilter: 'date:"MM/yyyy"'
-            },{
-                name: "Unit",
-                field: 'Unit.name',
-                width: '13%'
-            }, {
-                name: "Quantity",
-                field: 'quantity'
             }, {
                 name: 'Price',
                 field: 'price'

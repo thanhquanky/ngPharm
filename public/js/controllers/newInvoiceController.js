@@ -96,6 +96,9 @@
                     vm.gridOptions.data = vm.invoice.InvoiceItems;
                 };
 
+                vm.gridOptions.onRegisterApi = function(gridApi) {
+                  vm.gridApi = gridApi;
+                };
                 vm.newVendorForm = {
                     open: function (size) {
                         var modalInstance = $modal.open({
