@@ -9,7 +9,7 @@ function findOne(id) {
         },
         include: [
             {model: models.InvoiceItem,
-                attributes: ["id", "quantity", "manufactureDate", "expirationDate", "price"],
+                attributes: ["id", "sku", "quantity", "manufactureDate", "expirationDate", "price"],
                 include: [{
                     model: models.Drug,
                     attributes: ["name"]
@@ -46,10 +46,14 @@ router
     .get('/:invoiceId', function(req, res) {
         findOne(req.params.invoiceId)
             .then(function(model) {
-                res.json(model);
+                if (model !== null)
+                    res.json(model);
+                else {
+                    res.sendStatus(404);
+                }
             })
             .catch(function(error) {
-                res.send(error);
+                res.send(404, error);
             });
     })
     .post('/', function(req, res) {
@@ -65,6 +69,7 @@ router
                         invoice: invoice.id,
                         drug: item.Drug.id,
                         unit: item.Unit.id,
+                        sku: item.sku,
                         manufactureDate: item.manufactureDate,
                         expirationDate: item.expirationDate
                     };
@@ -88,6 +93,6 @@ router
             .catch(function(error) {
                 res.send(error);
             });
-    })
+    });
 
 module.exports = router;

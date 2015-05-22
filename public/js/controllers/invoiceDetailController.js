@@ -23,11 +23,26 @@ ngPharm.controller('InvoiceDetailController', ['$scope', '$stateParams', '$modal
             showGridFooter: true,
             showColumnFooter: true,
             enableFiltering: true,
+            enableRowSelection: true,
+            enableSelectAll: true,
+            enableRowHeaderSelection: true, 
+            selectionRowHeaderWidth: 35,
             columnDefs: [{
                 name: 'Name',
                 enableCellEdit: true,
                 enableCellEditOnFocus: true,
                 field: 'Drug.name'
+            },
+            {
+                name: "Unit",
+                field: 'Unit.name'
+            }, {
+                name: "Sku",
+                field: 'sku'
+            },
+            {
+                name: "Quantity",
+                field: 'quantity'
             },
             {
                 name: "MFD",
@@ -39,13 +54,6 @@ ngPharm.controller('InvoiceDetailController', ['$scope', '$stateParams', '$modal
                 field: 'expirationDate',
                 type: 'date',
                 cellFilter: 'date:"MM/yyyy"'
-            },{
-                name: "Unit",
-                field: 'Unit.name',
-                width: '13%'
-            }, {
-                name: "Quantity",
-                field: 'quantity'
             }, {
                 name: 'Price',
                 field: 'price'
