@@ -7,6 +7,7 @@
 </head>
 
 <body ng-app="ngPharm">
+<<<<<<< HEAD
     <div class="container-fluid">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -65,6 +66,64 @@
 
         <div ui-view></div>
         <toaster-container></toaster-container>
+=======
+    <div class="container">
+        <header style="background-color: black">
+            <div class="navbar-header" style="height: 6vh">
+                <p class="navbar-brand"style="padding: auto; color:white">ngPharm</p>
+            </div>
+            <div style="float: right; height: 6vh">
+                <a class="" ui-sref="home"><div class="navbar-button" style="background-color: lightgreen">
+                    <div style="vertical-align: middle">Home</div>
+                </div></a>
+                <a class="" ui-sref="invoice"><div class="navbar-button" style="background-color: lightblue">Invoice</div></a>
+                <a class="" ui-sref="sales"><div class="navbar-button" style="background-color: lightyellow">Sales</div></a>
+                <a class="" ui-sref="vendor"><div class="navbar-button" style="background-color: lightred">Vendor</div></a>
+                <a class="" ui-sref="manufacturer"><div class="navbar-button" style="background-color: lightgreen">Maker</div></a>
+                <a class="" ui-sref="drug"><div class="navbar-button" style="background-color: lightblue">Drug</div></a>
+                <a class="" ui-sref="item-lookup"><div class="navbar-button" style="background-color: lightyellow">Item Lookup</div></a>
+                <a class="" ui-sref="about"><div class="navbar-button" style="background-color: lightred">About</div></a>
+            </div>
+            <div class="clear"style=""></div>
+        </header>
+        <main style="height:72vh"><div ui-view></div>
+        <toaster-container></toaster-container></main>
+        <footer style="width: 100%; height: 22vh; background-color:#3e3f3a; color:white; text-align:center"> 
+            <div class="row" style="margin: 0; width: 100%">
+                <div class="col-md-4" style="height: 10vh">
+                    <h3>Sign up for our newsletter</h3>
+                    <form>
+                        <input type="email" name="email">
+                        <button class="btn btn-success btn-xs">Sign up</button>
+                    </form>
+                </div>
+                <div class="col-md-4" style="height: 10vh">
+                    <h4>About us</h4>
+                    <div class="row" style="margin: 0">
+                        <div class="col-md-8"><p>Get to know the team</p></div>
+                        <div class="col-md-4"><a class="btn btn-primary btn-sm" ui-sref="about">Learn more</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="height: 10vh">
+                    <h3>Follow us</h3>
+                    <div class="row" style="margin: 0">
+                    <a href="#" class="fa fa-3x fa-google-plus-square"></a>
+                    <a href="#" class="fa fa-3x fa-github-square"></a>
+                    <a href="#" class="fa fa-3x fa-linkedin-square"></a>
+                    <a href="#" class="fa fa-3x fa-facebook-square"></a>                                        
+                    <a href="#" class="fa fa-3x fa-twitter-square"></a>
+                    </div>
+                </div>
+            </div class="row" style="margin: 0; width: 100%">
+                <div class="col-md-8">
+                    <h3>NgPharm: some slogan with logo</h3>
+                </div>
+                <div>
+                    &copy Copyright 2015
+                </div>
+            </div>
+        </footer>
+>>>>>>> duc_test
     </div>
 </body>
     <script type="text/javascript" src="components/moment/moment.js"></script>
@@ -93,6 +152,8 @@
     <script type="text/javascript" src="components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
     <link rel="stylesheet" href="components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
 
+    <!-- Font awesome-->
+    <link href="components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Customized style -->
     <link rel="stylesheet" href="css/style.css" />
 
