@@ -11,45 +11,46 @@
 				<div class="form-group">
           <label for="name">Drug Name:</label>
           <input type="text" name="name" required class="form-control" ng-model="item.name">
-          <span style="color:red" ng-show="newSalesItem.name.$error.required">Name is required.</span>
-          <span style="color:red" ng-show="newSalesItem.name.$dirty && newSalesItem.name.$invalid">
+          <span style="color:red" ng-show="newSalesItem.name.$dirty">
+            <span style="color:red" ng-show="newSalesItem.name.$error.$required">Name is required</span>
+            <span style="color:red" ng-show="newSalesItem.name.$invalid">Invalid name format<span>
           </span>                            
         </div>
           <div class="form-group">
             <label for="total_sales">Total sales:</label>
             <input type="number" name="total_sales" required class="form-control" ng-model="item.total_sales">
-            <span style="color:red" ng-show="newSalesItem.total_sales.$error.required">Total sales is required.</span>
-            <span style="color:red" ng-show="newSalesItem.total_sales.$dirty && newSalesItem.total_sales.$invalid">
-                  <span ng-show="newSalesItem.total_sales.$error.number">Invalid number.</span>
+            <span style="color:red" ng-show="newSalesItem.total_sales.$dirty">
+              <span style="color:red" ng-show="newSalesItem.total_sales.$error.required">Total sales is required.</span>
+              <span ng-show="newSalesItem.total_sales.$error.number">Invalid number.</span>
             </span>                            
         </div>
         <div class="form-group">
             <label for="total_volume">Total Volume sold:</label>
             <input type="number" name="total_volume" required class="form-control" ng-model="item.total_volume">
-            <span style="color:red" ng-show="newSalesItem.total_volume.$error.required">Sales volume is required.</span>
-            <span style="color:red" ng-show="newSalesItem.total_volume.$dirty && newSalesItem.total_volume.$invalid">
-                  <span ng-show="newSalesItem.total_volume.$error.number">Invalid number.</span>
+            <span style="color:red" ng-show="newSalesItem.total_volume.$dirty">
+                <span style="color:red" ng-show="newSalesItem.total_volume.$error.required">Sales volume is required.</span>
+                <span ng-show="newSalesItem.total_volume.$error.number">Invalid number.</span>
             </span>                            
         </div>
         <div class="form-group">
             <label for="average_price">Average price per unit:</label>
             <input type="number" name="average_price" required class="form-control" ng-model="item.average_price">
-            <span style="color:red" ng-show="newSalesItem.average_price.$error.required">Average price is required.</span>
-            <span style="color:red" ng-show="newSalesItem.average_price.$dirty && newSalesItem.average_price.$invalid">
+            <span style="color:red" ng-show="newSalesItem.average_price.$dirty">
+                  <span style="color:red" ng-show="newSalesItem.average_price.$error.required">Average price is required.</span>
                   <span ng-show="newSalesItem.average_price.$error.number">Invalid number.</span>
             </span>                            
         </div>
           <div class="form-group">
             <label for="average_profit">Average profit per unit:</label>
             <input type="number" name="average_profit" required class="form-control" ng-model="item.average_profit">
-            <span style="color:red" ng-show="newSalesItem.average_profit.$error.required">Average profit is required.</span>
-            <span style="color:red" ng-show="newSalesItem.average_profit.$dirty && newSalesItem.average_profit.$invalid">
+            <span style="color:red" ng-show="newSalesItem.average_profit.$dirty">
+                <span style="color:red" ng-show="newSalesItem.average_profit.$error.required">Average profit is required.</span>
                   <span ng-show="newSalesItem.average_profit.$error.number">Invalid number.</span>
-              </span>                            
+            </span>                            
           </div>                                                          	            			
 		</form></div>
 		<div class="modal-footer">
-			<button ng-disabled="newSalesItem.$invalid" class="btn btn-success" ng-click="ok()">Submit
+			<button ng-disabled="newSalesItem.$invalid" class="btn btn-primary" ng-click="ok()">Submit
 			</button>
 			<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 		</div>
