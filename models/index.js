@@ -27,14 +27,11 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-var currencies =
-[{
-    "name": "USD"
-}, {
-    "name": "VND"
-}, {
-    "name": "GBP"
-}]
+var currencies = [   
+    { "name": "USD"}, 
+    { "name": "VND"}, 
+    { "name": "GBP"}
+]
 
 var vendors =
 [{
@@ -53,13 +50,11 @@ var vendors =
         "telephone": "84673852278",
         "email": "domesco@domesco.com"
 }];
-var manufacturers = [{
-    "id": 1,
-    "name": "Traphaco"
-}, {
-    "id": 2,
-    "name": "Domesco"
-}];
+var manufacturers = [
+    { "id": 1,  "name": "Traphaco"}, 
+    { "id": 2,  "name": "Domesco"}
+];
+
 var dodacin = {
     "id": 1,
     "name": "Dodacin",
@@ -75,6 +70,7 @@ var claritin = {
     "salesPrice": 12,
 }
 
+var drugs = [dodacin, claritin];
 var dodacin_item = {
     "invoice": 1,
     "drug": 1,
@@ -119,46 +115,37 @@ function syncTables() {
     });
 }
 
-function createVendor(vendors) {
-    console.log("Create vendor\n");
-    return db.Vendor.bulkCreate(vendors);
-};
-
-function createInvoice(invoice) {
-    console.log("Create invoice\n");
-
-    return db.Invoice.create(invoice);
+function createFunction(Model) {
+    return function(item){
+        console.log("Create " + Model.name + "\n");
+        return Model.create(item);
+    };
 }
-
-function createUnit(unit) {
-    console.log("Create unit\n");
-
-    return db.Unit.create(unit);
+var createDrug = createFunction(db.Drug);
+var createUnit = createFunction(db.Unit);
+var createInvoice = createFunction(db.Invoice);
+var createInvoiceItem = createFunction(db.InvoiceItem);
+var createItemPrice = createFunction(db.ItemPrice);
+//
+function multipleCreateFunction(Model) {
+    return function(items){
+        console.log("Create " + Model.name + "\n");
+        items.forEach(function(element, index, array){
+            return Model.create(element);
+        });
+    };
 }
-
-function createDrug(drug) {
-    console.log("Create drug\n");
-
-    return db.Drug.create(drug);
+//
+function bulkCreateFunction(Model) {
+    return function(items){
+        console.log("Create " + Model.name + "\n");
+        return Model.bulkCreate(items);
+    };
 }
-function createInvoiceItem(invoice_item) {
-    console.log("Create invoice item\n");
-
-    return db.InvoiceItem.create(invoice_item);
-}
-function createCurrency(currencies) {
-    console.log("Currency created \n");
-    return db.Currency.bulkCreate(currencies);
-}
-
-function createManufacturer(manufacturers) {
-    console.log("Manufacturers created. \n");
-    return db.Manufacturer.bulkCreate(manufacturers);
-}
-function createItemPrice(itemPrice){
-    console.log('Item price created');
-    return db.ItemPrice.create(itemPrice);
-}
+var createVendor = bulkCreateFunction(db.Vendor);
+var createCurrency = bulkCreateFunction(db.Currency);
+var createManufacturer = bulkCreateFunction(db.Manufacturer);
+//
 function populateData() {
     return createVendor(vendors)
         .then(function() {
