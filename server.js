@@ -18,18 +18,18 @@ app.use(function(req, res, next) {
 });
 
 
-var drugRouter = require('./routes/drug');
-var vendorRouter = require('./routes/vendor');
-var unitRouter = require('./routes/unit');
-var invoiceRouter = require('./routes/invoice');
-var invoiceItemRouter = require('./routes/invoiceitem');
-var manufacturerRouter = require('./routes/manufacturer');
-app.use('/drug', drugRouter);
-app.use('/vendor', vendorRouter);
-app.use('/unit', unitRouter);
-app.use('/invoice', invoiceRouter);
-app.use('/invoiceitem', invoiceItemRouter);
-app.use('/manufacturer', manufacturerRouter);
+
+
+
+
+
+
+app.use('/drug', require('./routes/drug'));
+app.use('/vendor', require('./routes/vendor'));
+app.use('/unit', require('./routes/unit'));
+app.use('/invoice', require('./routes/invoice'));
+app.use('/invoiceitem', require('./routes/invoiceitem'));
+app.use('/manufacturer', require('./routes/manufacturer'));
 
 module.exports = app;
 console.log('Server started: http://localhost:3000/');
