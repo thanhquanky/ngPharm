@@ -30,7 +30,7 @@ app.use('/unit', require('./routes/unit'));
 app.use('/invoice', require('./routes/invoice'));
 app.use('/invoiceitem', require('./routes/invoiceitem'));
 app.use('/manufacturer', require('./routes/manufacturer'));
-
+app.use('/user', require('./routes/user'));
 module.exports = app;
 console.log('Server started: http://localhost:3000/');
 app.listen(3000);

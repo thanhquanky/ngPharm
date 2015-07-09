@@ -1,7 +1,10 @@
 var models = require('../models');
 var express = require('express');
 var router = express.Router();
-
+//
+var middlewares = require('../middlewares');
+var sendJSON = middlewares.sendJSONFunction;
+//
 router.get('/:name', function(req, res) {
     var name = req.params.name;
         models.InvoiceItem.findAll({
@@ -10,9 +13,7 @@ router.get('/:name', function(req, res) {
                 "Drug.name LIKE ?", name + "%"
             ]
         })
-        .then(function(models) {
-            res.json(models);
-        })
+        .then(sendJSON(res))
         .catch(function(error) {
             res.send(error);
         });

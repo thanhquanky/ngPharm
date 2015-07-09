@@ -1,6 +1,10 @@
 var models = require('../models');
 var express = require('express');
 var router = express.Router();
+//
+var middlewares = require('../middlewares');
+var sendJSON = middlewares.sendJSONFunction;
+//
 function findOne(id) {
     return models.Invoice.findOne({
         attributes: ["id", "number", "createdAt", "updatedAt"],
@@ -36,9 +40,7 @@ function findAll() {
 router
     .get('/', function(req, res) {
         findAll()
-            .then(function(models) {
-                res.json(models);
-            })
+            .then(sendJSON(res))
             .catch(function(error) {
                 res.send(error);
             });

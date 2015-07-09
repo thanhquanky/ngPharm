@@ -1,7 +1,11 @@
 var models = require('../models');
 var express = require('express');
 var router = express.Router();
-
+//
+var middlewares = require('../middlewares');
+var sendJSON = middlewares.sendJSONFunction;
+var sendServerError = middlewares.sendServerErrorFunction;
+//
 
 var findOne = function(id) {
     return models.Drug.findOne({
@@ -21,12 +25,8 @@ router
                     attributes: ["name"]
                 }
             })
-            .then(function(models) {
-                res.json(models);
-            })
-            .catch(function(error) {
-                res.send(500, error);
-            });
+            .then(sendJSON(res))
+            .catch(sendServerError(res));
     })
     .post('/', function(req, res){
         var newDrug = req.body;
@@ -34,16 +34,12 @@ router
         models.Drug.create(newDrug)
             .then(function(drug) {
                 findOne(drug.id)
-                    .then(function(model) {
-                        res.json(model);
-                    })
+                    .then(sendJSON(res))
                     .catch(function(error) {
                         res.send(error);
                     });
             })
-            .catch(function(err) {
-                res.send(500, err);
-            })
+            .catch(sendServerError(res))
     })
 
 module.exports = router;
