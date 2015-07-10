@@ -7,11 +7,7 @@ var sendJSON = middlewares.sendJSONFunction;
 var sendServerError = middlewares.sendServerErrorFunction;
 //
 router.
-    get('/', function(req, res){
-        models.Manufacturer.findAll()
-            .then(sendJSON(res))
-            .catch(sendServerError(res))
-    })
+    get('/', middlewares.indexFunction(models.Manufacturer, {}))
     .get('/:id', function(req, res) {
         models.Manufacturer.findOne(req.params.id)
             .then(sendJSON(res))

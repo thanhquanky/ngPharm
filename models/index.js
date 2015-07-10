@@ -26,87 +26,44 @@ Object.keys(db).forEach(function(modelName) {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
+var users = [
+    {"username": "trananhduc", "password": "123456789", "first_name": "Duc", "last_name": "Tran"}
+];
 var currencies = [   
-    { "name": "USD"}, 
-    { "name": "VND"}, 
-    { "name": "GBP"}
+    {  "name": "USD"}, 
+    {  "name": "VND"}, 
+    {  "name": "GBP"}
 ]
 
 var vendors =
-[{
-        "name": "CVS",
-        "email": "info@cvs.com",
-        "telephone": "123-456-7890",
-        "address": "adfadf"
-    }, {
-        "name": "Walgreen",
-        "email": "info@walgreen.com",
-        "telephone": "123-456-7890",
-        "address": "abcdef"
-    }, {
-        "name": "CÔNG TY CỔ PHẦN XNK Y TẾ DOMESCO",
-        "address": "66 Quốc lộ 30 - P.Mỹ Phú - TP. Cao Lãnh - Tỉnh Đồng Tháp - Việt Nam",
-        "telephone": "84673852278",
-        "email": "domesco@domesco.com"
-}];
+[
+    {   "name": "CVS",                  "email": "info@cvs.com",        "telephone": "123-456-7890",        "address": "Emory"    }, 
+    {   "name": "Walgreen",             "email": "info@walgreen.com",   "telephone": "123-456-7890",        "address": "Georgia Tech"    }
+];
 var manufacturers = [
-    { "id": 1,  "name": "Traphaco"}, 
-    { "id": 2,  "name": "Domesco"}
+    {  "name": "Traphaco"}, 
+    { "name": "Domesco"}
 ];
 
-var dodacin = {
-    "id": 1,
-    "name": "Dodacin",
-    "use": "Antibiotic",
-    "manufacturer": 1
-}
+var drugs = [
+    {"name": "Dodacin",  "use": "Antibiotic",       "manufacturer": 1},
+    {"name": "Claritin", "use": "Anti-histamine",   "manufacturer": 1,  "salesPrice": 12}
+];
+var invoiceItems = [
+    { "invoice": 1,    "drug": 1,    "quantity": 1,    "unit": 1,    "manufactureDate": new Date("2015/01/01"),    "expirationDate": new Date("2017/01/01"),    "price": 3.5},
+    { "invoice": 1,    "drug": 2,    "quantity": 4,    "unit": 1,    "manufactureDate": new Date("2012/05/03"),    "expirationDate": new Date("2017/01/01"),    "price": 3.5},
+    { "invoice": 1,    "drug": 2,    "quantity": 4,    "unit": 1,    "manufactureDate": new Date("2012/05/03"),    "expirationDate": new Date("2017/01/01"),    "price": 3.5}
+];
+var itemPrices = [
+    { "drug": 1, "unit": 1, "currency": 1, price: 10.5}
+];
+var units = [
+    {"name": "Box"}
+];
 
-var claritin = {
-    "id": 2,
-    "name": "Claritin",
-    "use": "Anti-histamine",
-    "manufacturer": 1,
-    "salesPrice": 12,
-}
-
-var drugs = [dodacin, claritin];
-var dodacin_item = {
-    "invoice": 1,
-    "drug": 1,
-    "quantity": 1,
-    "unit": 1,
-    "manufactureDate": new Date("2015/01/01"),
-    "expirationDate": new Date("2017/01/01"),
-    "price": 3.5
-}
-
-var claritin_item = {
-    "invoice": 1,
-    "drug": 2,
-    "quantity": 5,
-    "unit": 1,
-    "manufactureDate": new Date("2015/01/01"),
-    "expirationDate": new Date("2017/02/01"),
-    "price": 7.5
-}
-
-var itemPrice1 = {
-    "drug": 1,
-    "unit": 1,
-    "currency": 1,
-    price: 10.5
-}
-var box = {
-    "id": 1,
-    "name": "Box"
-}
-
-var invoice_one = {
-    "id": 1,
-    "vendor": 1,
-    "number": "HD001"
-}
+var invoices = [
+    {"vendor": 1,"number": "HD001"}
+];
 
 function syncTables() {
     console.log("Sync table\n");
@@ -121,18 +78,16 @@ function createFunction(Model) {
         return Model.create(item);
     };
 }
-var createDrug = createFunction(db.Drug);
-var createUnit = createFunction(db.Unit);
-var createInvoice = createFunction(db.Invoice);
-var createInvoiceItem = createFunction(db.InvoiceItem);
-var createItemPrice = createFunction(db.ItemPrice);
+
+
 //
 function multipleCreateFunction(Model) {
     return function(items){
         console.log("Create " + Model.name + "\n");
-        items.forEach(function(element, index, array){
-            return Model.create(element);
-        });
+        for (var i = 0; i < items.length - 1; i++) {
+            Model.create(items[i]);
+        }
+        return Model.create(items[items.length - 1]);
     };
 }
 //
@@ -142,38 +97,41 @@ function bulkCreateFunction(Model) {
         return Model.bulkCreate(items);
     };
 }
-var createVendor = bulkCreateFunction(db.Vendor);
-var createCurrency = bulkCreateFunction(db.Currency);
-var createManufacturer = bulkCreateFunction(db.Manufacturer);
+var createVendor = multipleCreateFunction(db.Vendor);
+var createCurrency = multipleCreateFunction(db.Currency);
+var createManufacturer = multipleCreateFunction(db.Manufacturer);
+var createUnit = multipleCreateFunction(db.Unit);
+var createItemPrice = multipleCreateFunction(db.ItemPrice);
+var createInvoice = multipleCreateFunction(db.Invoice);
+var createDrug = multipleCreateFunction(db.Drug);
+var createInvoiceItem = multipleCreateFunction(db.InvoiceItem);
+var createUser = multipleCreateFunction(db.User);
 //
 function populateData() {
     return createVendor(vendors)
         .then(function() {
-            return createInvoice(invoice_one);
+            return createInvoice(invoices);
         })
         .then(function() {
-            return createUnit(box);
+            return createUnit(units);
         })
         .then(function(){
             return createManufacturer(manufacturers);
         })
-        .then(function() {
-            return createDrug(dodacin);
+        .then(function(){
+            return createDrug(drugs);
         })
-        .then(function() {
-            return createDrug(claritin);
-        })
-        .then(function() {
-            return createInvoiceItem(dodacin_item);
-        })
-        .then(function() {
-            return createInvoiceItem(claritin_item);
+        .then(function(){
+            return createInvoiceItem(invoiceItems);
         })
         .then(function(){
             return createCurrency(currencies);
         })
         .then(function(){
-            return createItemPrice(itemPrice1);
+            return createUser(users)
+        })
+        .then(function(){
+            return createItemPrice(itemPrices);
         });
 }
 

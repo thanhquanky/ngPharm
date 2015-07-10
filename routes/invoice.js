@@ -4,6 +4,8 @@ var router = express.Router();
 //
 var middlewares = require('../middlewares');
 var sendJSON = middlewares.sendJSONFunction;
+var sendServerError = middlewares.sendServerErrorFunction;
+var sendNotFoundError = middlewares.sendNotFoundErrorFunction;
 //
 function findOne(id) {
     return models.Invoice.findOne({
@@ -29,22 +31,21 @@ function findOne(id) {
 }
 
 function findAll() {
-    return models.Invoice.findAll({
-        attributes: ['id','number'],
-        include: {
-            model: models.Vendor,
-            attributes: ["name"]
-        }
-    })
+    return models.Invoice.findAll(
+        {
+            attributes: ['id','number'],
+            include: {  model: models.Vendor,    attributes: ["name"]}
+        })
 }
 router
-    .get('/', function(req, res) {
-        findAll()
-            .then(sendJSON(res))
-            .catch(function(error) {
-                res.send(error);
-            });
-    })
+    .get('/', middlewares.indexFunction(
+                models.Invoice, 
+                {
+                    attributes: ['id','number'],
+                    include: {  model: models.Vendor,    attributes: ["name"] }            
+                }
+            )
+        )
     .get('/:invoiceId', function(req, res) {
         findOne(req.params.invoiceId)
             .then(function(model) {
@@ -54,9 +55,7 @@ router
                     res.sendStatus(404);
                 }
             })
-            .catch(function(error) {
-                res.send(404, error);
-            });
+            .catch(sendServerError(res));
     })
     .post('/', function(req, res) {
         var items = [];

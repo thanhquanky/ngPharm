@@ -17,17 +17,11 @@ var findOne = function(id) {
         }
     });
 }
+
 router
-    .get('/', function(req, res) {
-        models.Drug.findAll({
-                include: {
-                    model: models.Manufacturer,
-                    attributes: ["name"]
-                }
-            })
-            .then(sendJSON(res))
-            .catch(sendServerError(res));
-    })
+    .get('/', 
+        middlewares.indexFunction(models.Drug, {   include: { model: models.Manufacturer,    attributes: ["name"]}  })
+    )
     .post('/', function(req, res){
         var newDrug = req.body;
         newDrug.manufacturer = req.body.Manufacturer.id;

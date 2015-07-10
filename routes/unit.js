@@ -5,12 +5,5 @@ var router = express.Router();
 var middlewares = require('../middlewares');
 var sendJSON = middlewares.sendJSONFunction;
 //
-router.get('/', function(req, res) {
-    models.Unit.findAll()
-        .then(sendJSON(res))
-        .catch(function(error) {
-            res.send(error);
-        });
-})
-
+router.get('/', middlewares.indexFunction(models.Unit, {}));
 module.exports = router;

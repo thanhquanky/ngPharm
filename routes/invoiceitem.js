@@ -5,6 +5,7 @@ var router = express.Router();
 var middlewares = require('../middlewares');
 var sendJSON = middlewares.sendJSONFunction;
 //
+router.get('/', middlewares.indexFunction(models.InvoiceItem, {}));
 router.get('/:name', function(req, res) {
     var name = req.params.name;
         models.InvoiceItem.findAll({
