@@ -41,7 +41,13 @@ ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($
             var modalInstance = $modal.open({
                 templateUrl: 'partials/newVendor.html',
                 controller: 'NewVendorController as NewVendorCtrl',
-                size: size
+                size: size,
+                resolve: {
+                    vendor: function() {
+                        return null;
+                    }
+                }
+
             });
             modalInstance.result.then(function(vendor) {
                 vm.vendors.push(vendor);

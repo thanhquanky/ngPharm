@@ -46,9 +46,7 @@ exported.createFunction = function(model){
 exported.destroyByIdFunction = function(model) {
 	return function(req, res) {
 		model.destroy(
-			{
-				where: {id: req.params.id}
-			}
+			{ where: {id: req.params.id}}
 		)
 			.then(function(){res.sendStatus(204)})
 			.catch(sendServerError(res))

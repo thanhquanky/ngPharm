@@ -17,12 +17,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-
-
-
-
-
-
+//
 
 app.use('/drug', require('./routes/drug'));
 app.use('/vendor', require('./routes/vendor'));

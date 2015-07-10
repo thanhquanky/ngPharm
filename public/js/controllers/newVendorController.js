@@ -4,7 +4,7 @@
  
 (function() {
    angular.module('ngPharm')
-       .controller('NewVendorController',  ['Vendors', '$modalInstance', 'toaster', 'vendor',
+       .controller('NewVendorController',  [ '$modalInstance', 'toaster', 'vendor',
             function (Vendors, $modalInstance, toaster, vendor) {
                 var vm = this;
                 vm.vendor = {};
