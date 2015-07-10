@@ -7,18 +7,8 @@ var sendJSON = middlewares.sendJSONFunction;
 var sendServerError = middlewares.sendServerErrorFunction;
 //
 router.
-    get('/', middlewares.indexFunction(models.Manufacturer, {}))
-    .get('/:id', function(req, res) {
-        models.Manufacturer.findOne(req.params.id)
-            .then(sendJSON(res))
-            .catch(function(error) {
-                res.send(error);
-            });
-    })
-    .post('/', function(req, res){
-        models.Manufacturer.create(req.body)
-            .then(sendJSON(res))
-            .catch(sendServerError(res))
-    });
-
+    get('/', middlewares.findAllFunction(models.Manufacturer, {}))
+    .get('/:id', middlewares.findOneFunction(models.Manufacturer, {}, "id"))
+    .post('/', middlewares.createFunction(models.Manufacturer))
+    .delete('/:id', middlewares.destroyByIdFunction(models.Manufacturer));
 module.exports = router;

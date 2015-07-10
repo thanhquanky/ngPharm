@@ -5,6 +5,7 @@ var router = express.Router();
 var middlewares = require('../middlewares');
 var sendJSON = middlewares.sendJSONFunction;
 var sendServerError = middlewares.sendServerErrorFunction;
+var sendError = middlewares.sendErrorFunction;
 //
 
 var findOne = function(id) {
@@ -20,8 +21,9 @@ var findOne = function(id) {
 
 router
     .get('/', 
-        middlewares.indexFunction(models.Drug, {   include: { model: models.Manufacturer,    attributes: ["name"]}  })
+        middlewares.findAllFunction(models.Drug, {   include: { model: models.Manufacturer,    attributes: ["name"]}  })
     )
+    .get('/:id', middlewares.findOneFunction(models.Drug, {}, "id"))
     .post('/', function(req, res){
         var newDrug = req.body;
         newDrug.manufacturer = req.body.Manufacturer.id;
@@ -29,11 +31,9 @@ router
             .then(function(drug) {
                 findOne(drug.id)
                     .then(sendJSON(res))
-                    .catch(function(error) {
-                        res.send(error);
-                    });
+                    .catch(sendError(res));
             })
             .catch(sendServerError(res))
     })
-
+    .delete('/:id', middlewares.destroyByIdFunction(models.Drug));
 module.exports = router;

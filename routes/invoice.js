@@ -8,37 +8,33 @@ var sendServerError = middlewares.sendServerErrorFunction;
 var sendNotFoundError = middlewares.sendNotFoundErrorFunction;
 //
 function findOne(id) {
-    return models.Invoice.findOne({
-        attributes: ["id", "number", "createdAt", "updatedAt"],
-        where: {
-            id: id
-        },
-        include: [
-            {model: models.InvoiceItem,
-                attributes: ["id", "sku", "quantity", "manufactureDate", "expirationDate", "price"],
-                include: [{
-                    model: models.Drug,
-                    attributes: ["name"]
-                }, {
-                    model: models.Unit,
-                    attributes: ["name"]
-                }]
-            }, {
-                model: models.Vendor,
-                attributes: ["id", "name"]
-        }]
-    })
-}
-
-function findAll() {
-    return models.Invoice.findAll(
+    return models.Invoice.findOne(
         {
-            attributes: ['id','number'],
-            include: {  model: models.Vendor,    attributes: ["name"]}
-        })
-}
+            attributes: ["id", "number", "createdAt", "updatedAt"],
+            where: {
+                id: id
+            },
+            include: [
+                {model: models.InvoiceItem,
+                    attributes: ["id", "sku", "quantity", "manufactureDate", "expirationDate", "price"],
+                    include: [{
+                        model: models.Drug,
+                        attributes: ["name"]
+                    }, {
+                        model: models.Unit,
+                        attributes: ["name"]
+                    }]
+                }, {
+                    model: models.Vendor,
+                    attributes: ["id", "name"]
+                }
+            ]
+        }
+    )
+};
+
 router
-    .get('/', middlewares.indexFunction(
+    .get('/', middlewares.findAllFunction(
                 models.Invoice, 
                 {
                     attributes: ['id','number'],
@@ -94,6 +90,7 @@ router
             .catch(function(error) {
                 res.send(error);
             });
-    });
+    })
+    .delete('/:id', middlewares.destroyByIdFunction(models.Invoice));;
 
 module.exports = router;
