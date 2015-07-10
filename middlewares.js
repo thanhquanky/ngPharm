@@ -52,6 +52,41 @@ exported.destroyByIdFunction = function(model) {
 			.catch(sendServerError(res))
 	};
 };
+exported.generateToken = function(req, res){
+	var User = require('./models').User;
+	var jwt = require('jsonwebtoken');
+	var privateKey = 'something';
+	User.findOne({	where: {username: req.body.username},
+					attributes: ["username", "password"]
+				})
+				.then(function(user){
+					if (!user) return res.json({success: false, message: "User not found"});
+					var isPasswordMatch = user.comparePassword(req.body.password);
+					if (!isPasswordMatch) return res.json({success: false, message: "Invalid password"});
+					var token = jwt.sign({name: user.username}, privateKey, { expiresInMinutes: 2});
+					res.json({success: true, message: 'Token created', token: token});
+				})
+				.catch(sendServerError(res));
+};
+exported.validateToken = function(req, res, next){
+	// console.log('Validating token');
+	var jwt = require('jsonwebtoken');
+	var secret = 'something';
+	var token = req.body.token || req.query.token || req.headers['x-access-token'];
+	if (token){
+		jwt.verify(token, secret, function(err, decoded){
+			if (err) {
+				return res.status(403).send({ success: false, message: 'Failed to authenticate token.' });
+			} else {
+				req.decoded = decoded;
+				res.json("Token validated");
+				next();
+			}
+		});
+	} else {
+		return res.status(403).send({ success: false, message: 'No token provided' });
+	}
+};
 exported.sendErrorFunction = sendError;
 exported.sendJSONFunction = sendJSON;
 exported.sendServerErrorFunction = sendServerError;

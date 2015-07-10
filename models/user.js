@@ -1,12 +1,18 @@
 var Sequelize = require('sequelize');
+var bcrypt = require('bcrypt-nodejs');
 module.exports = function(sequelizeInstance, DataTypes){
+var newPass = "";
     var User = sequelizeInstance.define('User', {
         "username": {
             type: DataTypes.STRING,
-            primaryKey: true
+            primaryKey: true,
+            allowNull: false,
+            required: true
         }, 
         "password": {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false,
+            required: true
         }, 
         "first_name": {
             type: DataTypes.STRING
@@ -31,7 +37,16 @@ module.exports = function(sequelizeInstance, DataTypes){
             defaultValue: 0
         }
     }, {
+        instanceMethods: {
+            comparePassword: function(password){
+                var user = this;
+                return bcrypt.compareSync(password, user.password);
+            }
+        },
         freezeTableName: true //Model tableName will be the same as the model name
+    });
+    User.beforeCreate(function(user){
+        user.password = bcrypt.hashSync(user.password);
     });
     return User;
 }
