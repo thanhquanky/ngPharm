@@ -16,9 +16,8 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
+app.post('/authenticate', middlewares.generateToken);
 //
-
 app.use('/drug', require('./routes/drug'));
 app.use('/vendor', require('./routes/vendor'));
 app.use('/unit', require('./routes/unit'));
@@ -27,8 +26,7 @@ app.use('/invoiceitem', require('./routes/invoiceitem'));
 app.use('/manufacturer', require('./routes/manufacturer'));
 app.use('/user', require('./routes/user'));
 //
-app.post('/authenticate', middlewares.generateToken);
-// app.post('/validate', middlewares.validateToken);
+
 //
 module.exports = app;
 console.log('Server started: http://localhost:3000/');

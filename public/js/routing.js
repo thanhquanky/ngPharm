@@ -10,6 +10,10 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
             templateUrl: "partials/home.html",
             controller: "HomeController as HomeCtrl"
         })
+        .state('login', {
+            url: "/login",
+            templateUrl: "partials/login.html"
+        })
         .state('invoice', {
             url: "/invoice",
             templateUrl: "partials/invoice.html",

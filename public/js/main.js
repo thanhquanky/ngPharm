@@ -34,11 +34,8 @@ var ngPharm = angular.module('ngPharm',
                     return $q.reject(rejection);
                 }
             }
-        })
+        });
     }]);
-
-
-
 ngPharm.constant('ServerInfo', {
     'host': '52.5.44.90',
     'post': '80'

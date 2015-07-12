@@ -63,7 +63,7 @@ exported.generateToken = function(req, res){
 					if (!user) return res.json({success: false, message: "User not found"});
 					var isPasswordMatch = user.comparePassword(req.body.password);
 					if (!isPasswordMatch) return res.json({success: false, message: "Invalid password"});
-					var token = jwt.sign({name: user.username}, privateKey, { expiresInMinutes: 2});
+					var token = jwt.sign({name: user.username}, privateKey, { expiresInMinutes: 60});
 					res.json({success: true, message: 'Token created', token: token});
 				})
 				.catch(sendServerError(res));
@@ -73,9 +73,11 @@ exported.validateToken = function(req, res, next){
 	var jwt = require('jsonwebtoken');
 	var secret = 'something';
 	var token = req.body.token || req.query.token || req.headers['x-access-token'];
+	console.log('token is ' + token)
 	if (token){
 		jwt.verify(token, secret, function(err, decoded){
 			if (err) {
+				console.log('Failed to authenticate token');
 				return res.status(403).send({ success: false, message: 'Failed to authenticate token.' });
 			} else {
 				req.decoded = decoded;
@@ -84,6 +86,7 @@ exported.validateToken = function(req, res, next){
 			}
 		});
 	} else {
+		console.log('no token provided');
 		return res.status(403).send({ success: false, message: 'No token provided' });
 	}
 };
