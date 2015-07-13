@@ -12,7 +12,8 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
         })
         .state('login', {
             url: "/login",
-            templateUrl: "partials/login.html"
+            templateUrl: "partials/login.html",
+            controller: "LoginController as LoginCtrl"
         })
         .state('invoice', {
             url: "/invoice",
