@@ -8,7 +8,7 @@ var ngPharm = angular.module('ngPharm',
         'ngResource',
         'ngPharm.services',
         'authService'
-]).config(['$httpProvider',
+]).config(['$httpProvider', 
     function($httpProvider) {
         $httpProvider.interceptors.push(function($q) {
             return {
@@ -19,7 +19,6 @@ var ngPharm = angular.module('ngPharm',
                     if(rejection.status === 404) {
                         window.location = "/";
                         //throw a error dialog or redirect to a  401 page etc
-
                     }
                     return $q.reject(rejection);
                 },
@@ -36,6 +35,7 @@ var ngPharm = angular.module('ngPharm',
                 }
             }
         });
+        $httpProvider.interceptors.push('AuthInterceptor');
     }]);
 ngPharm.constant('ServerInfo', {
     'host': '52.5.44.90',

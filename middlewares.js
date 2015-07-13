@@ -82,6 +82,7 @@ exported.validateToken = function(req, res, next){
 			} else {
 				req.decoded = decoded;
 				res.json("Token validated");
+				console.log('Succeeded to validate token');
 				next();
 			}
 		});

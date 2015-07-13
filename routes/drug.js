@@ -18,9 +18,8 @@ var findOne = function(id) {
         }
     });
 }
-
 router
-    .get('/', 
+    .get('/',
         middlewares.findAllFunction(models.Drug, {   include: { model: models.Manufacturer,    attributes: ["name"]}  })
     )
     .get('/:id', middlewares.findOneFunction(models.Drug, {}, "id"))
@@ -36,4 +35,5 @@ router
             .catch(sendServerError(res))
     })
     .delete('/:id', middlewares.destroyByIdFunction(models.Drug));
+
 module.exports = router;

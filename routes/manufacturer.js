@@ -7,7 +7,7 @@ var sendJSON = middlewares.sendJSONFunction;
 var sendServerError = middlewares.sendServerErrorFunction;
 //
 router.
-    get('/', middlewares.findAllFunction(models.Manufacturer, {}))
+    get('/' , middlewares.findAllFunction(models.Manufacturer, {}))
     .get('/:id', middlewares.findOneFunction(models.Manufacturer, {}, "id"))
     .post('/', middlewares.createFunction(models.Manufacturer))
     .delete('/:id', middlewares.destroyByIdFunction(models.Manufacturer));
