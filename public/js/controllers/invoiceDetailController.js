@@ -27,43 +27,22 @@ ngPharm.controller('InvoiceDetailController', ['$scope', '$stateParams', '$modal
             enableSelectAll: true,
             enableRowHeaderSelection: true, 
             selectionRowHeaderWidth: 35,
-            columnDefs: [{
-                name: 'Name',
-                enableCellEdit: true,
+            columnDefs: [
+            {   name: 'Name',        enableCellEdit: true,
                 enableCellEditOnFocus: true,
-                field: 'Drug.name'
-            },
-            {
-                name: "Unit",
-                field: 'Unit.name'
-            }, {
-                name: "Sku",
-                field: 'sku'
-            },
-            {
-                name: "Quantity",
-                field: 'quantity'
-            },
-            {
-                name: "MFD",
-                field: 'manufactureDate',
-                type: 'date',
-                cellFilter: 'date:"MM/yyyy"'
-            }, {
-                name: "EXP",
-                field: 'expirationDate',
-                type: 'date',
-                cellFilter: 'date:"MM/yyyy"'
-            }, {
-                name: 'Price',
-                field: 'price'
-            },
-                {
-                    name: 'Total',
-                    field: 'getTotal()',
-                    aggregationType: uiGridConstants.aggregationTypes.sum,
-                    type: 'number'
-                }],
+                field: 'Drug.name'                                  }, 
+            {   name: "Unit",        field: 'Unit.name'             }, 
+            {   name: "Sku",         field: 'sku'                   },
+            {   name: "Quantity",    field: 'quantity'              },
+            {   name: "MFD",         field: 'manufactureDate',
+                type: 'date',        cellFilter: 'date:"MM/yyyy"'   }, 
+            {   name: "EXP",         field: 'expirationDate',
+                type: 'date',        cellFilter: 'date:"MM/yyyy"'   }, 
+            {   name: 'Price',       field: 'price'                 },
+            {   name: 'Total',       field: 'getTotal()',
+                aggregationType: uiGridConstants.aggregationTypes.sum,
+                type: 'number'                                      }
+            ],
             data: []
         };
 

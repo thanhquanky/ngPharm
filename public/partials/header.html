@@ -46,7 +46,6 @@
                     </form>
                     -->
                     <ul class="nav navbar-nav navbar-right" ng-controller="LoginController as LoginCtrl">
-                        <li><a ui-sref="about">About ngPharm</a></li>
                         <li><a ng-if="LoginCtrl.loggedIn" href="#" ng-click="LoginCtrl.logout()">Logout</a></li>
                         <li><a ng-if="!LoginCtrl.loggedIn" href="#" ui-sref="login">Login</a></li>
                     </ul>

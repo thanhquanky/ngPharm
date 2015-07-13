@@ -21,13 +21,11 @@ ngPharm.controller('LoginController', ['$scope', '$location', '$rootScope', '$q'
 						location.reload();
 					}
 					else vm.errorMessage = data.message;
-					// console.log(vm.loggedIn);
 				}
 			);
 		};
 		vm.logout = function(){
 			Auth.logout();
-			// $location.path('login');
 			location.reload();
 		};
 	}]

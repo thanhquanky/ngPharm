@@ -1,10 +1,6 @@
-/**
-*/
 
-(function() {
-
-    var ngPharm = angular.module('ngPharm'); 
-    var AboutController = function() {
+ngPharm.controller('AboutController', 
+    function() {
         var vm = this;
         vm.developers = [
             {
@@ -23,6 +19,5 @@
             }
         ];
     }
-    ngPharm.controller('AboutController', AboutController);
+);
 
-})();

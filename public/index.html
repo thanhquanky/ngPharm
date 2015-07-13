@@ -8,7 +8,7 @@
 
 <body ng-app="ngPharm">
     <div class="container-fluid">
-        <header ng-include="'partials/navbar.html'"></header>
+        <header ng-include="'partials/header.html'"></header>
         <main style="min-height:72vh">
             <div ui-view></div>
             <toaster-container></toaster-container>
@@ -16,11 +16,12 @@
         <footer ng-include="'partials/footer.html'"></footer>
     </div>
 </body>
+    <!-- Additional libraries -->
     <script type="text/javascript" src="components/moment/moment.js"></script>
     <script type="text/javascript" src="components/moment/locale/vi.js"></script>
     <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
+    <!-- Angular -->
     <script type="text/javascript" src="components/angular/angular.min.js"></script>
-    <!-- Additional libraries -->
     <script type="text/javascript" src="components/ui-router/release/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="components/angular-resource/angular-resource.min.js"></script>
     <script type="text/javascript" src="components/angular-animate/angular-animate.min.js"></script>
