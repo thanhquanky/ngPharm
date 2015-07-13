@@ -1,19 +1,19 @@
-ngPharm.controller('LoginController', ['$scope', 
-	function($scope){
+ngPharm.controller('LoginController', ['$scope', '$location', 'Auth',
+	function($scope, $location, Auth){
 		var vm = this;
 		vm.loginData = {};
 		vm.login = function(){
 			console.log ('Username: ' + vm.loginData.username + ". Password " + vm.loginData.password);
 			vm.processing = true; // just for the spinning icon when the server is processing.
 			vm.errorMessage = ''; // Show error messages on screen
-			// Auth.login(vm.loginData.username, vm.loginData.password)
-			// 	.success(function(data){
-			// 		vm.processing = false; // End the process
-			// 		// Either redirect or send message error
-			// 		if (data.success) $location.path('/');
-			// 		else vm.errorMessage = data.message;
-			// 	}
-			// );
+			Auth.login(vm.loginData.username, vm.loginData.password)
+				.success(function(data){
+					vm.processing = false; // End the process
+					// Either redirect or send message error
+					if (data.success) $location.path('/');
+					else vm.errorMessage = data.message;
+				}
+			);
 		};
 	}]
 );

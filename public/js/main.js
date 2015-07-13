@@ -6,7 +6,8 @@ var ngPharm = angular.module('ngPharm',
         'ui.grid', 'ui.grid.edit','ui.grid.selection', 
         'toaster', 
         'ngResource',
-        'ngPharm.services'
+        'ngPharm.services',
+        'authService'
 ]).config(['$httpProvider',
     function($httpProvider) {
         $httpProvider.interceptors.push(function($q) {
