@@ -1,5 +1,5 @@
-ngPharm.controller('LoginController', ['$scope', '$location', '$rootScope', '$q', '$window', 'Auth',
-	function($scope, $location, $rootScope, $q, $window, Auth){
+ngPharm.controller('LoginController', ['$scope', '$location', '$rootScope', '$q', '$window', '$timeout', 'Auth',
+	function($scope, $location, $rootScope, $q, $window, $timeout, Auth){
 		var vm = this;
 		vm.abc = true;
 		vm.loginData = {};
@@ -17,7 +17,7 @@ ngPharm.controller('LoginController', ['$scope', '$location', '$rootScope', '$q'
 					vm.processing = false; // End the process
 					// Either redirect or send message error
 					if (data.success) {
-						// $location.path('/');
+						$location.path('home');
 						location.reload();
 					}
 					else vm.errorMessage = data.message;
@@ -25,9 +25,10 @@ ngPharm.controller('LoginController', ['$scope', '$location', '$rootScope', '$q'
 				}
 			);
 		};
-		//
 		vm.logout = function(){
 			Auth.logout();
+			// $location.path('login');
+			location.reload();
 		};
 	}]
 );
