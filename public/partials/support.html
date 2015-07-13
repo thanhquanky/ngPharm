@@ -1,0 +1,36 @@
+<div class="row col-sm-6 col-sm-offset-3">
+	<div class="jumbotron">
+		<h1>Request assistance </h1>
+	<form name="request" novalidate ng-submit="SupportCtrl.submitRequest()">
+	    <div class="form-group">
+	        <label for="name">Name</label>
+	        <input type="text" name="name" required class="form-control" ng-model="SupportCtrl.request.name">
+	        <span style="color:red" ng-show="request.name.$dirty && request.name.$invalid">
+	            <span style="color:red" ng-show="request.name.$error.required">Name is required</span>
+	        </span>
+	    </div>
+		<!-- Phone number input -->
+		<div class="form-group">
+			<label for="phoneNumber"> Phone number </label>
+			<input type="text" required name="phoneNumber" class="form-control" ng-model="SupportCtrl.request.phoneNumber">
+		</div>
+		<!-- Email input -->
+		<div class="form-group">
+			<label for="email"> Email </label>
+			<input type="email" name="email" class="form-control" required ng-model="SupportCtrl.request.email">
+	        <span style="color:red" ng-show="request.email.$dirty && request.name.$invalid">
+	            <span style="color:red" ng-show="request.email.$error.required">Email is required</span>
+	            <span style="color:red" ng-show="request.email.$error.email">Invalid email</span>	            
+	        </span>
+		</div>
+		<!-- Message input -->
+		<div class="form-group">
+			<label for="message"> Message </label>
+			<input type="text" name="message" class="form-control" ng-model="SupportCtrl.request.message">
+		</div>
+	    <button type="submit" ng-disabled="request.$invalid" class="btn btn-primary">OK</button>
+	</form>		
+	</div>
+</div>
+
+
