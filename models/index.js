@@ -7,6 +7,7 @@ var env       = process.env.NODE_ENV || "development";
 var config    = require(__dirname + '/../config/config.json')[env];
 var sequelize = new Sequelize(config.database, config.username, config.password, config);
 var db        = {};
+var data      = require('../populated_data');
 var Q         = require('q');
 fs
   .readdirSync(__dirname)
@@ -26,44 +27,6 @@ Object.keys(db).forEach(function(modelName) {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-var users = [
-    {"username": "trananhduc", "password": "123456789", "first_name": "Duc", "last_name": "Tran"}
-];
-var currencies = [   
-    {  "name": "USD"}, 
-    {  "name": "VND"}, 
-    {  "name": "GBP"}
-]
-
-var vendors =
-[
-    {   "name": "CVS",                  "email": "info@cvs.com",        "telephone": "123-456-7890",        "address": "Emory"    }, 
-    {   "name": "Walgreen",             "email": "info@walgreen.com",   "telephone": "123-456-7890",        "address": "Georgia Tech"    }
-];
-var manufacturers = [
-    {  "name": "Traphaco"}, 
-    { "name": "Domesco"}
-];
-
-var drugs = [
-    {"name": "Dodacin",  "use": "Antibiotic",       "manufacturer": 1},
-    {"name": "Claritin", "use": "Anti-histamine",   "manufacturer": 1,  "salesPrice": 12}
-];
-var invoiceItems = [
-    { "invoice": 1,    "drug": 1,    "quantity": 1,    "unit": 1,    "manufactureDate": new Date("2015/01/01"),    "expirationDate": new Date("2017/01/01"),    "price": 3.5},
-    { "invoice": 1,    "drug": 2,    "quantity": 4,    "unit": 1,    "manufactureDate": new Date("2012/05/03"),    "expirationDate": new Date("2017/01/01"),    "price": 3.5},
-    { "invoice": 1,    "drug": 2,    "quantity": 4,    "unit": 1,    "manufactureDate": new Date("2012/05/03"),    "expirationDate": new Date("2017/01/01"),    "price": 3.5}
-];
-var itemPrices = [
-    { "drug": 1, "unit": 1, "currency": 1, price: 10.5}
-];
-var units = [
-    {"name": "Box"}
-];
-
-var invoices = [
-    {"vendor": 1,"number": "HD001"}
-];
 
 function syncTables() {
     console.log("Sync table\n");
@@ -106,32 +69,34 @@ var createInvoice = multipleCreateFunction(db.Invoice);
 var createDrug = multipleCreateFunction(db.Drug);
 var createInvoiceItem = multipleCreateFunction(db.InvoiceItem);
 var createUser = multipleCreateFunction(db.User);
+
+
 //
 function populateData() {
-    return createVendor(vendors)
+    return createVendor(data.vendors)
         .then(function() {
-            return createInvoice(invoices);
+            return createInvoice(data.invoices);
         })
         .then(function() {
-            return createUnit(units);
+            return createUnit(data.units);
         })
         .then(function(){
-            return createManufacturer(manufacturers);
+            return createManufacturer(data.manufacturers);
         })
         .then(function(){
-            return createDrug(drugs);
+            return createDrug(data.drugs);
         })
         .then(function(){
-            return createInvoiceItem(invoiceItems);
+            return createInvoiceItem(data.invoiceItems);
         })
         .then(function(){
-            return createCurrency(currencies);
+            return createCurrency(data.currencies);
         })
         .then(function(){
-            return createUser(users)
+            return createUser(data.users)
         })
         .then(function(){
-            return createItemPrice(itemPrices);
+            return createItemPrice(data.itemPrices);
         });
 }
 
