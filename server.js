@@ -16,6 +16,17 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+
+
+
+
+
+
+
+// send mail with defined transport object
+app.post('/email', middlewares.sendMail);
+//
 app.post('/authenticate', middlewares.generateToken);
 //
 app.use('/drug', require('./routes/drug'));

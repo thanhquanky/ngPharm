@@ -11,7 +11,7 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
             controller: "HomeController as HomeCtrl"
         })
         .state('support', {
-            url: 'support',
+            url: '/support',
             templateUrl: 'partials/support.html',
             controller: 'SupportController as SupportCtrl'
         })

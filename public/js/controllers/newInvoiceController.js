@@ -7,23 +7,12 @@
         .controller('NewInvoiceController', ['$modal', '$state', 'Vendors', 'Drugs', 'Units', 'Invoices', 'toaster','$log',
             function($modal, $state, Vendors, Drugs, Units, Invoices, toaster, $log) {
                 var vm = this;
-
-                // Query the vendor list
+                // Quering statement: 
                 vm.vendors = Vendors.query();
-
-                // Query the drugs list
                 vm.drugs = Drugs.query();
-
-                // Query the units list
                 vm.units = Units.query();
-
                 // Initialize invoice
-                vm.invoice = {
-                    InvoiceItems: [],
-                    subtotal: 0,
-                    tax: 0,
-                    total: 0
-                };
+                vm.invoice = {  InvoiceItems: [], subtotal: 0,   tax: 0,   total: 0   };
                 vm.taxPercentage = 0.05;
 
                 vm.calculateSubtotal = function() {
@@ -51,36 +40,21 @@
 
                 //ng-grid configuration for invoice items table
                 vm.gridOptions = {
-                    showGridFooter: true,
-                    enableFiltering: true,
-                    enableRowSelection: true,
-                    enableRowHeaderSelection: true,
-                    columnDefs: [{
-                        name: 'Name',
-                        enableCellEdit: true,
-                        enableCellEditOnFocus: true,
-                        field: 'Drug.name'
-                    }, {
-                        name: "Unit",
-                        field: 'Unit.name'
-                    }, {
-                        name: "SKU",
-                        field: 'sku'
-                    }, {
-                        name: "Quantity",
-                        field: 'quantity'
-                    }, {
-                        name: "MFD",
-                        field: 'manufactureDate',
-                        cellFilter: 'date:"MM/yyyy"'
-                    }, {
-                        name: "EXP",
-                        field: 'expirationDate',
-                        cellFilter: 'date:"MM/yyyy"'
-                    }, {
-                        name: 'Price',
-                        field: 'price'
-                    }],
+                    showGridFooter: true,                    enableFiltering: true,
+                    enableRowSelection: true,                enableRowHeaderSelection: true,
+                    columnDefs: 
+                    [
+                        {   name: 'Name',                   enableCellEdit: true,
+                            enableCellEditOnFocus: true,    field: 'Drug.name'              }, 
+                        {   name: "Unit",                   field: 'Unit.name'              }, 
+                        {   name: "SKU",                    field: 'sku'                    }, 
+                        {   name: "Quantity",               field: 'quantity'               }, 
+                        {   name: "MFD",                    field: 'manufactureDate',
+                            cellFilter: 'date:"MM/yyyy"'                                    }, 
+                        {   name: "EXP",                    field: 'expirationDate',
+                            cellFilter: 'date:"MM/yyyy"'                                    }, 
+                        {   name: 'Price',                  field: 'price'                  }
+                    ],
                     data: vm.invoice.InvoiceItems
                 };
 

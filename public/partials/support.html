@@ -4,7 +4,7 @@
 	<form name="request" novalidate ng-submit="SupportCtrl.submitRequest()">
 	    <div class="form-group">
 	        <label for="name">Name</label>
-	        <input type="text" name="name" required class="form-control" ng-model="SupportCtrl.request.name">
+	        <input type="text" name="name" required class="form-control" ng-model="SupportCtrl.request.name" placeholder="Your name">
 	        <span style="color:red" ng-show="request.name.$dirty && request.name.$invalid">
 	            <span style="color:red" ng-show="request.name.$error.required">Name is required</span>
 	        </span>
@@ -12,12 +12,12 @@
 		<!-- Phone number input -->
 		<div class="form-group">
 			<label for="phoneNumber"> Phone number </label>
-			<input type="text" required name="phoneNumber" class="form-control" ng-model="SupportCtrl.request.phoneNumber">
+			<input type="text" required name="phoneNumber" class="form-control" ng-model="SupportCtrl.request.phoneNumber" placeholder="Your phone number">
 		</div>
 		<!-- Email input -->
 		<div class="form-group">
 			<label for="email"> Email </label>
-			<input type="email" name="email" class="form-control" required ng-model="SupportCtrl.request.email">
+			<input type="email" name="email" class="form-control" required ng-model="SupportCtrl.request.emailAddress" placeholder="Your email">
 	        <span style="color:red" ng-show="request.email.$dirty && request.name.$invalid">
 	            <span style="color:red" ng-show="request.email.$error.required">Email is required</span>
 	            <span style="color:red" ng-show="request.email.$error.email">Invalid email</span>	            
@@ -26,11 +26,9 @@
 		<!-- Message input -->
 		<div class="form-group">
 			<label for="message"> Message </label>
-			<input type="text" name="message" class="form-control" ng-model="SupportCtrl.request.message">
+			<textarea type="text" name="message" class="form-control" ng-model="SupportCtrl.request.message" placeholder="Your message"></textarea>
 		</div>
 	    <button type="submit" ng-disabled="request.$invalid" class="btn btn-primary">OK</button>
 	</form>		
 	</div>
 </div>
-
-

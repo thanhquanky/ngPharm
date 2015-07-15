@@ -91,6 +91,37 @@ exported.validateToken = function(req, res, next){
 		return res.status(403).send({ success: false, message: 'No token provided' });
 	}
 };
+exported.sendMail = function(req, res){
+  var nodemailer = require('nodemailer');
+  // create reusable transporter object using SMTP transport
+  var transporter = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+          user: 'angularpharm@gmail.com',
+          pass: 'ngpharm12345'
+      }
+  });
+  // NB! No need to recreate the transporter object. You can use
+// the same transporter object for all e-mails
+
+// setup e-mail data with unicode symbols
+	var sender = 'From ' + req.body.name + ' with phone number ' + req.body.phoneNumber;
+	var contactBack = 'Contact sender at: ' + req.body.emailAddress
+  	var mailOptions = {
+      from: '', // sender address
+      to: 'angularpharm@gmail.com', // list of receivers
+      subject: sender, // Subject line
+      text: '', // plaintext body
+      html: '<p> Message: ' + req.body.message + '. ' + contactBack + '</p>' // html body
+  	};
+	transporter.sendMail(mailOptions, function(error, info){
+	    if(error){
+	        return console.log(error);
+	    }
+	    console.log('Message sent: ' + info.response);
+		res.end("sent");
+	});
+}
 exported.sendErrorFunction = sendError;
 exported.sendJSONFunction = sendJSON;
 exported.sendServerErrorFunction = sendServerError;

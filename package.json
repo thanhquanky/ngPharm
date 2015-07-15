@@ -27,6 +27,7 @@
     "jsonwebtoken": "^5.0.2",
     "mariasql": "^0.1.22",
     "mysql": "^2.6.1",
+    "nodemailer": "^1.4.0",
     "q": "~1.4.0",
     "sequelize": "^2.0.5",
     "sqlite3": "^3.0.8",
