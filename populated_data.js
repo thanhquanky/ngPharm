@@ -2,10 +2,8 @@ var exported = {}
 exported.users = [
     {"username": "trananhduc", "password": "123456789", "first_name": "Duc", "last_name": "Tran"}
 ];
-exported.currencies = [   
-    {  "name": "USD"}, 
-    {  "name": "VND"}, 
-    {  "name": "GBP"}
+exported.currencies = [  
+    {  "name": "USD"},    {  "name": "VND"},     {  "name": "GBP"}  
 ]
 
 exported.vendors =
@@ -31,7 +29,7 @@ exported.itemPrices = [
     { "drug": 1, "unit": 1, "currency": 1, price: 10.5}
 ];
 exported.units = [
-    {"name": "Box"}
+    {"name": "Box"},     {"name": "Bottle"},     {"name": "Pill"},  
 ];
 
 exported.invoices = [

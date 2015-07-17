@@ -76,7 +76,7 @@
                 vm.newVendorForm = {
                     open: function (size) {
                         var modalInstance = $modal.open({
-                            templateUrl: 'partials/newVendor.html',
+                            templateUrl: 'app/vendor/newVendor.html',
                             controller: 'NewVendorController as NewVendorCtrl',
                             size: size
                         });
@@ -109,7 +109,7 @@
                 vm.newInvoiceItemForm = {
                     open: function (size) {
                         var modalInstance = $modal.open({
-                            templateUrl: 'partials/newInvoiceItem.html',
+                            templateUrl: 'app/invoice/newInvoiceItem.html',
                             controller: 'NewInvoiceItemController as NewInvoiceItemCtrl',
                             size: size
                         });
@@ -126,7 +126,7 @@
                 vm.newVendorForm = {
                     open: function(size) {
                         var modalInstance = $modal.open({
-                            templateUrl: 'partials/newVendor.html',
+                            templateUrl: 'app/vendor/newVendor.html',
                             controller: 'NewVendorController as NewVendorCtrl',
                             size: size,
                             resolve: { 

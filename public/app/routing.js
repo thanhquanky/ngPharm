@@ -22,23 +22,23 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
         })
         .state('invoice', {
             url: "/invoice",
-            templateUrl: "partials/invoice.html",
+            templateUrl: "app/invoice/invoice.html",
             controller: "InvoiceController as InvoiceCtrl"
         })
         .state('invoice.item', {
             url: "/{invoiceId:[0-9]+}",
-            templateUrl: "partials/invoice-detail.html",
+            templateUrl: "app/invoice/invoice-detail.html",
             controller: "InvoiceDetailController as InvoiceDetailCtrl"
         })
         .state('invoice.newinvoice', {
             url: '/new',
             parent: 'invoice',
-            templateUrl: "partials/newInvoice.html",
+            templateUrl: "app/invoice/newInvoice.html",
             controller:  "NewInvoiceController as NewInvoiceCtrl"
         })
         .state('manufacturer', {
             url: '/manufacturer',
-            templateUrl: "partials/manufacturer.html",
+            templateUrl: "app/manufacturer/manufacturer.html",
             controller: "ManufacturerController as ManufacturerCtrl"
         })
         .state('about', {
@@ -53,12 +53,12 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
         })
         .state('vendor', {
            url: "/vendor",
-           templateUrl: "partials/vendor.html",
+           templateUrl: "app/vendor/vendor.html",
            controller: "VendorController as VendorCtrl"
         })
         .state('drug', {
             url: "/drug",
-            templateUrl: "partials/drug.html",
+            templateUrl: "app/drug/drug.html",
             controller: "DrugController as DrugCtrl"
         })
         .state('item-lookup', {
