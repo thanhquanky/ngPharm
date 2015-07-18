@@ -68,7 +68,7 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
         })
         .state('item-lookup', {
             url: "/item-lookup",
-            templateUrl: "partials/itemLookup.html",
+            templateUrl: "app/models/invoice/itemLookup.html",
             controller: "ItemLookupController as ItemLookupCtrl"
         })
         // Don't strip trailing slashes from calculated URLs
