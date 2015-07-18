@@ -32,6 +32,9 @@ var newPass = "";
         "phone_number": {
             type: DataTypes.STRING
         }, 
+        "email_address": {
+            type: DataTypes.STRING
+        }, 
         "is_staff": {
             type: DataTypes.BOOLEAN,
             defaultValue: 0

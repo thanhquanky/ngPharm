@@ -15,6 +15,11 @@ ngPharm.config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
             templateUrl: 'app/components/support/support.html',
             controller: 'SupportController as SupportCtrl'
         })
+        .state('signup', {
+            url: '/signup',
+            templateUrl: 'app/components/signup/signup.html',
+            controller: 'SignupController as SignupCtrl'
+        })
         .state('login', {
             url: "/login",
             templateUrl: "app/components/login/login.html",

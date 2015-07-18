@@ -13,7 +13,7 @@ var sendError = function(res){
 };
 var sendServerError = function(res){
 	return function(error){
-		res.send(500, error);
+		res.status(500).send(error);
 	};
 };
 var sendNotFoundError = function(res){

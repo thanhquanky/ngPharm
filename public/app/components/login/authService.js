@@ -28,8 +28,8 @@ angular.module('authService', [])
 		authFactory.logout = function() {
 		// clear the token
 			AuthToken.setToken();
-			$window.localStorage.removeItem('currentUserId');
-			authFactory.currentUserId = null;
+			// $window.localStorage.removeItem('currentUserId');
+			// authFactory.currentUserId = null;
 		};
 		// check if a user is logged in
 		// checks if there is a local token
