@@ -39,7 +39,7 @@ ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($
 	vm.newVendorForm = {
         open: function(size) {
             var modalInstance = $modal.open({
-                templateUrl: 'app/vendor/newVendor.html',
+                templateUrl: 'app/models/vendor/newVendor.html',
                 controller: 'NewVendorController as NewVendorCtrl',
                 size: size,
                 resolve: {

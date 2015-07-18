@@ -4,13 +4,13 @@ ngPharm.controller('HomeController',
         this.carousel = {
             interval: 1000,
             slides: [{
-              image: '../../images/claritin.png',
+              image: '../../assets/images/claritin.png',
               text: 'This is claritin, an Anti-histanmine'
             }, {
-              image: '../../images/amoxicillin.png',
+              image: '../../assets/images/amoxicillin.png',
               text: 'This is amoxicillin, an Anti-biotic'
             }, {
-              image: '../../images/doracin.png',
+              image: '../../assets/images/doracin.png',
               text: 'This is claritin, an Anti-biotic'
             }]
         }

@@ -17,7 +17,7 @@ ngPharm.controller('ManufacturerController', ['$scope', 'Manufacturers','$modal'
     this.newManufacturerForm = {      
         open: function(size){
             var modalInstance = $modal.open({
-                templateUrl: 'app/manufacturer/newManufacturer.html',
+                templateUrl: 'app/models/manufacturer/newManufacturer.html',
                 controller: 'NewManufacturerController as NewManufacturerCtrl',
                 size: size,
                 resolve: {

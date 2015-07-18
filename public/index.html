@@ -8,12 +8,12 @@
 
 <body ng-app="ngPharm">
     <div class="container-fluid">
-        <header ng-include="'partials/header.html'"></header>
+        <header ng-include="'app/components/main/header.html'"></header>
         <main style="min-height:72vh">
             <div ui-view></div>
             <toaster-container></toaster-container>
         </main>
-        <footer ng-include="'partials/footer.html'"></footer>
+        <footer ng-include="'app/components/main/footer.html'"></footer>
     </div>
 </body>
     <!-- Additional libraries -->
@@ -27,7 +27,7 @@
     <script type="text/javascript" src="components/angular-animate/angular-animate.min.js"></script>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.js"></script>
 
@@ -46,38 +46,38 @@
     <!-- Font awesome-->
     <link href="components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Customized style -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- All Services -->
     <script type="text/javascript" src="js/services/services.js"></script>
     <script type="text/javascript" src="app/app.js"></script>
-    <script type="text/javascript" src="js/services/authService.js"></script>
-    <script type="text/javascript" src="app/vendor/vendorService.js"></script>
-    <script type="text/javascript" src="app/drug/drugService.js"></script>
-    <script type="text/javascript" src="app/manufacturer/manufacturerService.js"></script>
-    <script type="text/javascript" src="app/unit/unitService.js"></script>
-    <script type="text/javascript" src="app/invoice/invoiceItemService.js"></script>
-    <script type="text/javascript" src="app/invoice/invoices.js"></script>
+    <script type="text/javascript" src="app/components/login/authService.js"></script>
+    <script type="text/javascript" src="app/components/unit/unitService.js"></script>
+    <script type="text/javascript" src="app/models/vendor/vendorService.js"></script>
+    <script type="text/javascript" src="app/models/drug/drugService.js"></script>
+    <script type="text/javascript" src="app/models/manufacturer/manufacturerService.js"></script>
+    <script type="text/javascript" src="app/models/invoice/invoiceItemService.js"></script>
+    <script type="text/javascript" src="app/models/invoice/invoices.js"></script>
     <!-- Controllers -->
-    <script type="text/javascript" src="app/manufacturer/manufacturerController.js"></script>
-    <script type="text/javascript" src="app/manufacturer/newManufacturerController.js"></script>   
-    <script type="text/javascript" src="app/vendor/vendorController.js"></script>
-    <script type="text/javascript" src="app/vendor/newVendorController.js"></script>
-    <script type="text/javascript" src="app/drug/drugController.js"></script>
-    <script type="text/javascript" src="app/drug/newDrugController.js"></script>
-    <script type="text/javascript" src="app/invoice/itemLookupController.js"></script>
+    <script type="text/javascript" src="app/models/manufacturer/manufacturerController.js"></script>
+    <script type="text/javascript" src="app/models/manufacturer/newManufacturerController.js"></script>   
+    <script type="text/javascript" src="app/models/vendor/vendorController.js"></script>
+    <script type="text/javascript" src="app/models/vendor/newVendorController.js"></script>
+    <script type="text/javascript" src="app/models/drug/drugController.js"></script>
+    <script type="text/javascript" src="app/models/drug/newDrugController.js"></script>
+    <script type="text/javascript" src="app/models/invoice/itemLookupController.js"></script>
     <!--  -->
 
-    <script type="text/javascript" src="app/invoice/invoiceController.js"></script>
-    <script type="text/javascript" src="app/invoice/invoiceDetailController.js"></script>
-    <script type="text/javascript" src="app/invoice/newInvoiceController.js"></script>
-    <script type="text/javascript" src="app/invoice/newInvoiceItemController.js"></script>
+    <script type="text/javascript" src="app/models/invoice/invoiceController.js"></script>
+    <script type="text/javascript" src="app/models/invoice/invoiceDetailController.js"></script>
+    <script type="text/javascript" src="app/models/invoice/newInvoiceController.js"></script>
+    <script type="text/javascript" src="app/models/invoice/newInvoiceItemController.js"></script>
     <!--  -->
-    <script type="text/javascript" src="js/controllers/homeController.js"></script>
-    <script type="text/javascript" src="js/controllers/salesController.js"></script>
-    <script type="text/javascript" src="js/controllers/aboutController.js"></script>
-    <script type="text/javascript" src="js/controllers/loginController.js"></script>
-    <script type="text/javascript" src="js/controllers/supportController.js"></script>
+    <script type="text/javascript" src="app/components/home/homeController.js"></script>
+    <script type="text/javascript" src="app/components/sales/salesController.js"></script>
+    <script type="text/javascript" src="app/components/about/aboutController.js"></script>
+    <script type="text/javascript" src="app/components/login/loginController.js"></script>
+    <script type="text/javascript" src="app/components/support/supportController.js"></script>
     <!-- Directives -->
     <script type="text/javascript" src="js/directives/disableAnimation.js"></script>
     <script type="text/javascript" src="js/directives/ngEnter.js"></script>
