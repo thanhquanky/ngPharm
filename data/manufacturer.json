@@ -1,0 +1,820 @@
+{
+   "manufacturers":[
+      {
+         "name":"A & Z Pharmaceutical, Inc."
+      },
+      {
+         "name":"A-S Medication Solutions, LLC"
+      },
+      {
+         "name":"AAIPharma"
+      },
+      {
+         "name":"Abbott Laboratories"
+      },
+      {
+         "name":"AbbVie  Inc."
+      },
+      {
+         "name":"Accredo Health Group, Inc."
+      },
+      {
+         "name":"Acella Pharmaceuticals, LLC"
+      },
+      {
+         "name":"Acorda Therapeutics, Inc."
+      },
+      {
+         "name":"Actavis"
+      },
+      {
+         "name":"Actelion Pharmaceuticals US, Inc"
+      },
+      {
+         "name":"Acura Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Acusphere, Inc."
+      },
+      {
+         "name":"Adeona Pharmaceuticals, Inc.,"
+      },
+      {
+         "name":"Adolor Corporation"
+      },
+      {
+         "name":"Advance Pharmaceuticals Inc."
+      },
+      {
+         "name":"Advanced Life Sciences, Inc"
+      },
+      {
+         "name":"Advanced Pharmaceutical Services Inc"
+      },
+      {
+         "name":"Aero Pharmaceuticals Inc"
+      },
+      {
+         "name":"AG Marin Pharmaceutical"
+      },
+      {
+         "name":"Agenus Inc."
+      },
+      {
+         "name":"Akorn, Inc."
+      },
+      {
+         "name":"AkPharma Inc"
+      },
+      {
+         "name":"Akrimax Pharmaceuticals, LLC"
+      },
+      {
+         "name":"Alaven Pharmaceuticals"
+      },
+      {
+         "name":"Alcon"
+      },
+      {
+         "name":"Alfacell Corporation"
+      },
+      {
+         "name":"Alkermes"
+      },
+      {
+         "name":"Allegis Pharmaceuticals, LLC"
+      },
+      {
+         "name":"Allergan, Inc"
+      },
+      {
+         "name":"Alliance Pharmaceutical Inc"
+      },
+      {
+         "name":"Alvogen"
+      },
+      {
+         "name":"AMAG Pharmaceuticals Inc"
+      },
+      {
+         "name":"American Regent, Inc."
+      },
+      {
+         "name":"Amgen Inc."
+      },
+      {
+         "name":"Amneal Pharmaceuticals LLC"
+      },
+      {
+         "name":"Amylin Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Anacor Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Anchen Pharmaceuticals, Inc"
+      },
+      {
+         "name":"Andrx Pharmaceuticals"
+      },
+      {
+         "name":"Anika Therapeutics, Inc."
+      },
+      {
+         "name":"Apotex Corp"
+      },
+      {
+         "name":"Aptalis"
+      },
+      {
+         "name":"Aqua Pharmaceuticals LLC"
+      },
+      {
+         "name":"Arbor Pharmaceuticals, LLC"
+      },
+      {
+         "name":"ARCA biopharma, Inc."
+      },
+      {
+         "name":"Asklepion Pharmaceuticals LLC"
+      },
+      {
+         "name":"Astellas Pharma US, Inc."
+      },
+      {
+         "name":"AstraZeneca Pharmaceuticals  LP"
+      },
+      {
+         "name":"Atley Pharmaceuticals"
+      },
+      {
+         "name":"Aton Pharma, Inc."
+      },
+      {
+         "name":"Avanir Pharmaceuticals"
+      },
+      {
+         "name":"AvKARE"
+      },
+      {
+         "name":"Axcan Pharma"
+      },
+      {
+         "name":"B.F. Ascher & Company, inc."
+      },
+      {
+         "name":"Barr Laboratories Inc"
+      },
+      {
+         "name":"Bausch & Lomb Inc."
+      },
+      {
+         "name":"Baxter International Inc"
+      },
+      {
+         "name":"Bayer Healthcare Consumer Care"
+      },
+      {
+         "name":"Bayer Healthcare Pharmaceuticals"
+      },
+      {
+         "name":"Bayshore Pharmaceuticals LLC"
+      },
+      {
+         "name":"BD Rx Inc"
+      },
+      {
+         "name":"BioDelivery Sciences International, Inc."
+      },
+      {
+         "name":"Biogen"
+      },
+      {
+         "name":"BioMarin Pharmaceutical Inc"
+      },
+      {
+         "name":"Biovail Corporation (A Division of Valeant Pharmaceuticals International Inc. )"
+      },
+      {
+         "name":"Blu Pharmaceuticals LLC"
+      },
+      {
+         "name":"Boehringer Ingelheim Pharmaceuticals, Inc"
+      },
+      {
+         "name":"Braintree Laboratories Inc."
+      },
+      {
+         "name":"Breckenridge Pharmaceutical, Inc."
+      },
+      {
+         "name":"Bristol-Myers Squibb"
+      },
+      {
+         "name":"Caldwell Consumer Health"
+      },
+      {
+         "name":"Capellon Pharmaceuticals"
+      },
+      {
+         "name":"Caraco Pharmaceutical Laboratories"
+      },
+      {
+         "name":"Cardinal Health Inc"
+      },
+      {
+         "name":"Celgene Corporation"
+      },
+      {
+         "name":"Centocor Ortho Biotech, Inc"
+      },
+      {
+         "name":"Cephalon, Inc."
+      },
+      {
+         "name":"Chelsea Therapeutics"
+      },
+      {
+         "name":"Chugai Pharma USA, LLC"
+      },
+      {
+         "name":"Cobalt Laboratories"
+      },
+      {
+         "name":"Collegium Pharmaceutical, Inc."
+      },
+      {
+         "name":"Corden Pharma Latina S.p.A"
+      },
+      {
+         "name":"CorePharma, LLC"
+      },
+      {
+         "name":"CSL Behring "
+      },
+      {
+         "name":"Cubist Pharmaceuticals"
+      },
+      {
+         "name":"Cypress Bioscience, Inc."
+      },
+      {
+         "name":"Cypress Pharmaceuticals"
+      },
+      {
+         "name":"Daiichi Sankyo"
+      },
+      {
+         "name":"DAVA Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Dey Pharma"
+      },
+      {
+         "name":"Digestive Care, Inc"
+      },
+      {
+         "name":"Discovery Laboratories, Inc."
+      },
+      {
+         "name":"DOR BioPharma, Inc."
+      },
+      {
+         "name":"Dr. Reddy's Laboratories Inc."
+      },
+      {
+         "name":"Ducere Pharma, LLC"
+      },
+      {
+         "name":"Durata Therapeutics, Inc."
+      },
+      {
+         "name":"Dyax Corp"
+      },
+      {
+         "name":"Eagle Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Eisai Corporation "
+      },
+      {
+         "name":"Elan Corporation"
+      },
+      {
+         "name":"Eli Lilly and Company"
+      },
+      {
+         "name":"Elorac, Inc"
+      },
+      {
+         "name":"Endo Pharmaceuticals"
+      },
+      {
+         "name":"EpiCept Corporation"
+      },
+      {
+         "name":"EPIX Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Ethex Corporation"
+      },
+      {
+         "name":"Eusa Pharma"
+      },
+      {
+         "name":"Ferring Pharmaceuticals"
+      },
+      {
+         "name":"Flamel Technologies"
+      },
+      {
+         "name":"Forest Laboratories, Inc."
+      },
+      {
+         "name":"Fresenius Kabi USA"
+      },
+      {
+         "name":"Fresenius Medical Care"
+      },
+      {
+         "name":"G.D. Searle LLC (a subsidiary of Pfizer Inc.)"
+      },
+      {
+         "name":"Galderma Laboratories"
+      },
+      {
+         "name":"Gemini Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Genentech, Inc."
+      },
+      {
+         "name":"General Injectables and Vaccines Inc"
+      },
+      {
+         "name":"Genta Incorporated"
+      },
+      {
+         "name":"Genzyme Corporation"
+      },
+      {
+         "name":"Geron Corporation "
+      },
+      {
+         "name":"Gilead Sciences, Inc."
+      },
+      {
+         "name":"GlaxoSmithKline"
+      },
+      {
+         "name":"GlaxoSmithKline Consumer Healthcare LP"
+      },
+      {
+         "name":"Global Pharmaceuticals"
+      },
+      {
+         "name":"Graceway Pharmaceuticals, LLC"
+      },
+      {
+         "name":"Greenstone LLC"
+      },
+      {
+         "name":"Grifols USA, LLC"
+      },
+      {
+         "name":"GTC Biotherapeutics, Inc."
+      },
+      {
+         "name":"GTx, Inc."
+      },
+      {
+         "name":"Helix BioPharma Corp"
+      },
+      {
+         "name":"Hemispherx Biopharma, Inc."
+      },
+      {
+         "name":"Heritage Pharmaceuticals"
+      },
+      {
+         "name":"Hikma Pharmaceuticals PLC"
+      },
+      {
+         "name":"Hospira"
+      },
+      {
+         "name":"Ilex Consumer Products Group, Inc."
+      },
+      {
+         "name":"ImClone Systems Incorporated "
+      },
+      {
+         "name":"Impax Laboratories, Inc."
+      },
+      {
+         "name":"Incyte Corporation"
+      },
+      {
+         "name":"Interpharm Holdings, Inc"
+      },
+      {
+         "name":"Iroko Pharmaceuticals, LLC"
+      },
+      {
+         "name":"Isis Pharmaceuticals, Inc."
+      },
+      {
+         "name":"ISTA Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Janssen Pharmaceuticals, Inc"
+      },
+      {
+         "name":"JHP Pharmaceuticals, LLC"
+      },
+      {
+         "name":"Johnson & Johnson"
+      },
+      {
+         "name":"K-V Pharmaceutical Company"
+      },
+      {
+         "name":"Kaleo Inc."
+      },
+      {
+         "name":"Kedrion Biopharma, Inc"
+      },
+      {
+         "name":"King Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Kremers Urban Pharmaceuticals Inc."
+      },
+      {
+         "name":"KVK-TECH, Inc."
+      },
+      {
+         "name":"Kyowa Hakko Kirin Pharma, Inc"
+      },
+      {
+         "name":"Kythera Biopharmaceuticals, Inc."
+      },
+      {
+         "name":"Lannett Company, Inc"
+      },
+      {
+         "name":"Luitpold Pharmaceuticals, Inc"
+      },
+      {
+         "name":"Lundbeck Inc."
+      },
+      {
+         "name":"Lupin Pharmaceuticals, Inc"
+      },
+      {
+         "name":"Macleods Pharmaceuticals Limited"
+      },
+      {
+         "name":"Major Pharmaceuticals"
+      },
+      {
+         "name":"Mallinckrodt Inc."
+      },
+      {
+         "name":"Martek Biosciences Company"
+      },
+      {
+         "name":"McNeil Consumer Healthcare"
+      },
+      {
+         "name":"MCR American Pharmaceuticals Inc"
+      },
+      {
+         "name":"ME Pharmaceuticals"
+      },
+      {
+         "name":"Mead Johnson & Co"
+      },
+      {
+         "name":"Meda Pharmaceuticals"
+      },
+      {
+         "name":"Medac Pharma, Inc."
+      },
+      {
+         "name":"Medicis Pharmaceutical Corporation"
+      },
+      {
+         "name":"Medicure Pharma, Inc."
+      },
+      {
+         "name":"MedImmune, Inc"
+      },
+      {
+         "name":"MediQuest Therapeutics Inc "
+      },
+      {
+         "name":"Merck & Co., Inc."
+      },
+      {
+         "name":"Molnlycke Healthcare"
+      },
+      {
+         "name":"Morton Grove Pharmaceuticals, Inc"
+      },
+      {
+         "name":"MSD Consumer Care, Inc."
+      },
+      {
+         "name":"Mylan Inc."
+      },
+      {
+         "name":"Nagase America Corp."
+      },
+      {
+         "name":"Neurocrine Biosciences, Inc."
+      },
+      {
+         "name":"NeurogesX, Inc"
+      },
+      {
+         "name":"NexMed, Inc"
+      },
+      {
+         "name":"Northfield Laboratories Inc."
+      },
+      {
+         "name":"Northstar Rx"
+      },
+      {
+         "name":"NovaDel Pharma, Inc."
+      },
+      {
+         "name":"Novartis Consumer Health"
+      },
+      {
+         "name":"Novartis Pharmaceuticals Corporation"
+      },
+      {
+         "name":"Noven Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Novo Nordisk"
+      },
+      {
+         "name":"Nycomed"
+      },
+      {
+         "name":"Oak Pharmaceuticals, Inc ( subsidiary of Akorn, Inc)"
+      },
+      {
+         "name":"Oasis Medical Inc"
+      },
+      {
+         "name":"Omeros Corporation"
+      },
+      {
+         "name":"OncoGenex Pharmaceuticals "
+      },
+      {
+         "name":"Onyx Pharmaceuticals, Inc"
+      },
+      {
+         "name":"Ortho-McNeil-Janssen Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Osiris Therapeutics, Inc."
+      },
+      {
+         "name":"Othera Pharmaceuticals, Inc"
+      },
+      {
+         "name":"Otsuka Pharmaceutical Co., Ltd"
+      },
+      {
+         "name":"Paddock Laboratories, Inc., "
+      },
+      {
+         "name":"Pain Therapeutics, Inc."
+      },
+      {
+         "name":"Paladin Labs Inc."
+      },
+      {
+         "name":"Par Pharmaceutical, Inc."
+      },
+      {
+         "name":"PDL BioPharma, Inc. "
+      },
+      {
+         "name":"Perrigo Company "
+      },
+      {
+         "name":"Pfizer Inc"
+      },
+      {
+         "name":"Pharmacia & Upjohn Company LLC (a subsidiary of Pfizer Inc.)"
+      },
+      {
+         "name":"Pharmacyclics, Inc."
+      },
+      {
+         "name":"Pierre Fabre Pharmaceuticals Inc"
+      },
+      {
+         "name":"Piramal Critical Care Inc."
+      },
+      {
+         "name":"Pliva"
+      },
+      {
+         "name":"Pozen Inc"
+      },
+      {
+         "name":"Prasco Laboratories"
+      },
+      {
+         "name":"Prestige Brands (formerly MedTech)"
+      },
+      {
+         "name":"Pro-Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Procter & Gamble"
+      },
+      {
+         "name":"Progenics Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Purdue Pharma LP"
+      },
+      {
+         "name":"Qualitest Pharmaceuticals"
+      },
+      {
+         "name":"Ranbaxy Pharmaceuticals Inc."
+      },
+      {
+         "name":"Reckitt Benckiser Pharmaceuticals Inc."
+      },
+      {
+         "name":"Roche Pharmaceuticals "
+      },
+      {
+         "name":"Roxane Laboratories,Inc."
+      },
+      {
+         "name":"Roxro Pharma, Inc."
+      },
+      {
+         "name":"Salix Pharmaceuticals, Ltd"
+      },
+      {
+         "name":"Sandoz Inc."
+      },
+      {
+         "name":"Sanofi"
+      },
+      {
+         "name":"Santarus, Inc."
+      },
+      {
+         "name":"Savient Pharmaceuticals, Inc. acquired by Crealta Pharmaceuticals"
+      },
+      {
+         "name":"Schering-Plough"
+      },
+      {
+         "name":"Sepracor Inc. (renamed Sunovion Pharmaceuticals Inc)"
+      },
+      {
+         "name":"Shionogi Pharma, Inc"
+      },
+      {
+         "name":"Shire US Inc"
+      },
+      {
+         "name":"SIGA Technologies, Inc."
+      },
+      {
+         "name":"Sigma-Tau Pharmaceuticals"
+      },
+      {
+         "name":"Sirion Therapeutics, Inc. "
+      },
+      {
+         "name":"Solvay Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Somaxon Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Spear Pharmaceuticals"
+      },
+      {
+         "name":"Spherix Incorporated"
+      },
+      {
+         "name":"Stiefel Laboratories, Inc."
+      },
+      {
+         "name":"Summers Laboratories "
+      },
+      {
+         "name":"Sunovion Pharmaceuticals Inc."
+      },
+      {
+         "name":"SuperGen, Inc., renamed  Astex Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Synthon Pharmaceuticals Ltd"
+      },
+      {
+         "name":"Takeda Pharmaceuticals U.S.A., Inc"
+      },
+      {
+         "name":"Targanta Therapeutics Corporation"
+      },
+      {
+         "name":"Taro Pharmaceuticals U.S.A., Inc."
+      },
+      {
+         "name":"Teva Pharmaceuticals USA, Inc."
+      },
+      {
+         "name":"The Medicines Company"
+      },
+      {
+         "name":"Ther-Rx Corporation"
+      },
+      {
+         "name":"Theravance, Inc."
+      },
+      {
+         "name":"Three Rivers Pharmaceuticals, LLC "
+      },
+      {
+         "name":"Torrent Pharmaceuticals"
+      },
+      {
+         "name":"Transcept Pharmaceuticals, Inc."
+      },
+      {
+         "name":"Trimel Pharmaceuticals Corporation"
+      },
+      {
+         "name":"UCB Inc."
+      },
+      {
+         "name":"Upsher-Smith Laboratories Inc."
+      },
+      {
+         "name":"URL Pharma, Inc.(now Sun Pharma)"
+      },
+      {
+         "name":"Valeant Pharmaceuticals International"
+      },
+      {
+         "name":"Vanda Pharmaceuticals Inc."
+      },
+      {
+         "name":"VersaPharm Inc"
+      },
+      {
+         "name":"Vertex Pharmaceuticals"
+      },
+      {
+         "name":"ViroPharma"
+      },
+      {
+         "name":"Warner Chilcott"
+      },
+      {
+         "name":"Watson Pharmaceuticals, Inc. (now Actavis, Inc)"
+      },
+      {
+         "name":"West-Ward Pharmaceuticals"
+      },
+      {
+         "name":"Wockhardt USA "
+      },
+      {
+         "name":"Wyeth"
+      },
+      {
+         "name":"Xanodyne Pharmaceuticals, Inc"
+      },
+      {
+         "name":"XenoPort, Inc"
+      },
+      {
+         "name":"Zila, Inc."
+      },
+      {
+         "name":"Zogenix, Inc"
+      },
+      {
+         "name":"Zydus Pharmaceuticals"
+      }
+   ]
+}

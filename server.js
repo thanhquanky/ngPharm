@@ -17,13 +17,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-
-
-
-
-
-
-
 // send mail with defined transport object
 app.post('/email', middlewares.sendMail);
 //

@@ -1,0 +1,6 @@
+{
+	"drugs": [
+    	{"name": "Dodacin",  "use": "Antibiotic",       "manufacturer": 1},
+    	{"name": "Claritin", "use": "Anti-histamine",   "manufacturer": 5,  "salesPrice": 12}
+	]
+}
