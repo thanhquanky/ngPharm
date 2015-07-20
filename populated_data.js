@@ -2,9 +2,10 @@ var exported = {}
 exported.users = [
     {"username": "trananhduc", "password": "123456789", "first_name": "Duc", "last_name": "Tran"}
 ];
-exported.currencies = [  
-    {  "name": "USD"},    {  "name": "VND"},     {  "name": "GBP"}  
-]
+exported.currencies = require('./data/currency.json')["currencies"]
+// [  
+//     {  "name": "USD"},    {  "name": "VND"},     {  "name": "GBP"}  
+// ]
 
 exported.vendors =
 [
@@ -12,11 +13,6 @@ exported.vendors =
     {   "name": "Walgreen",             "email": "info@walgreen.com",   "telephone": "123-456-7890",        "address": "Georgia Tech"    }
 ];
 exported.manufacturers = require('./data/manufacturer.json')["manufacturers"].slice(0, 20);
-// [
-//     {  "name": "Traphaco"}, 
-//     { "name": "Domesco"}
-// ];
-
 exported.drugs = require('./data/drug.json')["drugs"];
 exported.invoiceItems = [
     { "invoice": 1,    "drug": 1,    "quantity": 1,    "unit": 1,    "manufactureDate": new Date("2015/01/01"),    "expirationDate": new Date("2017/01/01"),    "price": 3.5},

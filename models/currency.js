@@ -7,6 +7,10 @@ module.exports = function(sequelizeInstance, DataTypes){
             autoIncrement: true,
             primaryKey: true
         },
+        "code": {
+            type: DataTypes.STRING,
+            unique: true
+        },
         "name": {
             type: DataTypes.STRING,
             unique: true
