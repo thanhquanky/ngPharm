@@ -16,13 +16,15 @@ ngPharm.controller('VendorController', ['$scope', '$modal', 'Vendors',function($
             field: 'name',
             //width: columnWidthStr,
             footerCellTemplate:'<div></div>'
-        }, {
-        	name: 'Email',
-        	enableCellEdit: true,
-        	enableCellEditOnFocus: true,
-        	field: 'email',
-        	footerCellTemplate: '<div></div>'
-        }, {
+        }, 
+        // {
+        // 	name: 'Email',
+        // 	enableCellEdit: true,
+        // 	enableCellEditOnFocus: true,
+        // 	field: 'email',
+        // 	footerCellTemplate: '<div></div>'
+        // }, 
+        {
         	name: 'Telephone',
         	enableCellEdit: true,
         	enableCellEditOnFocus: true,
