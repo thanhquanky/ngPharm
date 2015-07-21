@@ -1,819 +1,1091 @@
 {
    "manufacturers":[
       {
+         "url":"http://www.drugs.com/manufacturer/a-amp-z-pharmaceutical-inc-468.html",
          "name":"A & Z Pharmaceutical, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/a-s-medication-solutions-llc-255.html",
          "name":"A-S Medication Solutions, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/aaipharma-1.html",
          "name":"AAIPharma"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/abbott-laboratories-2.html",
          "name":"Abbott Laboratories"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/abbvie-inc-482.html",
          "name":"AbbVie  Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/accredo-health-group-inc-3.html",
          "name":"Accredo Health Group, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/acella-pharmaceuticals-llc-263.html",
          "name":"Acella Pharmaceuticals, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/acorda-therapeutics-inc-4.html",
          "name":"Acorda Therapeutics, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/actavis-5.html",
          "name":"Actavis"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/actelion-pharmaceuticals-us-inc-365.html",
          "name":"Actelion Pharmaceuticals US, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/acura-pharmaceuticals-inc-6.html",
          "name":"Acura Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/acusphere-inc-7.html",
          "name":"Acusphere, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/adeona-pharmaceuticals-inc-8.html",
          "name":"Adeona Pharmaceuticals, Inc.,"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/adolor-corporation-9.html",
          "name":"Adolor Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/advance-pharmaceuticals-inc-439.html",
          "name":"Advance Pharmaceuticals Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/advanced-life-sciences-inc-10.html",
          "name":"Advanced Life Sciences, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/advanced-pharmaceutical-services-inc-237.html",
          "name":"Advanced Pharmaceutical Services Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/aero-pharmaceuticals-inc-421.html",
          "name":"Aero Pharmaceuticals Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/ag-marin-pharmaceutical-437.html",
          "name":"AG Marin Pharmaceutical"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/agenus-inc-21.html",
          "name":"Agenus Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/akorn-inc-11.html",
          "name":"Akorn, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/akpharma-inc-443.html",
          "name":"AkPharma Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/akrimax-pharmaceuticals-llc-349.html",
          "name":"Akrimax Pharmaceuticals, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/alaven-pharmaceuticals-344.html",
          "name":"Alaven Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/alcon-12.html",
          "name":"Alcon"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/alfacell-corporation-13.html",
          "name":"Alfacell Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/alkermes-174.html",
          "name":"Alkermes"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/allegis-pharmaceuticals-llc-341.html",
          "name":"Allegis Pharmaceuticals, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/allergan-inc-14.html",
          "name":"Allergan, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/alliance-pharmaceutical-inc-15.html",
          "name":"Alliance Pharmaceutical Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/alvogen-361.html",
          "name":"Alvogen"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/amag-pharmaceuticals-inc-17.html",
          "name":"AMAG Pharmaceuticals Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/american-regent-inc-525.html",
          "name":"American Regent, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/amgen-inc-18.html",
          "name":"Amgen Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/amneal-pharmaceuticals-llc-19.html",
          "name":"Amneal Pharmaceuticals LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/amylin-pharmaceuticals-inc-20.html",
          "name":"Amylin Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/anacor-pharmaceuticals-inc-518.html",
          "name":"Anacor Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/anchen-pharmaceuticals-inc-249.html",
          "name":"Anchen Pharmaceuticals, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/andrx-pharmaceuticals-307.html",
          "name":"Andrx Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/anika-therapeutics-inc-485.html",
          "name":"Anika Therapeutics, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/apotex-corp-22.html",
          "name":"Apotex Corp"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/aptalis-510.html",
          "name":"Aptalis"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/aqua-pharmaceuticals-llc-404.html",
          "name":"Aqua Pharmaceuticals LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/arbor-pharmaceuticals-llc-489.html",
          "name":"Arbor Pharmaceuticals, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/arca-biopharma-inc-23.html",
          "name":"ARCA biopharma, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/asklepion-pharmaceuticals-llc-528.html",
          "name":"Asklepion Pharmaceuticals LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/astellas-pharma-us-inc-24.html",
          "name":"Astellas Pharma US, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/astrazeneca-pharmaceuticals-lp-25.html",
          "name":"AstraZeneca Pharmaceuticals  LP"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/atley-pharmaceuticals-303.html",
          "name":"Atley Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/aton-pharma-inc-513.html",
          "name":"Aton Pharma, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/avanir-pharmaceuticals-228.html",
          "name":"Avanir Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/avkare-428.html",
          "name":"AvKARE"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/axcan-pharma-175.html",
          "name":"Axcan Pharma"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/b-f-ascher-amp-company-inc-351.html",
          "name":"B.F. Ascher & Company, inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/barr-laboratories-inc-200.html",
          "name":"Barr Laboratories Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/bausch-amp-lomb-inc-27.html",
          "name":"Bausch & Lomb Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/baxter-international-inc-26.html",
          "name":"Baxter International Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/bayer-healthcare-consumer-care-520.html",
          "name":"Bayer Healthcare Consumer Care"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/bayer-healthcare-pharmaceuticals-28.html",
          "name":"Bayer Healthcare Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/bayshore-pharmaceuticals-llc-500.html",
          "name":"Bayshore Pharmaceuticals LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/bd-rx-inc-496.html",
          "name":"BD Rx Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/biodelivery-sciences-international-inc-29.html",
          "name":"BioDelivery Sciences International, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/biogen-30.html",
          "name":"Biogen"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/biomarin-pharmaceutical-inc-448.html",
          "name":"BioMarin Pharmaceutical Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/biovail-corporation-a-division-of-valeant-pharmaceuticals-international-inc-172.html",
          "name":"Biovail Corporation (A Division of Valeant Pharmaceuticals International Inc. )"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/blu-pharmaceuticals-llc-254.html",
          "name":"Blu Pharmaceuticals LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/boehringer-ingelheim-pharmaceuticals-inc-31.html",
          "name":"Boehringer Ingelheim Pharmaceuticals, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/braintree-laboratories-inc-415.html",
          "name":"Braintree Laboratories Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/breckenridge-pharmaceutical-inc-32.html",
          "name":"Breckenridge Pharmaceutical, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/bristol-myers-squibb-33.html",
          "name":"Bristol-Myers Squibb"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/caldwell-consumer-health-501.html",
          "name":"Caldwell Consumer Health"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/capellon-pharmaceuticals-295.html",
          "name":"Capellon Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/caraco-pharmaceutical-laboratories-34.html",
          "name":"Caraco Pharmaceutical Laboratories"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/cardinal-health-inc-493.html",
          "name":"Cardinal Health Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/celgene-corporation-170.html",
          "name":"Celgene Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/centocor-ortho-biotech-inc-35.html",
          "name":"Centocor Ortho Biotech, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/cephalon-inc-36.html",
          "name":"Cephalon, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/chelsea-therapeutics-483.html",
          "name":"Chelsea Therapeutics"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/chugai-pharma-usa-llc-37.html",
          "name":"Chugai Pharma USA, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/cobalt-laboratories-38.html",
          "name":"Cobalt Laboratories"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/collegium-pharmaceutical-inc-39.html",
          "name":"Collegium Pharmaceutical, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/corden-pharma-latina-s-p-a-526.html",
          "name":"Corden Pharma Latina S.p.A"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/corepharma-llc-211.html",
          "name":"CorePharma, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/csl-behring-40.html",
          "name":"CSL Behring "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/cubist-pharmaceuticals-511.html",
          "name":"Cubist Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/cypress-bioscience-inc-41.html",
          "name":"Cypress Bioscience, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/cypress-pharmaceuticals-279.html",
          "name":"Cypress Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/daiichi-sankyo-165.html",
          "name":"Daiichi Sankyo"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/dava-pharmaceuticals-inc-42.html",
          "name":"DAVA Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/dey-pharma-43.html",
          "name":"Dey Pharma"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/digestive-care-inc-44.html",
          "name":"Digestive Care, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/discovery-laboratories-inc-45.html",
          "name":"Discovery Laboratories, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/dor-biopharma-inc-46.html",
          "name":"DOR BioPharma, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/dr-reddy-s-laboratories-inc-47.html",
          "name":"Dr. Reddy's Laboratories Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/ducere-pharma-llc-509.html",
          "name":"Ducere Pharma, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/durata-therapeutics-inc-494.html",
          "name":"Durata Therapeutics, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/dyax-corp-48.html",
          "name":"Dyax Corp"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/eagle-pharmaceuticals-inc-522.html",
          "name":"Eagle Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/eisai-corporation-49.html",
          "name":"Eisai Corporation "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/elan-corporation-50.html",
          "name":"Elan Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/eli-lilly-and-company-81.html",
          "name":"Eli Lilly and Company"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/elorac-inc-182.html",
          "name":"Elorac, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/endo-pharmaceuticals-51.html",
          "name":"Endo Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/epicept-corporation-52.html",
          "name":"EpiCept Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/epix-pharmaceuticals-inc-53.html",
          "name":"EPIX Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/ethex-corporation-54.html",
          "name":"Ethex Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/eusa-pharma-55.html",
          "name":"Eusa Pharma"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/ferring-pharmaceuticals-176.html",
          "name":"Ferring Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/flamel-technologies-519.html",
          "name":"Flamel Technologies"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/forest-laboratories-inc-56.html",
          "name":"Forest Laboratories, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/fresenius-kabi-usa-490.html",
          "name":"Fresenius Kabi USA"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/fresenius-medical-care-183.html",
          "name":"Fresenius Medical Care"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/g-d-searle-llc-a-subsidiary-of-pfizer-inc-507.html",
          "name":"G.D. Searle LLC (a subsidiary of Pfizer Inc.)"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/galderma-laboratories-171.html",
          "name":"Galderma Laboratories"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/gemini-pharmaceuticals-inc-516.html",
          "name":"Gemini Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/genentech-inc-57.html",
          "name":"Genentech, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/general-injectables-and-vaccines-inc-492.html",
          "name":"General Injectables and Vaccines Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/genta-incorporated-58.html",
          "name":"Genta Incorporated"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/genzyme-corporation-59.html",
          "name":"Genzyme Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/geron-corporation-60.html",
          "name":"Geron Corporation "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/gilead-sciences-inc-61.html",
          "name":"Gilead Sciences, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/glaxosmithkline-62.html",
          "name":"GlaxoSmithKline"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/glaxosmithkline-consumer-healthcare-lp-514.html",
          "name":"GlaxoSmithKline Consumer Healthcare LP"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/global-pharmaceuticals-63.html",
          "name":"Global Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/graceway-pharmaceuticals-llc-166.html",
          "name":"Graceway Pharmaceuticals, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/greenstone-llc-64.html",
          "name":"Greenstone LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/grifols-usa-llc-521.html",
          "name":"Grifols USA, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/gtc-biotherapeutics-inc-65.html",
          "name":"GTC Biotherapeutics, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/gtx-inc-66.html",
          "name":"GTx, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/helix-biopharma-corp-67.html",
          "name":"Helix BioPharma Corp"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/hemispherx-biopharma-inc-156.html",
          "name":"Hemispherx Biopharma, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/heritage-pharmaceuticals-188.html",
          "name":"Heritage Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/hikma-pharmaceuticals-plc-495.html",
          "name":"Hikma Pharmaceuticals PLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/hospira-177.html",
          "name":"Hospira"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/ilex-consumer-products-group-inc-504.html",
          "name":"Ilex Consumer Products Group, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/imclone-systems-incorporated-68.html",
          "name":"ImClone Systems Incorporated "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/impax-laboratories-inc-69.html",
          "name":"Impax Laboratories, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/incyte-corporation-70.html",
          "name":"Incyte Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/interpharm-holdings-inc-71.html",
          "name":"Interpharm Holdings, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/iroko-pharmaceuticals-llc-484.html",
          "name":"Iroko Pharmaceuticals, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/isis-pharmaceuticals-inc-72.html",
          "name":"Isis Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/ista-pharmaceuticals-inc-73.html",
          "name":"ISTA Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/janssen-pharmaceuticals-inc-74.html",
          "name":"Janssen Pharmaceuticals, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/jhp-pharmaceuticals-llc-505.html",
          "name":"JHP Pharmaceuticals, LLC"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/johnson-amp-johnson-75.html",
          "name":"Johnson & Johnson"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/k-v-pharmaceutical-company-77.html",
          "name":"K-V Pharmaceutical Company"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/kaleo-inc-487.html",
          "name":"Kaleo Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/kedrion-biopharma-inc-523.html",
          "name":"Kedrion Biopharma, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/king-pharmaceuticals-inc-76.html",
          "name":"King Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/kremers-urban-pharmaceuticals-inc-282.html",
          "name":"Kremers Urban Pharmaceuticals Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/kvk-tech-inc-78.html",
          "name":"KVK-TECH, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/kyowa-hakko-kirin-pharma-inc-79.html",
          "name":"Kyowa Hakko Kirin Pharma, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/kythera-biopharmaceuticals-inc-532.html",
          "name":"Kythera Biopharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/lannett-company-inc-80.html",
          "name":"Lannett Company, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/luitpold-pharmaceuticals-inc-82.html",
          "name":"Luitpold Pharmaceuticals, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/lundbeck-inc-83.html",
          "name":"Lundbeck Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/lupin-pharmaceuticals-inc-84.html",
          "name":"Lupin Pharmaceuticals, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/macleods-pharmaceuticals-limited-491.html",
          "name":"Macleods Pharmaceuticals Limited"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/major-pharmaceuticals-189.html",
          "name":"Major Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/mallinckrodt-inc-85.html",
          "name":"Mallinckrodt Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/martek-biosciences-company-86.html",
          "name":"Martek Biosciences Company"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/mcneil-consumer-healthcare-481.html",
          "name":"McNeil Consumer Healthcare"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/mcr-american-pharmaceuticals-inc-280.html",
          "name":"MCR American Pharmaceuticals Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/me-pharmaceuticals-161.html",
          "name":"ME Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/mead-johnson-amp-co-527.html",
          "name":"Mead Johnson & Co"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/meda-pharmaceuticals-87.html",
          "name":"Meda Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/medac-pharma-inc-517.html",
          "name":"Medac Pharma, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/medicis-pharmaceutical-corporation-88.html",
          "name":"Medicis Pharmaceutical Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/medicure-pharma-inc-530.html",
          "name":"Medicure Pharma, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/medimmune-inc-90.html",
          "name":"MedImmune, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/mediquest-therapeutics-inc-89.html",
          "name":"MediQuest Therapeutics Inc "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/merck-co-inc-91.html",
          "name":"Merck & Co., Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/molnlycke-healthcare-524.html",
          "name":"Molnlycke Healthcare"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/morton-grove-pharmaceuticals-inc-92.html",
          "name":"Morton Grove Pharmaceuticals, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/msd-consumer-care-inc-512.html",
          "name":"MSD Consumer Care, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/mylan-inc-93.html",
          "name":"Mylan Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/nagase-america-corp-94.html",
          "name":"Nagase America Corp."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/neurocrine-biosciences-inc-95.html",
          "name":"Neurocrine Biosciences, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/neurogesx-inc-96.html",
          "name":"NeurogesX, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/nexmed-inc-97.html",
          "name":"NexMed, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/northfield-laboratories-inc-98.html",
          "name":"Northfield Laboratories Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/northstar-rx-187.html",
          "name":"Northstar Rx"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/novadel-pharma-inc-99.html",
          "name":"NovaDel Pharma, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/novartis-consumer-health-508.html",
          "name":"Novartis Consumer Health"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/novartis-pharmaceuticals-corporation-100.html",
          "name":"Novartis Pharmaceuticals Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/noven-pharmaceuticals-inc-101.html",
          "name":"Noven Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/novo-nordisk-102.html",
          "name":"Novo Nordisk"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/nycomed-173.html",
          "name":"Nycomed"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/oak-pharmaceuticals-inc-subsidiary-of-akorn-inc-499.html",
          "name":"Oak Pharmaceuticals, Inc ( subsidiary of Akorn, Inc)"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/oasis-medical-inc-515.html",
          "name":"Oasis Medical Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/omeros-corporation-503.html",
          "name":"Omeros Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/oncogenex-pharmaceuticals-103.html",
          "name":"OncoGenex Pharmaceuticals "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/onyx-pharmaceuticals-inc-104.html",
          "name":"Onyx Pharmaceuticals, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/ortho-mcneil-janssen-pharmaceuticals-inc-105.html",
          "name":"Ortho-McNeil-Janssen Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/osiris-therapeutics-inc-106.html",
          "name":"Osiris Therapeutics, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/othera-pharmaceuticals-inc-107.html",
          "name":"Othera Pharmaceuticals, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/otsuka-pharmaceutical-co-ltd-178.html",
          "name":"Otsuka Pharmaceutical Co., Ltd"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/paddock-laboratories-inc-108.html",
          "name":"Paddock Laboratories, Inc., "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/pain-therapeutics-inc-109.html",
          "name":"Pain Therapeutics, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/paladin-labs-inc-486.html",
          "name":"Paladin Labs Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/par-pharmaceutical-inc-110.html",
          "name":"Par Pharmaceutical, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/pdl-biopharma-inc-111.html",
          "name":"PDL BioPharma, Inc. "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/perrigo-company-112.html",
          "name":"Perrigo Company "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/pfizer-inc-113.html",
          "name":"Pfizer Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/pharmacia-amp-upjohn-company-llc-a-subsidiary-of-pfizer-inc-506.html",
          "name":"Pharmacia & Upjohn Company LLC (a subsidiary of Pfizer Inc.)"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/pharmacyclics-inc-114.html",
          "name":"Pharmacyclics, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/pierre-fabre-pharmaceuticals-inc-184.html",
          "name":"Pierre Fabre Pharmaceuticals Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/piramal-critical-care-inc-488.html",
          "name":"Piramal Critical Care Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/pliva-179.html",
          "name":"Pliva"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/pozen-inc-115.html",
          "name":"Pozen Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/prasco-laboratories-190.html",
          "name":"Prasco Laboratories"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/prestige-brands-formerly-medtech-498.html",
          "name":"Prestige Brands (formerly MedTech)"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/pro-pharmaceuticals-inc-118.html",
          "name":"Pro-Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/procter-gamble-116.html",
          "name":"Procter & Gamble"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/progenics-pharmaceuticals-inc-117.html",
          "name":"Progenics Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/purdue-pharma-lp-160.html",
          "name":"Purdue Pharma LP"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/qualitest-pharmaceuticals-119.html",
          "name":"Qualitest Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/ranbaxy-pharmaceuticals-inc-120.html",
          "name":"Ranbaxy Pharmaceuticals Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/reckitt-benckiser-pharmaceuticals-inc-162.html",
          "name":"Reckitt Benckiser Pharmaceuticals Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/roche-pharmaceuticals-121.html",
          "name":"Roche Pharmaceuticals "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/roxane-laboratories-inc-122.html",
          "name":"Roxane Laboratories,Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/roxro-pharma-inc-123.html",
          "name":"Roxro Pharma, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/salix-pharmaceuticals-ltd-124.html",
          "name":"Salix Pharmaceuticals, Ltd"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/sandoz-inc-125.html",
          "name":"Sandoz Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/sanofi-126.html",
          "name":"Sanofi"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/santarus-inc-169.html",
          "name":"Santarus, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/savient-pharmaceuticals-inc-acquired-by-crealta-pharmaceuticals-127.html",
          "name":"Savient Pharmaceuticals, Inc. acquired by Crealta Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/schering-plough-128.html",
          "name":"Schering-Plough"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/sepracor-inc-renamed-sunovion-pharmaceuticals-inc-163.html",
          "name":"Sepracor Inc. (renamed Sunovion Pharmaceuticals Inc)"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/shionogi-pharma-inc-129.html",
          "name":"Shionogi Pharma, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/shire-us-inc-164.html",
          "name":"Shire US Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/siga-technologies-inc-130.html",
          "name":"SIGA Technologies, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/sigma-tau-pharmaceuticals-180.html",
          "name":"Sigma-Tau Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/sirion-therapeutics-inc-131.html",
          "name":"Sirion Therapeutics, Inc. "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/solvay-pharmaceuticals-inc-132.html",
          "name":"Solvay Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/somaxon-pharmaceuticals-inc-133.html",
          "name":"Somaxon Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/spear-pharmaceuticals-531.html",
          "name":"Spear Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/spherix-incorporated-134.html",
          "name":"Spherix Incorporated"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/stiefel-laboratories-inc-168.html",
          "name":"Stiefel Laboratories, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/summers-laboratories-135.html",
          "name":"Summers Laboratories "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/sunovion-pharmaceuticals-inc-276.html",
          "name":"Sunovion Pharmaceuticals Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/supergen-inc-renamed-astex-pharmaceuticals-inc-136.html",
          "name":"SuperGen, Inc., renamed  Astex Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/synthon-pharmaceuticals-ltd-296.html",
          "name":"Synthon Pharmaceuticals Ltd"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/takeda-pharmaceuticals-u-s-a-inc-137.html",
          "name":"Takeda Pharmaceuticals U.S.A., Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/targanta-therapeutics-corporation-138.html",
          "name":"Targanta Therapeutics Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/taro-pharmaceuticals-u-s-a-inc-139.html",
          "name":"Taro Pharmaceuticals U.S.A., Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/teva-pharmaceuticals-usa-inc-140.html",
          "name":"Teva Pharmaceuticals USA, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/the-medicines-company-529.html",
          "name":"The Medicines Company"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/ther-rx-corporation-300.html",
          "name":"Ther-Rx Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/theravance-inc-141.html",
          "name":"Theravance, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/three-rivers-pharmaceuticals-llc-143.html",
          "name":"Three Rivers Pharmaceuticals, LLC "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/torrent-pharmaceuticals-181.html",
          "name":"Torrent Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/transcept-pharmaceuticals-inc-142.html",
          "name":"Transcept Pharmaceuticals, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/trimel-pharmaceuticals-corporation-502.html",
          "name":"Trimel Pharmaceuticals Corporation"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/ucb-inc-144.html",
          "name":"UCB Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/upsher-smith-laboratories-inc-145.html",
          "name":"Upsher-Smith Laboratories Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/url-pharma-inc-now-sun-pharma-146.html",
          "name":"URL Pharma, Inc.(now Sun Pharma)"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/valeant-pharmaceuticals-international-147.html",
          "name":"Valeant Pharmaceuticals International"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/vanda-pharmaceuticals-inc-148.html",
          "name":"Vanda Pharmaceuticals Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/versapharm-inc-274.html",
          "name":"VersaPharm Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/vertex-pharmaceuticals-149.html",
          "name":"Vertex Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/viropharma-185.html",
          "name":"ViroPharma"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/warner-chilcott-167.html",
          "name":"Warner Chilcott"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/watson-pharmaceuticals-inc-now-actavis-inc-150.html",
          "name":"Watson Pharmaceuticals, Inc. (now Actavis, Inc)"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/west-ward-pharmaceuticals-186.html",
          "name":"West-Ward Pharmaceuticals"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/wockhardt-usa-151.html",
          "name":"Wockhardt USA "
       },
       {
+         "url":"http://www.drugs.com/manufacturer/wyeth-159.html",
          "name":"Wyeth"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/xanodyne-pharmaceuticals-inc-152.html",
          "name":"Xanodyne Pharmaceuticals, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/xenoport-inc-153.html",
          "name":"XenoPort, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/zila-inc-154.html",
          "name":"Zila, Inc."
       },
       {
+         "url":"http://www.drugs.com/manufacturer/zogenix-inc-155.html",
          "name":"Zogenix, Inc"
       },
       {
+         "url":"http://www.drugs.com/manufacturer/zydus-pharmaceuticals-157.html",
          "name":"Zydus Pharmaceuticals"
       }
    ]

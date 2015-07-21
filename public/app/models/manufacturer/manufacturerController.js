@@ -6,12 +6,20 @@ ngPharm.controller('ManufacturerController', ['$scope', 'Manufacturers','$modal'
     
 	this.gridOptions = {
         enableFiltering: true,
-        columnDefs: [{
-            name: 'Name',
-            enableCellEdit: true,
-            enableCellEditOnFocus: true,
-            field: 'name'
-        }],
+        columnDefs: [
+            {
+                name: 'Name',
+                enableCellEdit: true,
+                enableCellEditOnFocus: true,
+                field: 'name'
+            },
+            {
+                name: 'URL',
+                enableCellEdit: true,
+                enableCellEditOnFocus: true,
+                field: 'url'
+            } 
+        ],
         data: this.manufacturers
     };
     this.newManufacturerForm = {      

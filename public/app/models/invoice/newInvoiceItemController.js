@@ -49,7 +49,7 @@ angular.module('ngPharm')
             open: function(size){
                 console.log("Drug form opened");
                 var modalInstance = $modal.open({
-                    templateUrl: 'app/drug/newDrug.html',
+                    templateUrl: 'app/models/drug/newDrug.html',
                     controller: 'NewDrugController as NewDrugCtrl',
                     size: size,
                     resolve: {

@@ -8,6 +8,9 @@ module.exports = function(sequelizeInstance, DataTypes){
         },
         "name": {
             type: DataTypes.STRING
+        },
+        "url": {
+            type: DataTypes.STRING
         }
     }, {
         freezeTableName: true

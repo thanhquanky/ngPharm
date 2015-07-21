@@ -7,6 +7,10 @@
             <span style="color:red" ng-show="newManufacturer.name.$error.required">Name is required</span>
         </span>
     </div>
+    <div class="form-group">
+        <label for="url">URL</label>
+        <input type="text" name="url" required class="form-control" ng-model="NewManufacturerCtrl.manufacturer.url">
+    </div>
 </form></div>
 <div class="modal-footer">
     <button ng-disabled="newManufacturer.$invalid" class="btn btn-success" ng-click="NewManufacturerCtrl.ok()">OK</button>

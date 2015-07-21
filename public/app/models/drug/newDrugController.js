@@ -46,7 +46,7 @@
                 vm.newManufacturerForm = {
                     open: function(size){
                         var modalInstance = $modal.open({
-                            templateUrl: 'partials/newManufacturer.html',
+                            templateUrl: 'app/models/manufacturer/newManufacturer.html',
                             controller: 'NewManufacturerController as NewManufacturerCtrl',
                             resolve: {
                                 manufacturer: function() {
