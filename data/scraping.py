@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from urllib import urlopen
 import json
 def get_manufacturers():
-	html_file = urlopen('file:///home/trananhduc1004/git/ngpharm/data/htmls/pharmaceutical_companies.html')
+	html_file = urlopen('pharmaceutical_companies.html')
 	soup = BeautifulSoup(html_file, 'html5')
 	column_list = []
 	a_list = []
@@ -42,4 +42,11 @@ def get_currencies():
 	with open('currency.json', 'w') as f:
 		json.dump(data, f)
 	print currency_list[0]
-get_manufacturers()
+def get_drugs():
+	html_file = urlopen('drugs.html')
+	soup = BeautifulSoup(html_file, 'html5')
+	my_table = soup.find_all("table")[0]
+	print my_table.attrs
+	# all_rows = my_table.find_all('tbody')[0].find_all('tr')
+	# print len(all_rows)
+get_drugs()
