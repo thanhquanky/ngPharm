@@ -33,5 +33,6 @@ app.use('/user', require('./routes/user'));
 
 //
 module.exports = app;
-console.log('Server started: http://localhost:3000/');
-app.listen(3000);
+var port = process.env.PORT || 3000
+console.log('Server started at port ' + port);
+app.listen(port);

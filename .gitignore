@@ -1,4 +1,4 @@
-public/components/*
+public/bower_components/*
 components/*
 node_modules/*
 .idea/*
