@@ -17,6 +17,11 @@ ngPharm.controller('DrugController', ['$scope', 'Drugs','Manufacturers','$modal'
             enableCellEditOnFocus: true,
             field: 'use'
         }, {
+            name: 'Generic',
+            enableCellEdit: true,
+            enableCellEditOnFocus: true,
+            field: 'generic'
+        }, {
             name: 'Manufacturer',
             enableCellEdit: true,
             enableCellEditOnFocus: true,

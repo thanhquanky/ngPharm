@@ -13,6 +13,10 @@ module.exports = function(sequelizeInstance, DataTypes) {
         "use": {
             type: DataTypes.STRING,
             allowNull: true
+        },
+        "generic": {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     },  {
         classMethods: {

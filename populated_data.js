@@ -9,7 +9,7 @@ exported.vendors = require('./data/vendor.json')["vendors"];
 //     {   "name": "Walgreen",             "email": "info@walgreen.com",   "telephone": "123-456-7890",        "address": "Georgia Tech"    }
 // ];
 exported.manufacturers = require('./data/manufacturer.json')["manufacturers"].slice(0, 20);
-exported.drugs = require('./data/drug.json')["drugs"];
+exported.drugs = require('./data/drug.json')["drugs"].slice(0, 20);
 // [
 //     	{"name": "Dodacin",  "use": "Antibiotic",       "manufacturer": 1},
 //     	{"name": "Claritin", "use": "Anti-histamine",   "manufacturer": 5,  "salesPrice": 12}
